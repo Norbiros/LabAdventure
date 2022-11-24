@@ -11,6 +11,10 @@ onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
+func _ready():
+	self.global_position = Global.start_position
+	get_node("Camera2D").reset_smoothing()
+
 func _physics_process(delta):
 	var pos = get_position();
 	var input_vector = Vector2.ZERO
