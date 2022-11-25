@@ -2,6 +2,7 @@ extends Control
 class_name ItemBar
 
 onready var slot_container: HBoxContainer = $HBoxContainer
+var inventory = preload("res://UI/HUD/Inventory/Inventory.tres")
 
 var item_slots = []
 var selected_slot_index: int
@@ -40,7 +41,6 @@ func _select_slot(slot_index: int) -> void:
 	for index in item_slots.size():
 		item_slots[index].set_selected(index == slot_index)
 	
-	item_slots[slot_index].show_item( preload("res://Items/Resources/Axe.tres") )
 	selected_slot_index = slot_index
 	
 	
@@ -55,3 +55,14 @@ func _select_previous_slot() -> void:
 		_select_slot(item_slots.size() - 1)
 	else:
 		_select_slot(selected_slot_index - 1)
+
+func update_inventory_slot_display(item_index):
+	var itembarSlotDisplay = slot_container.get_child(item_index)
+	var item = inventory.items[item_index + 21]
+	itembarSlotDisplay.show_item(item)
+
+
+func itembar_changed():
+	update_inventory_slot_display(0)
+	update_inventory_slot_display(1)
+	update_inventory_slot_display(2)

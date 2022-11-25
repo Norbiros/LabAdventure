@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -9,7 +9,8 @@
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
 [ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Util/Transition.tscn" type="PackedScene" id=9]
-[ext_resource path="res://UI/HUD/ItemBar/ItemBar.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/HUD/Inventory/Inventory.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI/HUD/Inventory/InventoryContainer.gd" type="Script" id=12]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -566,7 +567,5 @@ text = "Tutaj jest magiczny portal :)"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ItemBar" parent="CanvasLayer" instance=ExtResource( 10 )]
-anchor_top = 1.0
-anchor_right = 0.0
-margin_right = 320.0
+[node name="InventoryContainer" parent="CanvasLayer" instance=ExtResource( 11 )]
+script = ExtResource( 12 )
