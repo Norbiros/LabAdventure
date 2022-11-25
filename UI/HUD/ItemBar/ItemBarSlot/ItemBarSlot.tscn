@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/HUD/ItemBar/HeartUIEmpty.png" type="Texture" id=1]
+[ext_resource path="res://UI/HUD/ItemBar/ItemBarSlot/ItemBarSlot.gd" type="Script" id=2]
+[ext_resource path="res://World/Grass.png" type="Texture" id=3]
+
+[node name="ItemBarSlot" type="Control"]
+script = ExtResource( 2 )
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+margin_left = -8.0
+margin_right = 8.0
+margin_bottom = 16.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="ItemDisplay" type="TextureRect" parent="."]
+margin_left = -6.0
+margin_top = 2.0
+margin_right = 6.0
+margin_bottom = 14.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1

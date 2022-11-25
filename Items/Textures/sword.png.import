@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartUIFull.png-e9d9ebbeee52aaa00895457d920c0f53.stex"
+path="res://.import/sword.png-53d5e934ccfa1811b25a43e7440010a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/HeartUIFull.png"
-dest_files=[ "res://.import/HeartUIFull.png-e9d9ebbeee52aaa00895457d920c0f53.stex" ]
+source_file="res://Items/Textures/sword.png"
+dest_files=[ "res://.import/sword.png-53d5e934ccfa1811b25a43e7440010a6.stex" ]
 
 [params]
 
