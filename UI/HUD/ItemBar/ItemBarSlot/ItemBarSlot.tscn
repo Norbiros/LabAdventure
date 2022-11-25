@@ -8,15 +8,15 @@
 script = ExtResource( 2 )
 
 [node name="BackgroundTexture" type="TextureRect" parent="."]
-margin_left = -8.0
-margin_right = 8.0
-margin_bottom = 16.0
+margin_left = -7.0
+margin_right = 7.0
+margin_bottom = 14.0
 texture = ExtResource( 1 )
-stretch_mode = 4
+expand = true
+stretch_mode = 1
 
 [node name="ItemDisplay" type="TextureRect" parent="."]
 margin_left = -6.0
-margin_top = 2.0
 margin_right = 6.0
 margin_bottom = 14.0
 texture = ExtResource( 3 )

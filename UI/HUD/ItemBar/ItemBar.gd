@@ -5,6 +5,7 @@ onready var slot_container: HBoxContainer = $HBoxContainer
 
 var item_slots = []
 var selected_slot_index: int
+var moved: int = 0
 
 func _ready() -> void:
 	_register_slots()
@@ -12,10 +13,17 @@ func _ready() -> void:
 
 func _unhandled_input(event) -> void:
 	if Input.is_action_just_pressed("item_bar_select_next"):
-		_select_next_slot()
+		moved += 1
 	
 	if Input.is_action_just_pressed("item_bar_select_previous"):
+		moved -= 1
+	
+	if moved >= 7:
+		moved = 0
+		_select_next_slot()
+	elif moved <= -7:
 		_select_previous_slot()
+		moved = 0
 
 
 func _unhandled_key_input(event) -> void:

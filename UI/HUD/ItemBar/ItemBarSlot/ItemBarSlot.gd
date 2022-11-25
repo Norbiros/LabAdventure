@@ -1,7 +1,7 @@
 extends Control
 class_name ItemBarSlot
 
-const SELECTED_TEXTURE: Texture = preload("res://UI/HUD/ItemBar/HeartUIFull.png")
+const SELECTED_TEXTURE: Texture = preload("res://UI/HUD/ItemBar/SelectedInventory.png")
 const UNSELECTED_TEXTURE: Texture = preload("res://UI/HUD/ItemBar/HeartUIEmpty.png")
 
 onready var background_texture_rect = $BackgroundTexture
