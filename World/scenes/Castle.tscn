@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=3]
 [ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/FullTransition.tscn" type="PackedScene" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -31,3 +32,7 @@ smoothing_speed = 8.0
 position = Vector2( 152, 112 )
 next_scene_path = "res://World.tscn"
 player_spawn_location = Vector2( 275, -130 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FullTransition" parent="CanvasLayer" instance=ExtResource( 5 )]

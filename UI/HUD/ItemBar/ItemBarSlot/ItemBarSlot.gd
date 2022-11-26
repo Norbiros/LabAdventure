@@ -27,7 +27,7 @@ func show_item(item: Item) -> void:
 		item_display.texture = null
 	
 func can_drop_data(_position, data):
-	return true
+	return data is Dictionary and data.has("item")
 
 func drop_data(_position, data):
 	var my_item_index = inventory.items.size() - 3 + get_index()
