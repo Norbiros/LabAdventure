@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/HUD/GUI/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=3]
+[ext_resource path="res://World/DirtTileset.png" type="Texture" id=4]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 152, 48 )
+current = true
+limit_left = -500
+limit_top = -500
+limit_right = 500
+limit_bottom = 500
+smoothing_enabled = true
+smoothing_speed = 8.0
+
+[node name="GrassBackground" type="Sprite" parent="."]
+position = Vector2( 152, 40 )
+texture = ExtResource( 3 )
+
+[node name="DirtTileset" type="Sprite" parent="."]
+position = Vector2( 144, 112 )
+texture = ExtResource( 4 )
+
+[node name="Portal" parent="." instance=ExtResource( 1 )]
+position = Vector2( 152, 112 )
+next_scene_path = "res://World.tscn"
+player_spawn_location = Vector2( 275, -130 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 152, 48 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera")
+
+[node name="GUI" parent="." instance=ExtResource( 2 )]

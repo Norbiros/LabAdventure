@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "ItemBarSlot",
 "language": "GDScript",
 "path": "res://UI/HUD/ItemBar/ItemBarSlot/ItemBarSlot.gd"
+}, {
+"base": "Area2D",
+"class": "ItemDrop",
+"language": "GDScript",
+"path": "res://Util/ItemDrop.gd"
 } ]
 _global_script_class_icons={
 "Inventory": "",
 "Item": "",
 "ItemBar": "",
-"ItemBarSlot": ""
+"ItemBarSlot": "",
+"ItemDrop": ""
 }
 
 [application]

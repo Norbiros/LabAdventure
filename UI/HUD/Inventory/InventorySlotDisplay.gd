@@ -26,6 +26,6 @@ func can_drop_data(_position, data):
 
 func drop_data(_position, data):
 	var my_item_index = get_index()
-	var my_item = inventory.items[my_item_index]
 	inventory.swap_item(my_item_index, data.item_index)
 	inventory.set_item(my_item_index, data.item)
+	Global.emit_signal("itembar_changed")

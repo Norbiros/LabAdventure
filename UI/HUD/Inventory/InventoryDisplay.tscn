@@ -15,28 +15,22 @@ margin_bottom = -4.0
 script = ExtResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 1.0
-margin_top = -4.0
-margin_right = 13.0
-margin_bottom = 11.0
+margin_right = 320.0
+margin_bottom = 180.0
 texture = ExtResource( 4 )
 
 [node name="OutsideDrop" type="Control" parent="."]
-margin_left = -40.0
-margin_top = -32.0
-margin_right = 392.0
-margin_bottom = 224.0
+margin_left = 160.0
+margin_top = 90.0
+margin_right = 160.0
+margin_bottom = 90.0
 script = ExtResource( 5 )
 
 [node name="InventorySlotsContainer" type="GridContainer" parent="."]
-anchor_right = 0.975
-anchor_bottom = 1.0
-margin_left = 38.0
-margin_top = 35.0
-margin_right = -18.2
-margin_bottom = -27.0
+margin_left = 36.0
+margin_top = 38.0
+margin_right = 284.0
+margin_bottom = 142.0
 columns = 7
 script = ExtResource( 6 )
 
@@ -44,160 +38,164 @@ script = ExtResource( 6 )
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 32.0
-margin_bottom = 36.0
+margin_bottom = 32.0
 
 [node name="InventorySlotDisplay2" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 36.0
 margin_right = 68.0
-margin_bottom = 36.0
+margin_bottom = 32.0
 
 [node name="InventorySlotDisplay3" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 72.0
 margin_right = 104.0
-margin_bottom = 36.0
+margin_bottom = 32.0
 
 [node name="InventorySlotDisplay4" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 108.0
 margin_right = 140.0
-margin_bottom = 36.0
+margin_bottom = 32.0
 
 [node name="InventorySlotDisplay5" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 144.0
 margin_right = 176.0
-margin_bottom = 36.0
+margin_bottom = 32.0
 
 [node name="InventorySlotDisplay6" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 180.0
 margin_right = 212.0
-margin_bottom = 36.0
+margin_bottom = 32.0
 
 [node name="InventorySlotDisplay7" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 216.0
 margin_right = 248.0
-margin_bottom = 36.0
+margin_bottom = 32.0
 
 [node name="InventorySlotDisplay8" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 40.0
+margin_top = 36.0
 margin_right = 32.0
-margin_bottom = 75.0
+margin_bottom = 68.0
 
 [node name="InventorySlotDisplay9" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 36.0
-margin_top = 40.0
+margin_top = 36.0
 margin_right = 68.0
-margin_bottom = 75.0
+margin_bottom = 68.0
 
 [node name="InventorySlotDisplay10" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 72.0
-margin_top = 40.0
+margin_top = 36.0
 margin_right = 104.0
-margin_bottom = 75.0
+margin_bottom = 68.0
 
 [node name="InventorySlotDisplay11" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 108.0
-margin_top = 40.0
+margin_top = 36.0
 margin_right = 140.0
-margin_bottom = 75.0
+margin_bottom = 68.0
 
 [node name="InventorySlotDisplay12" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 144.0
-margin_top = 40.0
+margin_top = 36.0
 margin_right = 176.0
-margin_bottom = 75.0
+margin_bottom = 68.0
 
 [node name="InventorySlotDisplay13" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 180.0
-margin_top = 40.0
+margin_top = 36.0
 margin_right = 212.0
-margin_bottom = 75.0
+margin_bottom = 68.0
 
 [node name="InventorySlotDisplay14" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 216.0
-margin_top = 40.0
+margin_top = 36.0
 margin_right = 248.0
-margin_bottom = 75.0
+margin_bottom = 68.0
 
 [node name="InventorySlotDisplay15" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 79.0
+margin_top = 72.0
 margin_right = 32.0
-margin_bottom = 114.0
+margin_bottom = 104.0
 
 [node name="InventorySlotDisplay16" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 36.0
-margin_top = 79.0
+margin_top = 72.0
 margin_right = 68.0
-margin_bottom = 114.0
+margin_bottom = 104.0
 
 [node name="InventorySlotDisplay17" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 72.0
-margin_top = 79.0
+margin_top = 72.0
 margin_right = 104.0
-margin_bottom = 114.0
+margin_bottom = 104.0
 
 [node name="InventorySlotDisplay18" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 108.0
-margin_top = 79.0
+margin_top = 72.0
 margin_right = 140.0
-margin_bottom = 114.0
+margin_bottom = 104.0
 
 [node name="InventorySlotDisplay19" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 144.0
-margin_top = 79.0
+margin_top = 72.0
 margin_right = 176.0
-margin_bottom = 114.0
+margin_bottom = 104.0
 
 [node name="InventorySlotDisplay20" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 180.0
-margin_top = 79.0
+margin_top = 72.0
 margin_right = 212.0
-margin_bottom = 114.0
+margin_bottom = 104.0
 
 [node name="InventorySlotDisplay21" parent="InventorySlotsContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 216.0
-margin_top = 79.0
+margin_top = 72.0
 margin_right = 248.0
-margin_bottom = 114.0
+margin_bottom = 104.0
 
 [node name="ItemBar" parent="." instance=ExtResource( 3 )]
-margin_top = -144.0
-margin_bottom = -56.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1.0
+margin_top = -141.0
+margin_right = 1.0
+margin_bottom = -141.0

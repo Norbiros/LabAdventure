@@ -11,8 +11,9 @@ var moved: int = 0
 func _ready() -> void:
 	_register_slots()
 	_select_slot(1)
+	Global.connect("itembar_changed", self, "itembar_changed")
 
-func _unhandled_input(event) -> void:
+func _unhandled_input(_event) -> void:
 	if Input.is_action_just_pressed("item_bar_select_next"):
 		moved += 1
 	

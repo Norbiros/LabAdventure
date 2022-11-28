@@ -21,12 +21,11 @@ texture = ExtResource( 1 )
 stretch_mode = 1
 
 [node name="ItemTextureRect" type="TextureRect" parent="."]
-margin_left = 144.0
-margin_top = 74.0
-margin_right = 176.0
-margin_bottom = 106.0
-rect_min_size = Vector2( 32, 32 )
-rect_scale = Vector2( 0.8, 0.8 )
+margin_left = 146.0
+margin_top = 76.0
+margin_right = 174.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 28, 28 )
 size_flags_horizontal = 7
 size_flags_vertical = 7
 texture = ExtResource( 3 )

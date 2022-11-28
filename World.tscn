@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=2]
+[gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,9 +8,39 @@
 [ext_resource path="res://World/Tree.png" type="Texture" id=6]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
 [ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=8]
-[ext_resource path="res://UI/FullTransition.tscn" type="PackedScene" id=9]
-[ext_resource path="res://UI/HUD/Inventory/InventoryDisplay.tscn" type="PackedScene" id=10]
-[ext_resource path="res://UI/HUD/Inventory/InventoryContainer.gd" type="Script" id=12]
+[ext_resource path="res://Util/ItemDrop.tscn" type="PackedScene" id=9]
+[ext_resource path="res://World/Stone.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Textures/Natural/Plants/flower4.png" type="Texture" id=11]
+[ext_resource path="res://UI/HUD/GUI/GUI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Textures/Natural/Plants/big_bush1.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Natural/Plants/plant12.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Natural/Plants/flower1.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Natural/Plants/flower3.png" type="Texture" id=16]
+[ext_resource path="res://Textures/Natural/Plants/bush3.png" type="Texture" id=17]
+[ext_resource path="res://Textures/Natural/Plants/plant10.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Natural/Stone/stone7.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Natural/Plants/flower7.png" type="Texture" id=20]
+[ext_resource path="res://Textures/Natural/Wood/sign1.png" type="Texture" id=21]
+[ext_resource path="res://Textures/Natural/Plants/big_bush4.png" type="Texture" id=22]
+[ext_resource path="res://Textures/Natural/Plants/flower5.png" type="Texture" id=23]
+[ext_resource path="res://Textures/Natural/Stone/stone4.png" type="Texture" id=24]
+[ext_resource path="res://Textures/Natural/Plants/plant5.png" type="Texture" id=25]
+[ext_resource path="res://Textures/Natural/Stone/stone8.png" type="Texture" id=26]
+[ext_resource path="res://Textures/Natural/Plants/plant3.png" type="Texture" id=27]
+[ext_resource path="res://Textures/Natural/Plants/mushroom2.png" type="Texture" id=28]
+[ext_resource path="res://Textures/Natural/Wood/wood7.png" type="Texture" id=29]
+[ext_resource path="res://Textures/Natural/Plants/plant14.png" type="Texture" id=30]
+[ext_resource path="res://Textures/Natural/Stone/stone11.png" type="Texture" id=31]
+[ext_resource path="res://Textures/Natural/Wood/wood2.png" type="Texture" id=32]
+[ext_resource path="res://Textures/Natural/Plants/big_bush3.png" type="Texture" id=33]
+[ext_resource path="res://Textures/Natural/Stone/stone1.png" type="Texture" id=34]
+[ext_resource path="res://Textures/Natural/Plants/flower6.png" type="Texture" id=35]
+[ext_resource path="res://Textures/Natural/Stone/stone5.png" type="Texture" id=36]
+[ext_resource path="res://Textures/Natural/Plants/big_bush2.png" type="Texture" id=37]
+[ext_resource path="res://Textures/Natural/Wood/wood5.png" type="Texture" id=38]
+[ext_resource path="res://Textures/Natural/Plants/plant9.png" type="Texture" id=39]
+[ext_resource path="res://Textures/Natural/Wood/fence3.png" type="Texture" id=40]
+[ext_resource path="res://Textures/Tileset/voda_pesok_trava.png" type="Texture" id=41]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -36,6 +66,20 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
+1/name = "voda_pesok_trava.png 1"
+1/texture = ExtResource( 41 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 96, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
 
 [sub_resource type="OccluderPolygon2D" id=52]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -184,145 +228,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [sub_resource type="OccluderPolygon2D" id=100]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=6]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=7]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=8]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=10]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=11]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=12]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=13]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=14]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=15]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=16]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=17]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=18]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=19]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=22]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=23]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=24]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=25]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=26]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=27]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=28]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=29]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=30]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=31]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=32]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=33]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=34]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=35]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=36]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=37]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=38]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=39]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=40]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=41]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=42]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=43]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=44]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=45]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=46]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=47]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=48]
-points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
-
-[sub_resource type="ConvexPolygonShape2D" id=49]
+[sub_resource type="ConvexPolygonShape2D" id=101]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=2]
@@ -345,290 +251,290 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 3 )
+0/shape = SubResource( 101 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 1, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 2, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 2, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 1, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 1, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 10 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 2, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 11 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 3, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 12 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 3, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 13 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 3, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 14 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 15 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 16 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 17 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 18 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 3, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 19 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 1, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 20 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 2, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 21 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 0, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 4, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 23 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 24 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 25 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 26 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 8, 4 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 27 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 10, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 28 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 9, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 29 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 8, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 30 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 31 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 32 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 3 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 33 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 34 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 35 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 36 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 8, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 37 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 9, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 38 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 10, 2 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 39 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 9, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 40 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 9, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 41 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 8, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 42 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 8, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 43 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 44 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 7, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 45 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 46 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 6, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 47 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 1 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 48 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 }, {
 "autotile_coord": Vector2( 5, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 49 ),
+"shape": SubResource( 101 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -667,6 +573,15 @@ tracks/0/keys = {
 
 [node name="World" type="Node2D"]
 
+[node name="Camera" type="Camera2D" parent="."]
+current = true
+limit_left = -500
+limit_top = -500
+limit_right = 500
+limit_bottom = 500
+smoothing_enabled = true
+smoothing_speed = 8.0
+
 [node name="Background" type="Sprite" parent="."]
 texture = ExtResource( 4 )
 region_enabled = true
@@ -689,76 +604,201 @@ tile_data = PoolIntArray( -458747, 0, 4, -458746, 0, 196609, -458745, 0, 7, -393
 [node name="YSort" type="YSort" parent="."]
 z_index = 1
 
-[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+[node name="Natural" type="YSort" parent="YSort"]
 
-[node name="Camera2D" type="Camera2D" parent="YSort/Player"]
-current = true
-limit_left = -500
-limit_top = -500
-limit_right = 500
-limit_bottom = 500
-smoothing_enabled = true
-smoothing_speed = 8.0
-
-[node name="Bush" parent="YSort" instance=ExtResource( 1 )]
+[node name="Bush" parent="YSort/Natural" instance=ExtResource( 1 )]
 position = Vector2( -48, -8 )
 
-[node name="Bush2" parent="YSort" instance=ExtResource( 1 )]
+[node name="Bush2" parent="YSort/Natural" instance=ExtResource( 1 )]
 position = Vector2( 248, 40 )
 
-[node name="Bush3" parent="YSort" instance=ExtResource( 1 )]
+[node name="Bush3" parent="YSort/Natural" instance=ExtResource( 1 )]
 position = Vector2( 144, 144 )
 
-[node name="Bush4" parent="YSort" instance=ExtResource( 1 )]
+[node name="Bush4" parent="YSort/Natural" instance=ExtResource( 1 )]
 position = Vector2( 120, 32 )
 
-[node name="Tree" type="Sprite" parent="."]
+[node name="Tree" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 56, 24 )
 texture = ExtResource( 6 )
 
-[node name="Tree2" type="Sprite" parent="."]
+[node name="Tree2" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 248, 192 )
 texture = ExtResource( 6 )
 
-[node name="Tree3" type="Sprite" parent="."]
+[node name="Tree3" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 200, 152 )
 texture = ExtResource( 6 )
 
-[node name="Grass2" type="Sprite" parent="."]
+[node name="Grass2" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 16, 24 )
 texture = ExtResource( 3 )
 
-[node name="Grass" type="Sprite" parent="."]
+[node name="Grass" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 280, 40 )
 texture = ExtResource( 3 )
 
+[node name="Flower1" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 56, -48 )
+texture = ExtResource( 15 )
+
+[node name="Flower3" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -136, -56 )
+texture = ExtResource( 16 )
+
+[node name="Flower4" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -152, -56 )
+texture = ExtResource( 11 )
+
+[node name="Bush5" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 80, -32 )
+texture = ExtResource( 17 )
+
+[node name="BigBush1" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -40, 64 )
+texture = ExtResource( 13 )
+
+[node name="Flower7" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -216, -128 )
+texture = ExtResource( 20 )
+
+[node name="Flower5" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 104, -176 )
+texture = ExtResource( 11 )
+
+[node name="Flower6" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -224, -72 )
+texture = ExtResource( 35 )
+
+[node name="Flower8" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -176, 160 )
+texture = ExtResource( 23 )
+
+[node name="Plant9" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 16, 136 )
+texture = ExtResource( 39 )
+
+[node name="Plant12" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 144, 168 )
+texture = ExtResource( 14 )
+
+[node name="Plant14" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -40, 104 )
+texture = ExtResource( 30 )
+
+[node name="Plant10" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 336, 80 )
+texture = ExtResource( 18 )
+
+[node name="Plant5" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 184, -80 )
+texture = ExtResource( 25 )
+
+[node name="Flower9" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 312, -104 )
+texture = ExtResource( 23 )
+
+[node name="Stone1" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 112, 48 )
+texture = ExtResource( 34 )
+
+[node name="Stone4" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -56, -96 )
+texture = ExtResource( 24 )
+
+[node name="Stone8" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -104, -104 )
+texture = ExtResource( 26 )
+
+[node name="Stone7" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -72, 72 )
+texture = ExtResource( 19 )
+
+[node name="Stone5" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 360, 32 )
+texture = ExtResource( 36 )
+
+[node name="Stone11" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 144, -120 )
+texture = ExtResource( 31 )
+
+[node name="Fence3" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -88, -96 )
+texture = ExtResource( 40 )
+
+[node name="Wood5" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 112, -8 )
+texture = ExtResource( 38 )
+
+[node name="Wood7" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 48, -136 )
+texture = ExtResource( 29 )
+
+[node name="Wood2" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -208, 48 )
+texture = ExtResource( 32 )
+
+[node name="Sign1" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 208, -80 )
+texture = ExtResource( 21 )
+
+[node name="BigBush2" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -24, 64 )
+texture = ExtResource( 37 )
+
+[node name="BigBush3" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -8, 64 )
+texture = ExtResource( 33 )
+
+[node name="BigBush4" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 8, 64 )
+texture = ExtResource( 22 )
+
+[node name="Mushroom2" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 120, -40 )
+texture = ExtResource( 28 )
+
+[node name="Plant3" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -168, 64 )
+texture = ExtResource( 27 )
+
+[node name="Stone" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 16, -96 )
+
+[node name="Items" type="YSort" parent="YSort"]
+
+[node name="AxeItem1" parent="YSort/Items" instance=ExtResource( 9 )]
+position = Vector2( 280, -160 )
+resource = "res://Items/Resources/Axe.tres"
+
+[node name="AxeItem2" parent="YSort/Items" instance=ExtResource( 9 )]
+position = Vector2( -216, -128 )
+resource = "res://Items/Resources/IronOre.tres"
+
+[node name="SwordItem" parent="YSort/Items" instance=ExtResource( 9 )]
+position = Vector2( -80, 64 )
+resource = "res://Items/Resources/Sword.tres"
+
+[node name="SwordItem2" parent="YSort/Items" instance=ExtResource( 9 )]
+position = Vector2( 40, -40 )
+resource = "res://Items/Resources/Plank.tres"
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera")
+
 [node name="Portal" parent="." instance=ExtResource( 8 )]
-position = Vector2( 216, -160 )
-next_scene_path = "res://World/scenes/Castle.tscn"
+position = Vector2( 216, -168 )
+next_scene_path = "res://Scenes/Castle/Castle.tscn"
 player_spawn_location = Vector2( 150, 50 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="DayAndNight" type="CanvasModulate" parent="."]
 
-[node name="FullTransition" parent="CanvasLayer" instance=ExtResource( 9 )]
-
-[node name="InventoryContainer2" type="CenterContainer" parent="CanvasLayer"]
-margin_left = -160.0
-margin_top = -88.0
-margin_right = 152.0
-margin_bottom = 88.0
-script = ExtResource( 12 )
-
-[node name="InventoryDisplay" parent="CanvasLayer/InventoryContainer2" instance=ExtResource( 10 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 156.0
-margin_top = 88.0
-margin_right = 156.0
-margin_bottom = 88.0
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasModulate"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DayAndNight"]
 autoplay = "Day_and_Night"
 anims/Day_and_Night = SubResource( 50 )
 anims/RESET = SubResource( 51 )
+
+[node name="GUI" parent="." instance=ExtResource( 12 )]
+visible = false
