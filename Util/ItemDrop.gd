@@ -3,9 +3,11 @@ class_name ItemDrop
 extends Area2D
 
 export(String, FILE) var resource = ""
+export(int) var amount = 1
 
-onready var textureRect = get_node("Sprite/TextureRect")
+onready var textureRect = $Sprite/TextureRect
 onready var animationPlayer = $AnimationPlayer
+onready var itemAmountLabel = $Sprite/TextureRect/ItemAmountLabel
 
 var player = null
 var speed = 0.9
@@ -17,7 +19,10 @@ var motion = Vector2(0, 0)
 func _ready():
 	textureRect.texture = resourceObj.texture
 	animationPlayer.play("Idle")
-	
+	if amount > 1:
+		itemAmountLabel.text = str(amount)
+	else:
+		itemAmountLabel.text = ""
 
 func _get_configuration_warning():
 	if resource == "":
@@ -38,6 +43,7 @@ func _physics_process(delta):
 		position.y += motion.y
 		speed += 0.1
 		motion = Vector2(0, 0)
+		resourceObj.amount = amount
 		if position.distance_to(player.position) <= 1.5:
 			inventory.add_item( resourceObj )
 			queue_free()

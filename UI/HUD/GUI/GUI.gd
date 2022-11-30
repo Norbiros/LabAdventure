@@ -20,6 +20,3 @@ func _unhandled_key_input(_event) -> void:
 	else: 
 		obj.hide()
 		obj2.hide()
-
-func _gui_input(event):
-	print("123")

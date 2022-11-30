@@ -7,6 +7,7 @@ func _ready():
 	obj.hide()
 	obj2.hide()
 	show()
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _unhandled_key_input(_event) -> void:
 	if Input.is_action_just_pressed("inventory_toggle"):
@@ -17,6 +18,8 @@ func _unhandled_key_input(_event) -> void:
 	if Global.inventory_state:
 		obj.show()
 		obj2.show()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else: 
 		obj.hide()
 		obj2.hide()
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

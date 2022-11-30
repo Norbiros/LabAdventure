@@ -11,13 +11,15 @@ var moved: int = 0
 func _ready() -> void:
 	_register_slots()
 	_select_slot(1)
-	Global.connect("itembar_changed", self, "itembar_changed")
+	if Global.connect("itembar_changed", self, "itembar_changed") != OK: 
+		printerr("Itembar changed signal error")
+	Global.emit_signal("itembar_changed")
 
 func _unhandled_input(_event) -> void:
-	if Input.is_action_just_pressed("item_bar_select_next"):
+	if Input.is_action_just_pressed("itembar_select_next"):
 		moved += 1
 	
-	if Input.is_action_just_pressed("item_bar_select_previous"):
+	if Input.is_action_just_pressed("itembar_select_previous"):
 		moved -= 1
 	
 	if moved >= 7:

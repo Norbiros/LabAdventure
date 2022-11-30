@@ -36,6 +36,7 @@ func drop_data(_position, data):
 	var my_item_index = inventory.items.size() - 3 + get_index()
 	inventory.swap_item(my_item_index, data.item_index)
 	inventory.set_item(my_item_index, data.item)
+	inventory.drag_data = null
 	Global.emit_signal("itembar_changed")
 
 func get_drag_data(_position):
@@ -45,8 +46,8 @@ func get_drag_data(_position):
 		var data = {}
 		data.item = item
 		data.item_index = item_index
-		var dragPreview = TextureRect.new()
+		var dragPreview = inventory.gen_drag_preview(item)
+		
 		Global.emit_signal("itembar_changed")
-		dragPreview.texture = item.texture
 		set_drag_preview(dragPreview)
 		return data

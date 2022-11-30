@@ -3,8 +3,8 @@ extends KinematicBody2D
 const ACCELERATION = 500
 const MAX_SPEED = 80
 const FRICTION = 500
-const MAX_SIZE = 495;
-const MIN_SIZE = -490;
+const MAX_SIZE = 995;
+const MIN_SIZE = -990;
 var velocity = Vector2.ZERO
 
 onready var animationPlayer = $AnimationPlayer

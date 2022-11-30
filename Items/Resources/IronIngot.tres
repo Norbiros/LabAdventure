@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Sword"
+name = "Iron Ingot"
 texture = ExtResource( 2 )
 is_tool = false
+max_stack_value = 64
