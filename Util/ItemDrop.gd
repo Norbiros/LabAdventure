@@ -9,6 +9,10 @@ onready var textureRect = $Sprite/TextureRect
 onready var animationPlayer = $AnimationPlayer
 onready var itemAmountLabel = $Sprite/TextureRect/ItemAmountLabel
 
+onready var SAVE_KEY = "item_" + name + "_pickedup"
+
+var picked_up = false
+
 var player = null
 var speed = 0.9
 onready var resourceObj = load(resource)
@@ -31,13 +35,13 @@ func _get_configuration_warning():
 		return ""
 		
 func _on_ItemDrop_body_entered(body):
-	if body.name == "Player":
+	if body.name == "Player" && picked_up == false:
 		if resource == "": return
 		animationPlayer.stop()
 		player = body
 
 func _physics_process(delta):
-	if player != null:
+	if player != null && picked_up == false:
 		motion = position.direction_to(player.position) * delta * 10 * speed
 		position.x += motion.x
 		position.y += motion.y
@@ -46,4 +50,16 @@ func _physics_process(delta):
 		resourceObj.amount = amount
 		if position.distance_to(player.position) <= 1.5:
 			inventory.add_item( resourceObj )
-			queue_free()
+			picked_up = true
+			animationPlayer.stop()
+			hide()
+
+func save(save_game : Resource):
+	save_game.data[SAVE_KEY] = picked_up
+
+func load(save_game : Resource):
+	picked_up = save_game.data[SAVE_KEY]
+	if picked_up == true:
+		hide()
+	else:
+		show()

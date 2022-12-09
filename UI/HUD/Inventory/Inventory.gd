@@ -43,6 +43,44 @@ func add_item(item):
 				Global.emit_signal("itembar_changed")
 				return true
 	
+	var loop_item = item.duplicate()
+	loop_item.amount = item.amount
+	while loop_item.amount > 0:
+		loop_item.amount = int(floor(loop_item.amount))
+		for i in items.size():
+			if items[i] is Item && items[i].name == loop_item.name && items[i].amount != item.max_stack_value:
+				if loop_item.amount + items[i].amount > item.max_stack_value:
+					loop_item.amount -= item.max_stack_value - items[i].amount
+					items[i].amount = item.max_stack_value
+				else:
+					items[i].amount = items[i].amount + loop_item.amount
+					loop_item.amount -= loop_item.amount
+				emit_signal("items_changed", [i])
+				break
+				
+			if items[i] == null:
+				if loop_item.amount > item.max_stack_value:
+					items[i] = item.duplicate()
+					items[i].amount = item.max_stack_value
+					loop_item.amount -= item.max_stack_value
+				else:
+					items[i] = item.duplicate()
+					items[i].amount = loop_item.amount % item.max_stack_value
+					loop_item.amount -= loop_item.amount % item.max_stack_value
+				emit_signal("items_changed", [i])
+				break
+	return true
+	
+
+func adda_item(item):
+	if item.is_tool:
+		for n in 3:
+			var i = items.size() - 3 + n;
+			if items[i] == null:
+				items[i] = item.duplicate()
+				Global.emit_signal("itembar_changed")
+				return true
+	
 	for n in floor(item.amount / item.max_stack_value + 1):
 		var item_changed = false
 		for i in items.size():

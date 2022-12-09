@@ -2,6 +2,9 @@ extends Control
 
 var inventory = preload("res://UI/HUD/Inventory/Inventory.tres")
 onready var gridContainer = $InventorySlotsContainer
+onready var parent = get_owner()
+
+var SAVE_KEY = "inventory"
 
 func _ready():
 	inventory.connect("items_changed", self, "_on_items_changed")
@@ -27,3 +30,25 @@ func _unhandled_input(event):
 	if event.is_action_released("ui_left"):
 		if inventory.drag_data is Dictionary:
 			inventory.set_item(inventory.drag_data.item_index, inventory.drag_data.item)
+
+func save(save_game : Resource):
+	var inv = []
+	for i in inventory.items.size():
+		var obj = {}
+		if inventory.items[i] is Item:
+			obj.amount = inventory.items[i].amount
+			obj.name = inventory.items[i].name
+		inv.append(obj)
+	save_game.data[SAVE_KEY] = inv
+
+func load(save_game : Resource):
+	for i in save_game.data[SAVE_KEY].size():
+		var obj = save_game.data[SAVE_KEY][i]
+		if !obj.has("name") || !obj.has("amount"):
+			inventory.items[i] = null
+		else:
+			var item = load("res://Items/Resources/" + obj.name + ".tres")
+			item.amount = obj.amount
+			inventory.items[i] = item
+			inventory.emit_signal("items_changed", [i])
+	Global.emit_signal("itembar_changed")

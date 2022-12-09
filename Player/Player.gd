@@ -11,6 +11,8 @@ onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 
+var SAVE_KEY: String  = "player_" + name
+
 func _ready():
 	get_owner().get_node("Camera").position = Global.start_position
 	get_owner().get_node("Camera").reset_smoothing()
@@ -35,3 +37,13 @@ func _physics_process(delta):
 	
 	set_position(Vector2(clamp(pos.x, MIN_SIZE, MAX_SIZE), clamp(pos.y, MIN_SIZE, MAX_SIZE)))
 	velocity = move_and_slide(velocity)
+
+func save(save_game : Resource):
+	save_game.data[SAVE_KEY] = position
+	save_game.data[Global.SAVE_KEY] = position
+
+func load(save_game : Resource):
+	print("asd")
+	position = save_game.data[SAVE_KEY]
+	get_owner().get_node("Camera").position = position
+	get_owner().get_node("Camera").reset_smoothing()
