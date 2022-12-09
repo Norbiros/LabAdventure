@@ -16,4 +16,5 @@ func _on_Portal_body_entered(body):
 	Global.start_position = player_spawn_location
 	
 	if body.name == "Player":
-		get_tree().change_scene(next_scene_path)
+		Global.emit_signal("teleported_in", next_scene_path)
+		Global.show_tp_animation = true
