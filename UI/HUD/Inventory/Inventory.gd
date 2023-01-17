@@ -42,7 +42,7 @@ func add_item(item):
 				items[i] = item.duplicate()
 				Global.emit_signal("itembar_changed")
 				return true
-	
+		
 	var loop_item = item.duplicate()
 	loop_item.amount = item.amount
 	while loop_item.amount > 0:
@@ -71,34 +71,6 @@ func add_item(item):
 				break
 	return true
 	
-
-func adda_item(item):
-	if item.is_tool:
-		for n in 3:
-			var i = items.size() - 3 + n;
-			if items[i] == null:
-				items[i] = item.duplicate()
-				Global.emit_signal("itembar_changed")
-				return true
-	
-	for n in floor(item.amount / item.max_stack_value + 1):
-		var item_changed = false
-		for i in items.size():
-			if items[i] == null:
-				items[i] = item.duplicate()
-				if item.amount < item.max_stack_value:
-					items[i].amount = item.amount % item.max_stack_value
-				else:
-					items[i].amount =  item.max_stack_value
-				emit_signal("items_changed", [i])
-				item_changed = true
-				break
-		if item_changed == false:
-			return false
-		item.amount -= item.max_stack_value
-	
-	return true
-
 
 func make_items_unique():
 	var unique_items = []

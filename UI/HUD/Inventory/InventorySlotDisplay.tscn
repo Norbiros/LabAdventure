@@ -47,6 +47,9 @@ margin_bottom = 19.6667
 custom_fonts/font = SubResource( 1 )
 text = "123"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [connection signal="mouse_entered" from="." to="." method="_on_InventorySlotDisplay_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_InventorySlotDisplay_mouse_exited"]
