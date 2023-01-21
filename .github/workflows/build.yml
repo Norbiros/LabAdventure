@@ -3,7 +3,7 @@ name: Build Godot project on Windows
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
