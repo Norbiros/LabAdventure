@@ -40,6 +40,7 @@ func drop_data(_position, data):
 	Global.emit_signal("itembar_changed")
 
 func get_drag_data(_position):
+	if Global.inventory_state != true: return
 	var item_index = inventory.items.size() - 3 + get_index()
 	var item = inventory.remove_item(item_index)
 	if item is Item:

@@ -13,7 +13,7 @@ func _ready():
 	inventory.make_items_unique()
 
 func update_inventory_slot_display(item_index):
-	if item_index <= (inventory.items.size() - 4): 
+	if item_index <= (inventory.items.size() - 4) and item_index != -1: 
 		var inventorySlotDisplay = gridContainer.get_child(item_index)
 		var item = inventory.items[item_index]
 		inventorySlotDisplay.display_item(item)
@@ -52,3 +52,9 @@ func load(save_game : Resource):
 			inventory.items[i] = item
 			inventory.emit_signal("items_changed", [i])
 	Global.emit_signal("itembar_changed")
+
+func can_drop_data(_position, data):
+	return data is Dictionary and data.has("item")
+
+func drop_data(_position, data):
+	inventory.set_item(data.item_index, data.item)

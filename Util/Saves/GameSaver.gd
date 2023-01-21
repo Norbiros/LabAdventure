@@ -53,6 +53,12 @@ func save_level(id: int):
 	if error != OK:
 		print('There was an issue writing the save %s to %s' % [id, save_path])
 
+func delete_level(id: int):
+	var directory: Directory = Directory.new()
+	if not directory.dir_exists(SAVE_FOLDER):
+		directory.make_dir_recursive(SAVE_FOLDER)
+	directory.remove("user://" + SAVE_NAME_TEMPLATE % id)
+
 func save_preview(id: int, name: String):
 	var save_game := SaveGame.new()
 	save_game.game_version = ProjectSettings.get_setting("application/config/version")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Textures/Fonts/SourceCodePro/SourceCodePro-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/TitleScreen/TitleScreen.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://UI/TitleScreen/TitleMenuButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/TitleScreen/LevelNameInput.gd" type="Script" id=7]
 [ext_resource path="res://Textures/Fonts/SourceCodePro/SourceCodePro-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Textures/Other/logo.png" type="Texture" id=9]
 
 [sub_resource type="Shader" id=6]
 code = "shader_type canvas_item;
@@ -158,3 +159,9 @@ margin_bottom = 49.0
 align = 1
 max_length = 20
 script = ExtResource( 7 )
+
+[node name="Logo" type="Sprite" parent="."]
+visible = false
+position = Vector2( 168, 64 )
+scale = Vector2( 2.3125, 1.75 )
+texture = ExtResource( 9 )

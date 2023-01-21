@@ -1,11 +1,13 @@
 extends Control
 
-onready var obj = get_node("CanvasLayer/CenterContainer/InventoryDisplay/InventorySlotsContainer")
-onready var obj2 = get_node("CanvasLayer/CenterContainer/InventoryDisplay/TextureRect")
+onready var inventorySlots = get_node("CanvasLayer/CenterContainer/InventoryDisplay/InventorySlotsContainer")
+onready var textureRect = get_node("CanvasLayer/CenterContainer/InventoryDisplay/TextureRect")
+onready var inventoryInteraction = get_node("CanvasLayer/CenterContainer/InventoryDisplay/InventoryInteractionDisplay")
 
 func _ready():
-	obj.hide()
-	obj2.hide()
+	inventorySlots.hide()
+	textureRect.hide()
+	inventoryInteraction.hide()
 	show()
 
 func _unhandled_key_input(_event) -> void:
@@ -15,8 +17,10 @@ func _unhandled_key_input(_event) -> void:
 		Global.inventory_state = false
 	
 	if Global.inventory_state:
-		obj.show()
-		obj2.show()
+		inventorySlots.show()
+		textureRect.show()
+		inventoryInteraction.show()
 	else: 
-		obj.hide()
-		obj2.hide()
+		inventorySlots.hide()
+		textureRect.hide()
+		inventoryInteraction.hide()

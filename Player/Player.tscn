@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Player/PlayerInteraction.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Textures/Other/player.png" type="Texture" id=3]
 
 [sub_resource type="Animation" id=27]
@@ -361,3 +362,10 @@ active = true
 parameters/playback = SubResource( 17 )
 parameters/Idle/blend_position = Vector2( 0.722222, -0.256034 )
 parameters/Run/blend_position = Vector2( 0, 0 )
+
+[node name="PlayerInteraction" parent="." instance=ExtResource( 2 )]
+margin_left = 14.0
+margin_top = -20.0
+margin_right = 14.0
+margin_bottom = -20.0
+rect_scale = Vector2( 0.5, 0.5 )
