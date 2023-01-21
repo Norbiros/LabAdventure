@@ -3,8 +3,8 @@ on: push
 
 env:
   GODOT_VERSION: 3.3.4
-  EXPORT_NAME: Geek Competition
-  PROJECT_PATH: Geek Competition
+  EXPORT_NAME: GeekCompetition
+  PROJECT_PATH: GeekCompetition
   
 jobs:
   export-windows:
