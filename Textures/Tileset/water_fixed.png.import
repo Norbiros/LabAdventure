@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/big_bush4.png-273d701c59ec6a8d87ef8247565d8909.stex"
+path="res://.import/water_fixed.png-0ae4f1724bb02ff71367df8b85d43740.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Natural/Plants/big_bush4.png"
-dest_files=[ "res://.import/big_bush4.png-273d701c59ec6a8d87ef8247565d8909.stex" ]
+source_file="res://Textures/Tileset/water_fixed.png"
+dest_files=[ "res://.import/water_fixed.png-0ae4f1724bb02ff71367df8b85d43740.stex" ]
 
 [params]
 

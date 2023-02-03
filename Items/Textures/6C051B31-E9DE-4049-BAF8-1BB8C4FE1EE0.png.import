@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/big_bush1.png-3d7edff531fd667cf037900b8b706a19.stex"
+path="res://.import/6C051B31-E9DE-4049-BAF8-1BB8C4FE1EE0.png-fda03cc83e1d5d6df4c8a71debe35e52.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Natural/Plants/big_bush1.png"
-dest_files=[ "res://.import/big_bush1.png-3d7edff531fd667cf037900b8b706a19.stex" ]
+source_file="res://Items/Textures/6C051B31-E9DE-4049-BAF8-1BB8C4FE1EE0.png"
+dest_files=[ "res://.import/6C051B31-E9DE-4049-BAF8-1BB8C4FE1EE0.png-fda03cc83e1d5d6df4c8a71debe35e52.stex" ]
 
 [params]
 
