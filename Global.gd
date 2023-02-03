@@ -11,7 +11,7 @@ var start_position = Vector2.ZERO
 var teleporting = false
 var show_tp_animation = false
 var SAVE_KEY = "global"
-var player_interactions = []
+var player_interactions = {}
 
 var level_name = "Untitled"
 

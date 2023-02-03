@@ -66,7 +66,7 @@ func _input(event):
 		var el = inventory.items[item_index].duplicate() 
 		if i is Item:
 			var amount = inventory.items[item_index].amount
-			if amount / 2 == 0 || amount - amount / 2 == 0:
+			if amount / 2 == 0 || amount - amount / 2 == 0 or amount == 1:
 				return
 			i.amount = floor(amount / 2)
 			el.amount = amount - floor(amount / 2)

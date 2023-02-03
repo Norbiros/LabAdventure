@@ -13,4 +13,9 @@ func run_interaction():
 
 func _on_Area2D_body_entered(body):
 	if body.name  == "Player" and interacted == false:
-		Global.player_interactions.append(["Kliknij, aby zabrać wodę podnieść!", self, "run_interaction"])
+		Global.player_interactions[self.name] = ["Kliknij, aby zabrać wodę podnieść!", self, "run_interaction"]
+
+
+func _on_Area2D_body_exited(body):
+	if body.name  == "Player":
+		Global.player_interactions.erase(self.name)

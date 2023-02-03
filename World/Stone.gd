@@ -4,7 +4,7 @@ var interacted = false
 
 func _on_Stone_body_entered(body):
 	if body.name  == "Player" and interacted == false:
-		Global.player_interactions.append(["Kliknij, aby podnieść!", self, "run_interaction"])
+		Global.player_interactions[self.name] = ["Kliknij, aby podnieść!", self, "run_interaction"]
 
 func run_interaction():
 	interacted = true
@@ -23,3 +23,8 @@ func run_interaction():
 	car.z_index = 10
 	get_owner().call_deferred("add_child", car)
 	queue_free()
+
+
+func _on_Stone_body_exited(body):
+	if body.name  == "Player":
+		Global.player_interactions.erase(self.name)
