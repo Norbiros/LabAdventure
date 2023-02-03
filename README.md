@@ -1,3 +1,3 @@
-# GeekCompetition Project (we don't have name lol)
+# LabAdventure
 
-Awesome Godot game about chemistry!
+Awesome Godot game about chemistry for competition!
