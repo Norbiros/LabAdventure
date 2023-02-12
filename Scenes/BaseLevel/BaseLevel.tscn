@@ -1,14 +1,21 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://UI/HUD/Inventory/InventoryContainer.gd" type="Script" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/FullTransition.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
 [ext_resource path="res://World/Grass.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Natural/Vulcan/black_rock2.png" type="Texture" id=6]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
 [ext_resource path="res://World/Tree.png" type="Texture" id=8]
 [ext_resource path="res://UI/HUD/Inventory/InventoryDisplay.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Textures/Natural/Vulcan/lava_rock.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Natural/Vulcan/black_rock.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Natural/Vulcan/lava_bush.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Natural/Vulcan/vulcan_1.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Natural/Vulcan/vulcan_2.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Tileset/Biom_wulkaniczny_03.png" type="Texture" id=16]
 
 [sub_resource type="TileSet" id=101]
 0/name = "DirtTileset.png 0"
@@ -66,6 +73,60 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
+
+[sub_resource type="TileSet" id=106]
+0/name = "Biom_wulkaniczny_03.png 0"
+0/texture = ExtResource( 16 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 0, 16, 16 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [ Vector3( 0, 0, 3 ) ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Biom_wulkaniczny_03.png 1"
+1/texture = ExtResource( 16 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 16, 16 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 16, 16 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="SpriteFrames" id=105]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
 
 [node name="BaseLevel" type="Node2D"]
 
@@ -135,3 +196,35 @@ margin_bottom = 88.0
 autoplay = "Day_and_Night"
 anims/Day_and_Night = SubResource( 103 )
 anims/RESET = SubResource( 104 )
+
+[node name="BlackRock2" type="Sprite" parent="."]
+position = Vector2( -184, 24 )
+texture = ExtResource( 6 )
+
+[node name="BlackRock" type="Sprite" parent="."]
+position = Vector2( -144, 0 )
+texture = ExtResource( 12 )
+
+[node name="LavaBush" type="Sprite" parent="."]
+position = Vector2( -120, 32 )
+texture = ExtResource( 13 )
+
+[node name="LavaRock" type="Sprite" parent="."]
+position = Vector2( 88, -72 )
+texture = ExtResource( 11 )
+
+[node name="Vulcan2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -152, -72 )
+texture = ExtResource( 15 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 106 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -262145, 1, 0, -327680, 1, 0, -327679, 1, 0, -327678, 0, 0, -327677, 1, 0, -327676, 1, 0, -196609, 1, 0, -262144, 0, 0, -262143, 1, 0, -262142, 0, 0, -262141, 0, 0, -262140, 1, 0, -262139, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 1, 0, -196607, 0, 0, -196606, 1, 0, -196605, 0, 0, -196604, 0, 0, -196603, 1, 0, -65538, 1, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 1, 0, -65531, 1, 0 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 32, -88 )
+frames = SubResource( 105 )
+playing = true

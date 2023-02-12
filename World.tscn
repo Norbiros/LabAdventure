@@ -500,7 +500,7 @@ anims/RESET = SubResource( 51 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 42 )
-volume_db = -27.5
+volume_db = -11.9
 
 [node name="Gravestone" type="Sprite" parent="."]
 position = Vector2( 32, -48 )
