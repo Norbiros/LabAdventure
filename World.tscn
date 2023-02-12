@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -11,7 +11,7 @@
 [ext_resource path="res://Util/ItemDrop.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World/Stone.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Textures/Natural/Plants/flower4.png" type="Texture" id=11]
-[ext_resource path="res://UI/HUD/GUI/GUI.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Textures/Natural/Stone/gravestone.png" type="Texture" id=13]
 [ext_resource path="res://Textures/Natural/Plants/flower1.png" type="Texture" id=15]
 [ext_resource path="res://Textures/Natural/Plants/flower3.png" type="Texture" id=16]
 [ext_resource path="res://Textures/Natural/Plants/bush3.png" type="Texture" id=17]
@@ -31,7 +31,6 @@
 [ext_resource path="res://Textures/Natural/Stone/stone5.png" type="Texture" id=36]
 [ext_resource path="res://Textures/Natural/Wood/wood5.png" type="Texture" id=38]
 [ext_resource path="res://Textures/Natural/Wood/fence3.png" type="Texture" id=40]
-[ext_resource path="res://Util/Debug/DebugInterface.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Music and Sounds/Music.mp3" type="AudioStream" id=42]
 [ext_resource path="res://World.gd" type="Script" id=43]
 [ext_resource path="res://Textures/Tileset/water.png" type="Texture" id=44]
@@ -199,6 +198,7 @@ tracks/0/keys = {
 script = ExtResource( 43 )
 
 [node name="Camera" type="Camera2D" parent="."]
+position = Vector2( 153, 204 )
 current = true
 limit_left = -1000
 limit_top = -1000
@@ -208,6 +208,7 @@ smoothing_enabled = true
 smoothing_speed = 8.0
 
 [node name="Background" type="Sprite" parent="."]
+position = Vector2( 6, 8 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1000, 1000 )
@@ -239,7 +240,7 @@ position = Vector2( -9, 145 )
 position = Vector2( -20, 132 )
 
 [node name="Bush10" parent="YSort/Natural" instance=ExtResource( 1 )]
-position = Vector2( 233, 30 )
+position = Vector2( 169, 56 )
 
 [node name="Bush6" parent="YSort/Natural" instance=ExtResource( 1 )]
 position = Vector2( 144, -82 )
@@ -254,7 +255,7 @@ position = Vector2( -200, 40 )
 position = Vector2( 144, 144 )
 
 [node name="Bush4" parent="YSort/Natural" instance=ExtResource( 1 )]
-position = Vector2( 120, 32 )
+position = Vector2( 115, 21 )
 
 [node name="Grass2" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 16, 24 )
@@ -479,8 +480,10 @@ position = Vector2( -65, -37 )
 resource = "res://Items/Resources/Plank.tres"
 
 [node name="Player" parent="YSort" groups=["save"] instance=ExtResource( 2 )]
+position = Vector2( 153, 204 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+visible = false
 remote_path = NodePath("../../../Camera")
 
 [node name="Portal" parent="." instance=ExtResource( 8 )]
@@ -495,19 +498,12 @@ autoplay = "Day_and_Night"
 anims/Day_and_Night = SubResource( 50 )
 anims/RESET = SubResource( 51 )
 
-[node name="GUI" parent="." instance=ExtResource( 12 )]
-margin_left = -70.0
-margin_top = 2.0
-margin_right = -70.0
-margin_bottom = 2.0
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 42 )
 volume_db = -27.5
 
-[node name="Debug" type="CanvasLayer" parent="."]
-visible = false
+[node name="Gravestone" type="Sprite" parent="."]
+position = Vector2( 32, -48 )
+texture = ExtResource( 13 )
 
-[node name="DebugInterface" parent="Debug" instance=ExtResource( 41 )]
-margin_right = 280.0
-margin_bottom = 120.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

@@ -11,6 +11,7 @@ func _ready():
 	show()
 
 func _unhandled_key_input(_event) -> void:
+
 	if Input.is_action_just_pressed("inventory_toggle"):
 		Global.inventory_state = !Global.inventory_state
 	if Input.is_action_just_pressed("inventory_close"):

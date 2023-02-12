@@ -35,15 +35,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
 
-[node name="GrassBackground" type="Sprite" parent="."]
-position = Vector2( 160, 92 )
-scale = Vector2( 5, 2.875 )
-texture = ExtResource( 5 )
-
 [node name="BackgroundBlur" type="TextureRect" parent="."]
+visible = false
 material = SubResource( 7 )
-anchor_right = 1.0
-anchor_bottom = 1.0
+margin_right = 320.0
+margin_bottom = 165.0
 texture = ExtResource( 3 )
 expand = true
 script = SubResource( 8 )
@@ -51,26 +47,37 @@ script = SubResource( 8 )
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+margin_right = 320.0
+margin_bottom = 180.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="GrassBackground" type="Sprite" parent="MarginContainer"]
+visible = false
+position = Vector2( 160, 92 )
+scale = Vector2( 5, 2.875 )
+texture = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_right = 320.0
-margin_bottom = 165.0
+margin_bottom = 180.0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 320.0
-margin_bottom = 80.0
+margin_bottom = 88.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 1 )
-text = "Geek Competition"
+text = "LabAdventure"
 align = 1
 valign = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 84.0
+margin_top = 92.0
 margin_right = 320.0
-margin_bottom = 165.0
+margin_bottom = 180.0
 rect_min_size = Vector2( 0, 81 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -78,7 +85,7 @@ custom_constants/separation = 5
 
 [node name="MainButtons" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 margin_right = 320.0
-margin_bottom = 81.0
+margin_bottom = 88.0
 rect_min_size = Vector2( 0, 81 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -90,18 +97,11 @@ margin_right = 320.0
 margin_bottom = 0.0
 button_name = "Graj"
 
-[node name="TitleMenuButton2" parent="MarginContainer/VBoxContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
+[node name="TitleMenuButton3" parent="MarginContainer/VBoxContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
 anchor_right = 0.0
 margin_top = 30.0
 margin_right = 320.0
 margin_bottom = 30.0
-button_name = "Ustawienia"
-
-[node name="TitleMenuButton3" parent="MarginContainer/VBoxContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
-anchor_right = 0.0
-margin_top = 60.0
-margin_right = 320.0
-margin_bottom = 60.0
 button_name = "Zamknij"
 
 [node name="SelectSave" type="CenterContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
