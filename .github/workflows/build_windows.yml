@@ -3,30 +3,34 @@ name: Build Windows
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
-  matrix:
-    - OS: Windows-2019
+  OS: Windows-2019
 
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
+jobs:
+  build:
+    runs-on: ${{ env.OS }}
 
-  - name: Setup dependencies
-    run: |
-      choco install -y git
-      choco install -y visualstudio2019buildtools
-      choco install -y godot
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-  - name: Build game
-    run: |
-      cd godot_project
-      godot --export "Windows Desktop" game.exe
+      - name: Setup dependencies
+        run: |
+          choco install -y git
+          choco install -y visualstudio2019buildtools
+          choco install -y godot
 
-  - name: Upload artifact
-    uses: actions/upload-artifact@v2
-    with:
-      name: game_windows
-      path: godot_project/game.exe
+      - name: Build game
+        run: |
+          cd godot_project
+          godot --export "Windows Desktop" game.exe
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: game_windows
+          path: godot_project/game.exe
+
 
