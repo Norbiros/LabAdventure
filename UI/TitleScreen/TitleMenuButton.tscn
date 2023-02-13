@@ -27,23 +27,19 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[node name="TitleMenuButton" type="Control"]
+[node name="TitleMenuButton2" type="CenterContainer"]
 anchor_right = 1.0
 margin_bottom = 24.0
-script = ExtResource( 2 )
-
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 320.0
-margin_bottom = 22.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/margin_right = 50
-custom_constants/margin_left = 50
+script = ExtResource( 2 )
 
-[node name="TitleMenuButton" type="Button" parent="MarginContainer"]
-margin_left = 50.0
-margin_right = 270.0
+[node name="TitleMenuButton" type="Button" parent="."]
+margin_left = 60.0
+margin_top = 1.0
+margin_right = 260.0
 margin_bottom = 22.0
+rect_min_size = Vector2( 200, 0 )
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -54,4 +50,4 @@ custom_styles/normal = SubResource( 4 )
 enabled_focus_mode = 0
 text = "Graj"
 
-[connection signal="button_down" from="MarginContainer/TitleMenuButton" to="." method="_on_TitleMenuButton_button_down"]
+[connection signal="button_down" from="TitleMenuButton" to="." method="_on_TitleMenuButton_button_down"]

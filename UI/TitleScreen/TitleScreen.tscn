@@ -49,20 +49,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-margin_right = 320.0
-margin_bottom = 180.0
+margin_right = 160.0
+margin_bottom = 90.0
+rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 expand = true
-
-[node name="GrassBackground" type="Sprite" parent="MarginContainer"]
-visible = false
-position = Vector2( 160, 92 )
-scale = Vector2( 5, 2.875 )
-texture = ExtResource( 5 )
+stretch_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_right = 320.0
 margin_bottom = 180.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 320.0
@@ -89,19 +87,19 @@ margin_bottom = 88.0
 rect_min_size = Vector2( 0, 81 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 30
+custom_constants/separation = -22
 
 [node name="TitleMenuButton" parent="MarginContainer/VBoxContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
 anchor_right = 0.0
 margin_right = 320.0
-margin_bottom = 0.0
+margin_bottom = 55.0
 button_name = "Graj"
 
 [node name="TitleMenuButton3" parent="MarginContainer/VBoxContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
 anchor_right = 0.0
-margin_top = 30.0
+margin_top = 33.0
 margin_right = 320.0
-margin_bottom = 30.0
+margin_bottom = 88.0
 button_name = "Zamknij"
 
 [node name="SelectSave" type="CenterContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]

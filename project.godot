@@ -53,6 +53,8 @@ _global_script_class_icons={
 config/name="LabAdventure"
 config/description="Project for Geek Competition!"
 run/main_scene="res://UI/TitleScreen/TitleScreen.tscn"
+boot_splash/show_image=false
+boot_splash/bg_color=Color( 0.0941176, 0.0941176, 0.0941176, 1 )
 config/icon="res://icon.png"
 config/version="0.0.3"
 
