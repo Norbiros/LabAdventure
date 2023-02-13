@@ -10,7 +10,7 @@ env:
 
 jobs:
   build:
-    runs-on: ${{ env.OS }}
+    runs-on: $OS
 
     steps:
       - name: Checkout code
