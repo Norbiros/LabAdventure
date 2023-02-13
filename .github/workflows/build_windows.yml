@@ -5,12 +5,9 @@ on:
     branches:
       - master
 
-env:
-  OS: Windows-2019
-
 jobs:
   build:
-    runs-on: $OS
+    runs-on: Windows-2019
 
     steps:
       - name: Checkout code
@@ -32,5 +29,4 @@ jobs:
         with:
           name: game_windows
           path: godot_project/game.exe
-
 
