@@ -21,7 +21,7 @@ jobs:
 
       - name: Build game
         run: |
-          godot --export "Windows Desktop" game.exe
+          godot --export "Windows Desktop" Geek Competition.exe
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
