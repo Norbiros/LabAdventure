@@ -27,7 +27,7 @@ jobs:
           ls
           cd ../
           ls
-          dir /s *LabAdventure.exe*
+          dir  /s /b *.exe | findstr /v .exe.
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
