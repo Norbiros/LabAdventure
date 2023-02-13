@@ -21,7 +21,6 @@ var inventory = preload("res://UI/HUD/Inventory/Inventory.tres") # So it is save
 func _ready():
 	emit_signal("itembar_changed")
 	emit_signal("teleported_in") # Remove stupid debugger warning
-	print(123)
 	OS.min_window_size = Vector2(1280, 720)
 
 
