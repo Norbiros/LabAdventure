@@ -21,12 +21,11 @@ jobs:
 
       - name: Build game
         run: |
-          cd godot_project
           godot --export "Windows Desktop" game.exe
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: game_windows
-          path: godot_project/game.exe
+          path: game.exe
 
