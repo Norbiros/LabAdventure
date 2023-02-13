@@ -21,11 +21,12 @@ jobs:
 
       - name: Build game
         run: |
-          godot --export "Windows Desktop" Geek Competition.exe
+          godot --export "Windows Desktop" LabAdventure.exe
+          ls
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: game_windows
-          path: Geek Competition.exe
+          path: LabAdventure.exe
 
