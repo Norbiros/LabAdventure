@@ -23,6 +23,9 @@ jobs:
         run: |
           godot --export "Windows Desktop" LabAdventure.exe
           ls
+          cd ../
+          ls
+          dir ../ *LabAdventure.exe*
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
