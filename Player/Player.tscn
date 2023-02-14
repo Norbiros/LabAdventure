@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/PlayerInteraction.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Textures/Other/player.png" type="Texture" id=3]
 [ext_resource path="res://Shadows/MediumShadow.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Other/shadow-water.png" type="Texture" id=5]
 
 [sub_resource type="Animation" id=27]
 resource_name = "IdleLeft"
@@ -264,6 +265,29 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
+[sub_resource type="Shader" id=34]
+code = "shader_type canvas_item;
+
+uniform float crop_left:hint_range(0.0,1.0,0.01) = 0.0;
+uniform float crop_right:hint_range(0.0,1.0,0.01) = 0.0;
+uniform float crop_top:hint_range(0.0,1.0,0.01) = 0.0;
+uniform float crop_bottom:hint_range(0.0,1.0,0.01) = 0.3;
+
+void fragment(){
+	vec4 color = texture(TEXTURE,UV);
+	if (UV.x<=crop_left || UV.x>=1.0-crop_right || UV.y>=1.0-crop_bottom || UV.y<=crop_top){
+		color.a = 0.0;
+	}
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=35]
+shader = SubResource( 34 )
+shader_param/crop_left = 0.0
+shader_param/crop_right = 0.0
+shader_param/crop_top = 0.0
+shader_param/crop_bottom = 0.3
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0
 height = 4.0
@@ -347,6 +371,7 @@ anims/idleDown = SubResource( 30 )
 anims/idleUp = SubResource( 33 )
 
 [node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 35 )
 position = Vector2( -1, -17 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 3 )
@@ -380,3 +405,9 @@ scale = Vector2( 1.1875, 1.2 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 6, 16, 4 )
+
+[node name="Shadow-water" type="Sprite" parent="."]
+visible = false
+position = Vector2( -2, -8 )
+scale = Vector2( 1.0625, 0.75 )
+texture = ExtResource( 5 )
