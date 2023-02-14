@@ -1,53 +1,39 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Textures/Fonts/Montserrat/montserrat_black.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Textures/Other/button.png" type="Texture" id=1]
 [ext_resource path="res://UI/TitleScreen/TitleMenuButton.gd" type="Script" id=2]
+[ext_resource path="res://Textures/Fonts/Comfortaa/Comfortaa-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Textures/Other/button-hover.png" type="Texture" id=4]
 
-[sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 0, 0, 0.490196 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0, 0, 0.686275 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0, 0, 0, 0.392157 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="DynamicFont" id=5]
+size = 14
+font_data = ExtResource( 3 )
 
 [node name="TitleMenuButton2" type="CenterContainer"]
 anchor_right = 1.0
-margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 2 )
 
-[node name="TitleMenuButton" type="Button" parent="."]
+[node name="TitleMenuButton" type="TextureButton" parent="."]
 margin_left = 60.0
-margin_top = 1.0
 margin_right = 260.0
-margin_bottom = 22.0
+margin_bottom = 20.0
 rect_min_size = Vector2( 200, 0 )
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 1 )
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
 enabled_focus_mode = 0
-text = "Graj"
+texture_normal = ExtResource( 1 )
+texture_hover = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="TitleMenuButton"]
+margin_left = -4.0
+margin_right = 204.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 5 )
+text = "Przycisk menu"
+align = 1
+valign = 1
 
 [connection signal="button_down" from="TitleMenuButton" to="." method="_on_TitleMenuButton_button_down"]

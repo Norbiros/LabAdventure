@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Textures/Fonts/SourceCodePro/SourceCodePro-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/TitleScreen/LoadSave.gd" type="Script" id=2]
+[ext_resource path="res://Textures/Fonts/Montserrat/montserrat_black.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 12
@@ -28,6 +29,9 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 3 )
+
 [node name="LoadSave" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -35,9 +39,9 @@ script = ExtResource( 2 )
 
 [node name="PlayGame" type="Button" parent="."]
 margin_left = -40.0
-margin_top = -16.0
+margin_top = -50.0
 margin_right = 40.0
-margin_bottom = 84.0
+margin_bottom = 50.0
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -46,14 +50,15 @@ custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 enabled_focus_mode = 0
-text = "Graja"
+text = ":)"
 clip_text = true
 
 [node name="Button" type="Button" parent="."]
 margin_left = 24.0
-margin_top = -24.0
-margin_right = 44.0
-margin_bottom = -4.0
+margin_top = -56.0
+margin_right = 48.0
+margin_bottom = -29.0
+custom_fonts/font = SubResource( 5 )
 text = "X"
 
 [connection signal="button_down" from="PlayGame" to="." method="_on_PlayGame_button_down"]

@@ -1,7 +1,7 @@
 extends Control
 
-onready var saves = $MarginContainer/VBoxContainer/VBoxContainer/SelectSave
-onready var main = $MarginContainer/VBoxContainer/VBoxContainer/MainButtons
+onready var saves = $MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/SelectSave
+onready var main = $MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MainButtons
 signal type_name()
 
 func _ready():

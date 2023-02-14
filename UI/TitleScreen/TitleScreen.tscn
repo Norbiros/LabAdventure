@@ -1,27 +1,14 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Textures/Fonts/SourceCodePro/SourceCodePro-Black.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/TitleScreen/TitleScreen.gd" type="Script" id=2]
-[ext_resource path="res://Util/inventory_background.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Fonts/Montserrat/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://UI/TitleScreen/LoadSave.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=5]
 [ext_resource path="res://UI/TitleScreen/TitleMenuButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/TitleScreen/LevelNameInput.gd" type="Script" id=7]
 [ext_resource path="res://Textures/Fonts/SourceCodePro/SourceCodePro-Regular.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Textures/Other/logo.png" type="Texture" id=9]
-
-[sub_resource type="Shader" id=6]
-code = "shader_type canvas_item;
-
-void fragment() {
-    vec4 color = texture(SCREEN_TEXTURE, SCREEN_UV, 2.5);
-    COLOR = color;
-}"
-
-[sub_resource type="ShaderMaterial" id=7]
-shader = SubResource( 6 )
-
-[sub_resource type="GDScript" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -30,28 +17,21 @@ font_data = ExtResource( 1 )
 [sub_resource type="DynamicFont" id=9]
 font_data = ExtResource( 8 )
 
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 3 )
+
 [node name="TitleScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
-
-[node name="BackgroundBlur" type="TextureRect" parent="."]
-visible = false
-material = SubResource( 7 )
-margin_right = 320.0
-margin_bottom = 165.0
-texture = ExtResource( 3 )
-expand = true
-script = SubResource( 8 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
-margin_right = 160.0
-margin_bottom = 90.0
-rect_scale = Vector2( 2, 2 )
+margin_right = 320.0
+margin_bottom = 180.0
 texture = ExtResource( 5 )
 expand = true
 stretch_mode = 2
@@ -64,7 +44,7 @@ grow_vertical = 0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 margin_right = 320.0
-margin_bottom = 88.0
+margin_bottom = 53.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 1 )
@@ -72,75 +52,96 @@ text = "LabAdventure"
 align = 1
 valign = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 92.0
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+margin_top = 57.0
 margin_right = 320.0
 margin_bottom = 180.0
-rect_min_size = Vector2( 0, 81 )
+custom_constants/margin_bottom = 13
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+margin_right = 320.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 0, 110 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 5
+alignment = 1
 
-[node name="MainButtons" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="MainButtons" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+margin_top = 14.0
 margin_right = 320.0
-margin_bottom = 88.0
+margin_bottom = 95.0
 rect_min_size = Vector2( 0, 81 )
 size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = -22
+custom_constants/separation = -20
 
-[node name="TitleMenuButton" parent="MarginContainer/VBoxContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
+[node name="TitleMenuButton" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
 anchor_right = 0.0
 margin_right = 320.0
-margin_bottom = 55.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_vertical = 1
 button_name = "Graj"
 
-[node name="TitleMenuButton3" parent="MarginContainer/VBoxContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
+[node name="TitleMenuButton3" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MainButtons" instance=ExtResource( 6 )]
 anchor_right = 0.0
-margin_top = 33.0
+margin_top = 30.0
 margin_right = 320.0
-margin_bottom = 88.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 1
+size_flags_vertical = 1
 button_name = "Zamknij"
 
-[node name="SelectSave" type="CenterContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="SelectSave" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 visible = false
 margin_right = 320.0
+margin_bottom = 110.0
 size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="SelectSaves" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/SelectSave"]
+[node name="SelectSaves" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/SelectSave"]
 margin_left = 60.0
+margin_top = 55.0
 margin_right = 260.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 custom_constants/separation = 100
 
-[node name="LoadSave" parent="MarginContainer/VBoxContainer/VBoxContainer/SelectSave/SelectSaves" instance=ExtResource( 4 )]
+[node name="LoadSave" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/SelectSave/SelectSaves" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 
-[node name="LoadSave2" parent="MarginContainer/VBoxContainer/VBoxContainer/SelectSave/SelectSaves" instance=ExtResource( 4 )]
+[node name="LoadSave2" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/SelectSave/SelectSaves" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 100.0
 margin_right = 100.0
 
-[node name="LoadSave3" parent="MarginContainer/VBoxContainer/VBoxContainer/SelectSave/SelectSaves" instance=ExtResource( 4 )]
+[node name="LoadSave3" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/SelectSave/SelectSaves" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 200.0
 margin_right = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="TypeName" type="CenterContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="TypeName" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 visible = false
-margin_top = 5.0
 margin_right = 320.0
-margin_bottom = 54.0
+margin_bottom = 110.0
 rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainer/TypeName"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TypeName"]
 margin_left = 45.0
+margin_top = 27.0
 margin_right = 275.0
-margin_bottom = 49.0
+margin_bottom = 83.0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/TypeName/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TypeName/VBoxContainer"]
 margin_right = 230.0
 margin_bottom = 21.0
 size_flags_horizontal = 3
@@ -150,12 +151,15 @@ text = "  Podaj nazwę świata:  "
 align = 1
 valign = 1
 
-[node name="LevelNameInput" type="LineEdit" parent="MarginContainer/VBoxContainer/VBoxContainer/TypeName/VBoxContainer"]
+[node name="LevelNameInput" type="LineEdit" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/TypeName/VBoxContainer"]
 margin_top = 25.0
 margin_right = 230.0
-margin_bottom = 49.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 10 )
 align = 1
-max_length = 20
+max_length = 15
 script = ExtResource( 7 )
 
 [node name="Logo" type="Sprite" parent="."]

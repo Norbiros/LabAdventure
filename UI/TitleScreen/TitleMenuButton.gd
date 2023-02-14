@@ -2,7 +2,7 @@ extends Control
 
 
 export(String) var button_name = ""
-onready var menuButton = $TitleMenuButton
+onready var menuButton = $TitleMenuButton/Label
 
 func _ready():
 	menuButton.text = button_name
