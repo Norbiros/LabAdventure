@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://UI/HUD/Inventory/InventoryContainer.gd" type="Script" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
@@ -15,7 +15,6 @@
 [ext_resource path="res://Textures/Natural/Vulcan/lava_bush.png" type="Texture" id=13]
 [ext_resource path="res://Textures/Natural/Vulcan/vulcan_1.png" type="Texture" id=14]
 [ext_resource path="res://Textures/Natural/Vulcan/vulcan_2.png" type="Texture" id=15]
-[ext_resource path="res://Textures/Tileset/Biom_wulkaniczny_03.png" type="Texture" id=16]
 
 [sub_resource type="TileSet" id=101]
 0/name = "DirtTileset.png 0"
@@ -76,7 +75,6 @@ tracks/0/keys = {
 
 [sub_resource type="TileSet" id=106]
 0/name = "Biom_wulkaniczny_03.png 0"
-0/texture = ExtResource( 16 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 16, 0, 16, 16 )
@@ -99,7 +97,6 @@ tracks/0/keys = {
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Biom_wulkaniczny_03.png 1"
-1/texture = ExtResource( 16 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 32, 0, 16, 16 )

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Biom_wulkaniczny_03.png-1b675db5db8c7712790b0d8f0318efdf.stex"
+path="res://.import/water-animated-left-down2.png-601390f59d8f8c4394fe6591ee75bb0b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Tileset/Biom_wulkaniczny_03.png"
-dest_files=[ "res://.import/Biom_wulkaniczny_03.png-1b675db5db8c7712790b0d8f0318efdf.stex" ]
+source_file="res://Textures/Tileset/water-animated-left-down2.png"
+dest_files=[ "res://.import/water-animated-left-down2.png-601390f59d8f8c4394fe6591ee75bb0b.stex" ]
 
 [params]
 
