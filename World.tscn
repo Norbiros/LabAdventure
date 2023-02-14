@@ -1,8 +1,7 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://World/Grass.png" type="Texture" id=3]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
 [ext_resource path="res://World/Well.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=6]
@@ -14,24 +13,14 @@
 [ext_resource path="res://Textures/Natural/Stone/gravestone.png" type="Texture" id=13]
 [ext_resource path="res://Textures/Natural/Plants/flower1.png" type="Texture" id=15]
 [ext_resource path="res://Textures/Natural/Plants/flower3.png" type="Texture" id=16]
-[ext_resource path="res://Textures/Natural/Plants/bush3.png" type="Texture" id=17]
 [ext_resource path="res://Textures/Natural/Stone/stone7.png" type="Texture" id=19]
-[ext_resource path="res://Textures/Natural/Plants/flower7.png" type="Texture" id=20]
 [ext_resource path="res://Textures/Natural/Wood/sign1.png" type="Texture" id=21]
 [ext_resource path="res://Textures/Natural/Plants/flower5.png" type="Texture" id=23]
-[ext_resource path="res://Textures/Natural/Stone/stone4.png" type="Texture" id=24]
-[ext_resource path="res://Textures/Natural/Stone/stone8.png" type="Texture" id=26]
-[ext_resource path="res://Textures/Natural/Plants/mushroom2.png" type="Texture" id=28]
-[ext_resource path="res://Textures/Natural/Wood/wood7.png" type="Texture" id=29]
-[ext_resource path="res://Textures/Natural/Plants/plant14.png" type="Texture" id=30]
-[ext_resource path="res://Textures/Natural/Stone/stone11.png" type="Texture" id=31]
-[ext_resource path="res://Textures/Natural/Wood/wood2.png" type="Texture" id=32]
-[ext_resource path="res://Textures/Natural/Stone/stone1.png" type="Texture" id=34]
 [ext_resource path="res://Textures/Natural/Plants/flower6.png" type="Texture" id=35]
 [ext_resource path="res://Textures/Natural/Stone/stone5.png" type="Texture" id=36]
 [ext_resource path="res://Textures/Natural/Wood/wood5.png" type="Texture" id=38]
 [ext_resource path="res://Textures/Natural/Wood/fence3.png" type="Texture" id=40]
-[ext_resource path="res://Music and Sounds/Music.mp3" type="AudioStream" id=42]
+[ext_resource path="res://Sounds/Music.mp3" type="AudioStream" id=42]
 [ext_resource path="res://World.gd" type="Script" id=43]
 [ext_resource path="res://Textures/Tileset/water.png" type="Texture" id=44]
 [ext_resource path="res://Textures/Tileset/water_and_sand_animated.tres" type="Texture" id=45]
@@ -208,7 +197,6 @@ smoothing_enabled = true
 smoothing_speed = 8.0
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 6, 8 )
 texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1000, 1000 )
@@ -231,7 +219,7 @@ z_index = 1
 [node name="Natural" type="YSort" parent="YSort"]
 
 [node name="Bush" parent="YSort/Natural" instance=ExtResource( 1 )]
-position = Vector2( -87, 175 )
+position = Vector2( -87, 178 )
 
 [node name="Bush8" parent="YSort/Natural" instance=ExtResource( 1 )]
 position = Vector2( -9, 145 )
@@ -257,37 +245,24 @@ position = Vector2( 144, 144 )
 [node name="Bush4" parent="YSort/Natural" instance=ExtResource( 1 )]
 position = Vector2( 115, 21 )
 
-[node name="Grass2" type="Sprite" parent="YSort/Natural"]
-position = Vector2( 16, 24 )
-texture = ExtResource( 3 )
-
-[node name="Grass" type="Sprite" parent="YSort/Natural"]
-position = Vector2( 280, 40 )
-texture = ExtResource( 3 )
-
 [node name="Flower1" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 63, -63 )
 texture = ExtResource( 15 )
 
 [node name="Flower3" type="Sprite" parent="YSort/Natural"]
 position = Vector2( -91, -15 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 16 )
 
 [node name="Flower4" type="Sprite" parent="YSort/Natural"]
 position = Vector2( -53, 14 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 11 )
 
 [node name="Flower19" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 35, 71 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 11 )
-
-[node name="Bush5" type="Sprite" parent="YSort/Natural"]
-position = Vector2( 80, -32 )
-texture = ExtResource( 17 )
-
-[node name="Flower7" type="Sprite" parent="YSort/Natural"]
-position = Vector2( -216, -128 )
-texture = ExtResource( 20 )
 
 [node name="Flower5" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 104, -176 )
@@ -301,25 +276,10 @@ texture = ExtResource( 35 )
 position = Vector2( -176, 160 )
 texture = ExtResource( 23 )
 
-[node name="Plant14" type="Sprite" parent="YSort/Natural"]
-position = Vector2( -40, 104 )
-texture = ExtResource( 30 )
-
 [node name="Flower9" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 27, 46 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 23 )
-
-[node name="Stone1" type="Sprite" parent="YSort/Natural"]
-position = Vector2( 112, 48 )
-texture = ExtResource( 34 )
-
-[node name="Stone4" type="Sprite" parent="YSort/Natural"]
-position = Vector2( -56, -96 )
-texture = ExtResource( 24 )
-
-[node name="Stone8" type="Sprite" parent="YSort/Natural"]
-position = Vector2( -104, -104 )
-texture = ExtResource( 26 )
 
 [node name="Stone7" type="Sprite" parent="YSort/Natural"]
 position = Vector2( -72, 72 )
@@ -329,33 +289,17 @@ texture = ExtResource( 19 )
 position = Vector2( 360, 32 )
 texture = ExtResource( 36 )
 
-[node name="Stone11" type="Sprite" parent="YSort/Natural"]
-position = Vector2( 144, -120 )
-texture = ExtResource( 31 )
-
 [node name="Fence3" type="Sprite" parent="YSort/Natural"]
 position = Vector2( -88, -96 )
 texture = ExtResource( 40 )
 
 [node name="Wood5" type="Sprite" parent="YSort/Natural"]
-position = Vector2( 112, -8 )
+position = Vector2( 75, 47 )
 texture = ExtResource( 38 )
-
-[node name="Wood7" type="Sprite" parent="YSort/Natural"]
-position = Vector2( 48, -136 )
-texture = ExtResource( 29 )
-
-[node name="Wood2" type="Sprite" parent="YSort/Natural"]
-position = Vector2( -208, 48 )
-texture = ExtResource( 32 )
 
 [node name="Sign1" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 208, -80 )
 texture = ExtResource( 21 )
-
-[node name="Mushroom2" type="Sprite" parent="YSort/Natural"]
-position = Vector2( 120, -40 )
-texture = ExtResource( 28 )
 
 [node name="Stone" parent="YSort/Natural" instance=ExtResource( 10 )]
 position = Vector2( -48, -88 )
@@ -399,10 +343,12 @@ position = Vector2( -101, -84 )
 
 [node name="Flower2" type="Sprite" parent="YSort/Natural"]
 position = Vector2( -386, -146 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 46 )
 
 [node name="Flower10" type="Sprite" parent="YSort/Natural"]
 position = Vector2( -436, -118 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 11 )
 
 [node name="Flower11" type="Sprite" parent="YSort/Natural"]
@@ -413,10 +359,6 @@ texture = ExtResource( 23 )
 [node name="Flower12" type="Sprite" parent="YSort/Natural"]
 position = Vector2( -428, -74 )
 texture = ExtResource( 35 )
-
-[node name="Flower13" type="Sprite" parent="YSort/Natural"]
-position = Vector2( -390, -56 )
-texture = ExtResource( 20 )
 
 [node name="Flower14" type="Sprite" parent="YSort/Natural"]
 position = Vector2( -476, -71 )
@@ -492,6 +434,7 @@ next_scene_path = "res://Scenes/Castle/Castle.tscn"
 player_spawn_location = Vector2( 150, 50 )
 
 [node name="DayAndNight" type="CanvasModulate" parent="."]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DayAndNight"]
 autoplay = "Day_and_Night"

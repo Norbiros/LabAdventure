@@ -1,13 +1,11 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://UI/HUD/Inventory/InventorySlotDisplay.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/HUD/Inventory/InventoryDisplay.gd" type="Script" id=2]
 [ext_resource path="res://UI/HUD/ItemBar/ItemBar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI/HUD/Inventory/inventory_background.png" type="Texture" id=4]
-[ext_resource path="res://Textures/Other/Screenshot from 2022-11-29 21-11-38.png" type="Texture" id=5]
 [ext_resource path="res://UI/HUD/Inventory/InventorySlotsContainer.gd" type="Script" id=6]
 [ext_resource path="res://Util/Fonts/PixelRPG.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://Textures/Other/Screenshot from 2022-11-29 21-30-23.png" type="Texture" id=8]
 [ext_resource path="res://UI/HUD/InventoryInteraction/InventoryInteractionDisplay.tscn" type="PackedScene" id=9]
 [ext_resource path="res://UI/HUD/Inventory/InventoryName.gd" type="Script" id=10]
 
@@ -247,72 +245,3 @@ margin_bottom = 68.0
 rect_scale = Vector2( 1, 1 )
 
 [node name="ItemBar" parent="." instance=ExtResource( 3 )]
-
-[node name="WIP" type="Control" parent="."]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="TextureRect2" type="TextureRect" parent="WIP"]
-visible = false
-margin_right = 320.0
-margin_bottom = 179.0
-texture = ExtResource( 5 )
-expand = true
-
-[node name="TextureRect3" type="TextureRect" parent="WIP"]
-visible = false
-margin_right = 320.0
-margin_bottom = 179.0
-texture = ExtResource( 8 )
-expand = true
-
-[node name="InventorySlotDisplay2" parent="WIP" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 149.0
-margin_top = 15.0
-margin_right = 172.0
-margin_bottom = 35.0
-rect_scale = Vector2( 1, 1 )
-rect_pivot_offset = Vector2( 9, 20 )
-
-[node name="InventorySlotDisplay3" parent="WIP" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 225.0
-margin_top = 46.0
-margin_right = 248.0
-margin_bottom = 66.0
-rect_scale = Vector2( 1, 1 )
-rect_pivot_offset = Vector2( 9, 20 )
-
-[node name="InventorySlotDisplay4" parent="WIP" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 75.0
-margin_top = 47.0
-margin_right = 98.0
-margin_bottom = 67.0
-rect_scale = Vector2( 1, 1 )
-rect_pivot_offset = Vector2( 9, 20 )
-
-[node name="InventorySlotDisplay5" parent="WIP" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 123.0
-margin_top = 46.0
-margin_right = 146.0
-margin_bottom = 66.0
-rect_scale = Vector2( 1, 1 )
-rect_pivot_offset = Vector2( 9, 20 )
-
-[node name="InventorySlotDisplay6" parent="WIP" instance=ExtResource( 1 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 185.0
-margin_top = 47.0
-margin_right = 208.0
-margin_bottom = 67.0
-rect_scale = Vector2( 1, 1 )
-rect_pivot_offset = Vector2( 9, 20 )
