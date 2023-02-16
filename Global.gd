@@ -6,6 +6,7 @@ signal start_creating_game(level)
 signal remove_save(level)
 signal start_game(level)
 signal pressed_menu_button(button)
+signal inventory_closed()
 
 var start_position = Vector2.ZERO
 var teleporting = false
@@ -33,4 +34,6 @@ func load(save_game : Resource):
 
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
-		GameSaver.save()
+		if get_tree().get_current_scene().get_name() != "TitleScreen":
+			emit_signal("inventory_closed")
+			GameSaver.save()

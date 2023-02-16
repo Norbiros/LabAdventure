@@ -13,8 +13,7 @@
 extends Node
 
 const SaveGame = preload('res://Util/Saves/SaveGame.gd')
-# TODO: Use project setting to save to res://debug vs user://
-var SAVE_FOLDER: String = "user://"#"res://debug/save"
+var SAVE_FOLDER: String = "user://" #"res://debug/save"
 var SAVE_NAME_TEMPLATE: String = "save_%03d.tres"
 
 var saveGameResource: Resource
@@ -29,6 +28,7 @@ func load_level():
 
 
 func save():
+	print("123")
 	if level_name == "": return
 	save_level(gameID)
 

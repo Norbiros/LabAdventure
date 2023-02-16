@@ -35,3 +35,4 @@ func _unhandled_key_input(_event) -> void:
 		inventorySlots.hide()
 		textureRect.hide()
 		inventoryInteraction.hide()
+		Global.emit_signal("inventory_closed")

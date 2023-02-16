@@ -1,9 +1,33 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://UI/HUD/InventoryInteraction/InventoryInteractionSlotDisplay.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/HUD/InventoryInteraction/InventoryInteractionDisplay.gd" type="Script" id=2]
-[ext_resource path="res://UI/HUD/InventoryInteraction/craft_arrow.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Other/craft_arrow_white.png" type="Texture" id=3]
 [ext_resource path="res://UI/HUD/InventoryInteraction/InventoryCraftedSlotDisplay.gd" type="Script" id=4]
+[ext_resource path="res://Textures/Other/craft_arrow.png" type="Texture" id=5]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float crop_left:hint_range(0.0,1.0,0.01) = 0.0;
+uniform float crop_right:hint_range(0.0,1.0,0.01) = 0.75;
+uniform float crop_top:hint_range(0.0,1.0,0.01) = 0.0;
+uniform float crop_bottom:hint_range(0.0,1.0,0.01) = 0.0;
+
+void fragment(){
+	vec4 color = texture(TEXTURE,UV);
+	if (UV.x<=crop_left || UV.x>=1.0-crop_right || UV.y>=1.0-crop_bottom || UV.y<=crop_top){
+		color.a = 0.0;
+	}
+	COLOR = color;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/crop_left = 0.0
+shader_param/crop_right = 0.75
+shader_param/crop_top = 0.0
+shader_param/crop_bottom = 0.0
 
 [node name="InventoryInteractionDisplay" type="Control"]
 anchor_right = 1.0
@@ -34,5 +58,11 @@ script = ExtResource( 4 )
 
 [node name="CraftArrow" type="Sprite" parent="."]
 position = Vector2( 153, 54 )
-scale = Vector2( 0.882812, 0.796875 )
+scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 3 )
+
+[node name="CraftArrowFull" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 153, 54 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 5 )

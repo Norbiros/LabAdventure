@@ -7,10 +7,7 @@ var displayItem = null
 
 func _ready():
 	display_item(null)
-	get_parent().connect("crafted", self, "_crafted")
-
-func _crafted():
-	display_item(null)
+	get_parent().connect("crafted", self, "_ended_crafting")
 
 func display_item(item):
 	displayItem = item
@@ -46,6 +43,8 @@ func drag_data(item, _item_index):
 		var data = {}
 		data.item = item
 		data.item_index = -1
+		get_parent().time_left = -1.0
+		get_parent().start_time = -1.0
 		inventory.drag_data = data
 		return data
 
@@ -54,8 +53,12 @@ func can_drop_data(_position, data):
 
 func drop_data(_position, data):
 	display_item(data.item)
-	get_parent().emit_signal("show_crafting_recepies", data.item)
+	get_parent().emit_signal("start_crafting", data.item, 10.0)
+
+func _ended_crafting(item):
+	get_parent().emit_signal("show_crafting_recepies", item)
 	inventory.emit_signal("items_changed", [0])
 	Global.emit_signal("itembar_changed")
 	inventory.drag_data = null 
 	inventory.hideSlot = true
+	display_item(null)

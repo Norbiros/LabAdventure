@@ -9,6 +9,7 @@ var displayItem = null
 
 func _ready():
 	get_parent().connect("show_crafting_recepies", self, "_show_crafting")
+	Global.connect("inventory_closed", self, "_on_inventory_close")
 	display_item(null)
 
 func display_item(item):
@@ -31,7 +32,6 @@ func get_drag_data(_position):
 	var item_index = get_index()
 	
 	if displayItem is Item:
-		get_parent().emit_signal("crafted")
 		var dragPreview = inventory.gen_drag_preview(displayItem)
 	
 		set_drag_preview(dragPreview)
@@ -59,5 +59,8 @@ func can_drop_data(_position, data):
 	return data is Dictionary and data.has("item")
 
 func drop_data(_position, data):
-	inventory.set_item(data.item_index, data.item)
+	inventory.add_item(data.item)
 
+func _on_inventory_close():
+	if displayItem != null: inventory.add_item(displayItem)
+	displayItem = null
