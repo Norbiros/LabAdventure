@@ -5,7 +5,7 @@ signal crafted()
 
 var inventory = preload("res://UI/HUD/Inventory/Inventory.tres")
 
-func can_drop_data(_position, data):
+func can_drop_data(_position, _data):
 	return true
 
 func drop_data(_position, data):

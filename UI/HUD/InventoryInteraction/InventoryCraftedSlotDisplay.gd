@@ -40,7 +40,7 @@ func get_drag_data(_position):
 		return drag
 	display_item(null)
 
-func drag_data(item, item_index):
+func drag_data(item, _item_index):
 	if item is Item:
 		var data = {}
 		data.item = item

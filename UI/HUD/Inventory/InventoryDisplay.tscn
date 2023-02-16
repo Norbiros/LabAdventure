@@ -29,12 +29,13 @@ texture = ExtResource( 4 )
 
 [node name="InventoryName" type="RichTextLabel" parent="TextureRect"]
 margin_left = 105.0
-margin_top = 21.0
-margin_right = 224.0
-margin_bottom = 42.0
+margin_top = 20.0
+margin_right = 264.0
+margin_bottom = 41.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 1 )
 text = "EKWIPUNEK"
+fit_content_height = true
 script = ExtResource( 10 )
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="TextureRect"]

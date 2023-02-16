@@ -286,7 +286,7 @@ shader = SubResource( 34 )
 shader_param/crop_left = 0.0
 shader_param/crop_right = 0.0
 shader_param/crop_top = 0.0
-shader_param/crop_bottom = 0.3
+shader_param/crop_bottom = 0.0
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.0

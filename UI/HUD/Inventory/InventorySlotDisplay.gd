@@ -59,7 +59,7 @@ func drop_data(_position, data):
 
 var touchingMouse = false
 	
-func _input(event):
+func _input(_event):
 	if get_index() == inventory.mouse && Input.is_action_pressed("inventory_split") && inventory.drag_data == null:
 		var item_index = get_index()
 		var i = inventory.items[item_index].duplicate()

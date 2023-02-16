@@ -4,8 +4,8 @@
 [ext_resource path="res://Shadows/LargeShadow.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 9.94941
-height = 12.1008
+radius = 5.97471
+height = 18.0502
 
 [node name="Bush" type="KinematicBody2D"]
 
@@ -15,7 +15,7 @@ scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, -9 )
+position = Vector2( 1, -5 )
 rotation = 1.57584
 shape = SubResource( 1 )
 

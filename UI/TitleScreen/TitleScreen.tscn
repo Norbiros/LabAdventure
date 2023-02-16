@@ -4,11 +4,14 @@
 [ext_resource path="res://UI/TitleScreen/TitleScreen.gd" type="Script" id=2]
 [ext_resource path="res://Textures/Fonts/Montserrat/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://UI/TitleScreen/LoadSave.tscn" type="PackedScene" id=4]
-[ext_resource path="res://World/GrassBackground.png" type="Texture" id=5]
 [ext_resource path="res://UI/TitleScreen/TitleMenuButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/TitleScreen/LevelNameInput.gd" type="Script" id=7]
 [ext_resource path="res://Textures/Fonts/SourceCodePro/SourceCodePro-Regular.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Textures/Other/logo.png" type="Texture" id=9]
+
+[sub_resource type="StreamTexture" id=11]
+flags = 2
+load_path = "res://.import/GrassBackground.png-97f32375e80ccfc9d4addd18e4430882.stex"
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -32,7 +35,7 @@ anchor_bottom = 1.0
 [node name="TextureRect" type="TextureRect" parent="MarginContainer"]
 margin_right = 320.0
 margin_bottom = 180.0
-texture = ExtResource( 5 )
+texture = SubResource( 11 )
 expand = true
 stretch_mode = 2
 

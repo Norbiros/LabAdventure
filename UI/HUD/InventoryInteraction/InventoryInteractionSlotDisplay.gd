@@ -41,7 +41,7 @@ func get_drag_data(_position):
 		return drag
 	display_item(null)
 
-func drag_data(item, item_index):
+func drag_data(item, _item_index):
 	if item is Item:
 		var data = {}
 		data.item = item
@@ -53,8 +53,6 @@ func can_drop_data(_position, data):
 	return data is Dictionary and data.has("item")
 
 func drop_data(_position, data):
-	var my_item_index = get_index()
-	var my_item = inventory.items[my_item_index]
 	display_item(data.item)
 	get_parent().emit_signal("show_crafting_recepies", data.item)
 	inventory.emit_signal("items_changed", [0])

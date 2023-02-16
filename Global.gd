@@ -12,6 +12,7 @@ var teleporting = false
 var show_tp_animation = false
 var SAVE_KEY = "global"
 var player_interactions = {}
+var is_near_crafting = false
 
 var level_name = "Untitled"
 
