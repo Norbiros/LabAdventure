@@ -1,9 +1,9 @@
 extends Control
 
 onready var craftArrow = get_node("CraftArrowFull")
-signal show_crafting_recepies(item)
-signal crafted(item)
-signal start_crafting(item, time)
+signal show_crafting_recepies(item, second_item)
+signal crafted(item, second_item)
+signal start_crafting(item, time, second_item)
 
 var inventory = preload("res://UI/HUD/Inventory/Inventory.tres")
 var time_left = -1.0
@@ -11,6 +11,7 @@ var start_time = -1.0
 const TIMER_SPEED = 0.25
 var timer = Timer.new()
 var item_to_craft = null
+var second_item_to_craft = null
 
 func _ready():
 	connect("start_crafting", self, "_start_crafting")
@@ -20,10 +21,11 @@ func _ready():
 	add_child(timer)
 	timer.start()
 
-func _start_crafting(item, time):
+func _start_crafting(item, time, second_item):
 	time_left = time
 	start_time = time
 	item_to_craft = item
+	second_item_to_craft = second_item
 
 func timer_tick():
 	if time_left < 0:
@@ -31,7 +33,7 @@ func timer_tick():
 		return
 	if time_left == 0:
 		time_left -= TIMER_SPEED
-		emit_signal("crafted", item_to_craft)
+		emit_signal("crafted", item_to_craft, second_item_to_craft)
 		return
 	var value = ((time_left / start_time) * 0.5) + 0.25
 	craftArrow.material.set_shader_param("crop_right",value)

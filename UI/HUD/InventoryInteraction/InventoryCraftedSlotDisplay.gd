@@ -48,9 +48,13 @@ func drag_data(item, _item_index):
 		inventory.drag_data = data
 		return data
 		
-func _show_crafting(item):
+func _show_crafting(item, second_item):
 	display_item(null)
-	if get_index() == 1 and item is Item and item.name == "IronOre":
+	if item == null and second_item != null:
+		item = second_item
+		second_item = null
+		
+	if get_index() == 2 and item is Item and item.name == "IronOre":
 		var i = load("res://Items/Resources/IronIngot.tres")
 		i.amount = floor(item.amount / 2) + 1
 		display_item(i)

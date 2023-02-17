@@ -35,34 +35,40 @@ anchor_bottom = 1.0
 script = ExtResource( 2 )
 
 [node name="InventoryInteractionSlotDisplay" parent="." instance=ExtResource( 1 )]
-margin_left = 98.0
+margin_left = 81.0
+margin_top = 44.0
+margin_right = -217.0
+margin_bottom = -114.0
+
+[node name="InventoryInteractionSlotDisplay2" parent="." instance=ExtResource( 1 )]
+margin_left = 109.0
 margin_top = 43.0
-margin_right = -200.0
+margin_right = -189.0
 margin_bottom = -115.0
 
 [node name="InventoryCraftedSlotDisplay" parent="." instance=ExtResource( 1 )]
-margin_left = 185.0
+margin_left = 195.0
 margin_top = 43.0
-margin_right = -113.0
+margin_right = -103.0
 margin_bottom = -115.0
 rect_pivot_offset = Vector2( 2, 8 )
 script = ExtResource( 4 )
 
 [node name="InventoryCraftedSlotDisplay2" parent="." instance=ExtResource( 1 )]
-margin_left = 210.0
+margin_left = 220.0
 margin_top = 43.0
-margin_right = -88.0
+margin_right = -78.0
 margin_bottom = -115.0
 rect_pivot_offset = Vector2( 2, 8 )
 script = ExtResource( 4 )
 
 [node name="CraftArrow" type="Sprite" parent="."]
-position = Vector2( 153, 54 )
+position = Vector2( 161.6, 54.6 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 3 )
 
 [node name="CraftArrowFull" type="Sprite" parent="."]
 material = SubResource( 2 )
-position = Vector2( 153, 54 )
+position = Vector2( 161.6, 54.6 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 5 )
