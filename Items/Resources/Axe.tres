@@ -7,7 +7,7 @@
 script = ExtResource( 1 )
 name = "Axe"
 displayName = "Siekiera"
-description = ""
+description = "Narzędzie służące do zabijania ludzi, lub niewinnych drzewek!"
 texture = ExtResource( 2 )
 is_tool = true
 max_stack_value = 1

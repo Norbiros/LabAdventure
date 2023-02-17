@@ -6,8 +6,8 @@
 [resource]
 script = ExtResource( 1 )
 name = "IronOre"
-displayName = "Skała żelaza"
-description = ""
+displayName = "Ruda żelaza"
+description = "Bardzo fajny kamień, który otrzymujesz z innych fajnych kamieni."
 texture = ExtResource( 2 )
 is_tool = false
 max_stack_value = 64

@@ -7,7 +7,7 @@
 script = ExtResource( 1 )
 name = "IronIngot"
 displayName = "Sztabka żelaza"
-description = ""
+description = "Sztabka żelaza. Otrzymujesz ją po przepaleniu rudy żelaza."
 texture = ExtResource( 2 )
 is_tool = false
 max_stack_value = 64
