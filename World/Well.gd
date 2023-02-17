@@ -6,6 +6,7 @@ onready var inventory = preload("res://UI/HUD/Inventory/Inventory.tres")
 onready var resourceObj = load(resource)
 
 func run_interaction():
+	if interacted == true: return
 	interacted = true
 	resourceObj.amount = 2
 	inventory.add_item( resourceObj )

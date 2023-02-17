@@ -64,4 +64,10 @@ func craft_items(item, second_item):
 		return_items.append(i)
 		time = 10.0
 	
+	if items.keys().has("Sulfur") and items.keys().has("WaterTube"):
+		var i = load("res://Items/Resources/H2SO4Tube.tres")
+		i.amount = floor((item.amount + second_item.amount) / 2) + 1
+		return_items.append(i)
+		time = 5.0
+	
 	return {"time": time, "return_items": return_items}
