@@ -4,6 +4,7 @@ class_name Inventory
 var drag_data = null
 var mouse = null
 var hideSlot = true
+var mouse_hovered_item = null
 
 signal items_changed(indexes)
 

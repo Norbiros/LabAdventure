@@ -2,10 +2,12 @@ extends CenterContainer
 
 onready var itemTextureRect = $ItemTextureRect
 onready var itemAmountLabel = $ItemTextureRect/ItemAmountLabel
+var displayItem = null
 var inventory = preload("res://UI/HUD/Inventory/Inventory.tres")
 
 func display_item(item):
 	if item is Item:
+		displayItem = item
 		itemTextureRect.texture = item.texture
 		if item.amount > 1:
 			itemTextureRect.show()
@@ -16,6 +18,7 @@ func display_item(item):
 			itemTextureRect.show()
 			itemAmountLabel.text = ""
 	else:
+		displayItem = null
 		itemTextureRect.texture = load("res://Items/Textures/empty.png")
 		itemAmountLabel.text = ""
 
@@ -56,8 +59,6 @@ func drop_data(_position, data):
 	Global.emit_signal("itembar_changed")
 	inventory.drag_data = null 
 	inventory.hideSlot = true
-
-var touchingMouse = false
 	
 func _input(_event):
 	if get_index() == inventory.mouse && Input.is_action_pressed("inventory_split") && inventory.drag_data == null:
@@ -83,6 +84,8 @@ func _input(_event):
 
 func _on_InventorySlotDisplay_mouse_entered():
 	inventory.mouse = get_index()
-
+	inventory.mouse_hovered_item = displayItem
+	
 func _on_InventorySlotDisplay_mouse_exited():
 	inventory.mouse = get_index()
+	inventory.mouse_hovered_item = null

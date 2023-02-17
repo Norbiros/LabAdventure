@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/HUD/Inventory/InventoryHover.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Fonts/Monocraft.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 9
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 6
+font_data = ExtResource( 2 )
+
+[node name="InventoryHover" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 120.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 1 )
+text = "Bardzo fajny item"
+
+[node name="Description" type="Label" parent="."]
+margin_top = 16.0
+margin_right = 128.0
+margin_bottom = 30.0
+custom_fonts/font = SubResource( 2 )
+text = "Bardzo fajny opis"
+autowrap = true

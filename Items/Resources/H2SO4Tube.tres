@@ -6,6 +6,10 @@
 [resource]
 script = ExtResource( 1 )
 name = "H2SO4Tube"
+displayName = "Kwas siarkowy(IV)"
+description = "Super kwas który został stworzony z:
+siarki, tlenu i wody!
+Bardzo przydatny"
 texture = ExtResource( 2 )
 is_tool = false
 max_stack_value = 8

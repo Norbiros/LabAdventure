@@ -6,6 +6,8 @@
 [resource]
 script = ExtResource( 1 )
 name = "WaterTube"
+displayName = "Probówka z wodą"
+description = "Probówka zapełniona H2O."
 texture = ExtResource( 2 )
 is_tool = false
 max_stack_value = 6
