@@ -8,7 +8,7 @@ var displayItem = null
 
 
 func _ready():
-	get_parent().connect("show_crafting_recepies", self, "_show_crafting")
+	get_parent().connect("crafted", self, "_show_crafting")
 	Global.connect("inventory_closed", self, "_on_inventory_close")
 	display_item(null)
 
@@ -50,14 +50,11 @@ func drag_data(item, _item_index):
 		
 func _show_crafting(item, second_item):
 	display_item(null)
-	if item == null and second_item != null:
-		item = second_item
-		second_item = null
 		
-	if get_index() == 2 and item is Item and item.name == "IronOre":
-		var i = load("res://Items/Resources/IronIngot.tres")
-		i.amount = floor(item.amount / 2) + 1
-		display_item(i)
+	if get_index() == 2:
+		display_item(item)
+	if get_index() == 3:
+		display_item(second_item)
 
 func can_drop_data(_position, data):
 	return data is Dictionary and data.has("item")

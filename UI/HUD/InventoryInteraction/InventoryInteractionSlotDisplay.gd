@@ -28,7 +28,6 @@ func display_item(item):
 
 func get_drag_data(_position):
 	var item_index = get_index()
-	get_parent().emit_signal("show_crafting_recepies", null)
 	
 	if displayItem is Item:
 		var dragPreview = inventory.gen_drag_preview(displayItem)
@@ -54,10 +53,9 @@ func can_drop_data(_position, data):
 
 func drop_data(_position, data):
 	display_item(data.item)
-	get_parent().emit_signal("start_crafting", data.item, 10.0, get_parent().get_child(1 - get_index()).get_item())
+	get_parent().emit_signal("start_crafting", data.item, get_parent().get_child(1 - get_index()).get_item())
 
-func _ended_crafting(item, second_item):
-	get_parent().emit_signal("show_crafting_recepies", item, second_item)
+func _ended_crafting(_item, _second_item):
 	inventory.emit_signal("items_changed", [0])
 	Global.emit_signal("itembar_changed")
 	inventory.drag_data = null 
