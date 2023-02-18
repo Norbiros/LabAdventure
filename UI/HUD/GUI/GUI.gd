@@ -20,6 +20,7 @@ func _unhandled_key_input(_event) -> void:
 		Global.inventory_state = false
 	if state == Global.inventory_state: return
 	
+	Global.emit_signal("inventory_state_change", state)
 	if Global.inventory_state:
 		inventorySlots.show()
 		textureRect.show()

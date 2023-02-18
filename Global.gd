@@ -7,6 +7,7 @@ signal remove_save(level)
 signal start_game(level)
 signal pressed_menu_button(button)
 signal inventory_closed()
+signal inventory_state_change(state)
 
 var start_position = Vector2.ZERO
 var teleporting = false

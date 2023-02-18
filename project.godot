@@ -62,6 +62,7 @@ config/version="0.0.4"
 
 Global="*res://Global.gd"
 GameSaver="*res://Util/Saves/GameSaver.gd"
+InventoryCraftings="*res://UI/HUD/Inventory/InventoryCraftings.gd"
 
 [display]
 

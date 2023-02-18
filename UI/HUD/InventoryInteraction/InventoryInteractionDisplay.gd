@@ -50,24 +50,36 @@ func craft_items(item, second_item):
 	var items = {}
 	var return_items = []
 	var time = -1.0
-	print(item.name)
-	print(second_item)
-	
+
 	if item is Item:
 		items[item.name] = item
 	if second_item is Item:
 		items[second_item.name] = second_item
+	
+	for crafting_name in InventoryCraftings.craftings.keys():
+		var crafting = InventoryCraftings.craftings[crafting_name]
+		var can_craft =true
+		var amounts = []
+		for ingredient in crafting.ingredients.keys():
+			var ingredient_amount = crafting["ingredients"][ingredient]
+			if !items.keys().has(ingredient):
+				can_craft = false
+			else:
+				amounts.append(ingredient_amount)
 		
-	if items.keys().has("IronOre") and len(items.keys()) == 1:
-		var i = load("res://Items/Resources/IronIngot.tres")
-		i.amount = floor(item.amount / 2) + 1
-		return_items.append(i)
-		time = 10.0
-	
-	if items.keys().has("Sulfur") and items.keys().has("WaterTube"):
-		var i = load("res://Items/Resources/H2SO4Tube.tres")
-		i.amount = floor((item.amount + second_item.amount) / 2) + 1
-		return_items.append(i)
-		time = 5.0
-	
+		# TODO: Better proportion system
+		var amount_ratio = 0
+		if len(amounts) == 1:
+			amount_ratio = amounts[0]
+		elif len(amounts) == 2:
+			amount_ratio = floor(amounts[0] / amounts[1]) + 1
+			
+		if can_craft:
+			for result in crafting.result:
+				var i = load(result)
+				i.amount = amount_ratio * crafting["result"][result]
+				if i.amount < 1:
+					return {"time": -1.0, "return_items": []}
+				time = crafting["time"]
+				return_items.append(i)
 	return {"time": time, "return_items": return_items}

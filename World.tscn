@@ -326,6 +326,9 @@ texture = ExtResource( 21 )
 position = Vector2( -48, -88 )
 priority = 1.0
 
+[node name="KinematicBody2D" parent="YSort/Natural" instance=ExtResource( 6 )]
+position = Vector2( 39, 82 )
+
 [node name="Tree2" parent="YSort/Natural" instance=ExtResource( 6 )]
 position = Vector2( -177, 84 )
 
@@ -489,5 +492,3 @@ tile_data = PoolIntArray( -131097, 1610612740, 1, -131096, 1610612740, 1, -13108
 [node name="Flower6" type="Sprite" parent="BetterWaterTilemap"]
 position = Vector2( -306, -71 )
 texture = ExtResource( 35 )
-
-[node name="KinematicBody2D" parent="." instance=ExtResource( 6 )]
