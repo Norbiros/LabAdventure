@@ -9,24 +9,26 @@ onready var vbox = $HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer
 onready var slots = get_parent().get_node("InventorySlotsContainer")
 onready var display = get_parent().get_node("InventoryInteractionDisplay")
 
+onready var descriptionName = $HBoxContainer/ScrollContainer2/VBoxContainer/Label
+onready var descriptionDescription = $HBoxContainer/ScrollContainer2/VBoxContainer/Description
+
+signal crafting_changed(crafting)
+
+
+
 func _ready():
 	Global.connect("inventory_state_change", self, "_inventory_state_changed")
+	self.connect("crafting_changed", self, "_crafting_changed")
 	scrollbar.get_v_scrollbar().rect_scale.x = 0
 	texture.hide()
 	scroll.hide()
 	for crafting_name in InventoryCraftings.craftings.keys():
-		print(InventoryCraftings.craftings[crafting_name]["name"])
 		var resource = preload("res://UI/HUD/InventoryInteraction/InventoryCraftingElement.tscn")
 		var obj = resource.instance()
-		obj.get_node("Name").text = "xd"
-		vbox.add_child(obj)
-		for v in range(10):
-			obj = resource.instance()
-			obj.get_node("Name").text = str(v)
-			vbox.add_child(obj)
-			print(v)
-		obj = resource.instance()
-		obj.get_node("Name").text = "str(v)"
+		var crafting = InventoryCraftings.craftings[crafting_name]
+		obj.description = crafting["description"]
+		obj.set_name(crafting["name"])
+		obj.set_crafting(crafting["ingredients"], crafting["result"])
 		vbox.add_child(obj)
 
 
@@ -55,3 +57,20 @@ func change_state():
 		scroll.show()
 		slots.hide()
 		display.hide()
+
+func _crafting_changed(crafting):
+	print(crafting.crafting_name)
+	print(crafting.description)
+	descriptionName.text = crafting.crafting_name
+	descriptionDescription.text = crafting.description
+	var values = "Substraty: \n"
+	print(values)
+	for v in crafting.ingredients:
+		var resource = load("res://Items/Resources/" + v + ".tres")
+		values += " - " + resource.displayName + "\n"
+	values += "Produkty: \n"
+	for v in crafting.result:
+		var resource = load(v)
+		values += " - " +resource.displayName + "\n"
+	print(values)
+
