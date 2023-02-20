@@ -6,32 +6,33 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: Windows-2019
-
+  # job id, can be anything
+  export_game:
+    # Always use ubuntu-latest for this action
+    runs-on: ubuntu-latest
+    # Add permission for release creation. Can be made narrower according to your needs
+    permissions: write-all
+    # Job name, can be anything
+    name: Export Game
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Setup dependencies
-        run: |
-          choco install -y git
-          choco install -y visualstudio2019buildtools
-          choco install -y godot
-
-      - name: Build game
-        run: |
-          godot --export "Windows Desktop" LabAdventure.exe
-          ls
-          cd ../
-          ls
-          cd ../
-          ls
-          dir  /s /b *.exe | findstr /v .exe.
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: game_windows
-          path: LabAdventure.exe
+      # Always include the checkout step so that 
+      # your project is available for Godot to export
+    - name: checkout
+      uses: actions/checkout@v3.0.2
+  
+    - name: export game
+      id: export
+      # Use latest version (see releases for all versions)
+      uses: firebelley/godot-export@v4.7.0
+      with:
+        # Defining all the required inputs
+        godot_executable_download_url: https://github.com/godotengine/godot/releases/download/3.5.1-stable/Godot_v3.5.1-stable_linux_headless.64.zip
+        godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/3.5.1-stable/Godot_v3.5.1-stable_export_templates.tpz
+        relative_project_path: ./
+        archive_output: true
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: game
+        path: ${{ steps.export.outputs.archive_directory }}/*
 
