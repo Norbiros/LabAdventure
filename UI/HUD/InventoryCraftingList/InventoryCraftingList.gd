@@ -5,12 +5,14 @@ onready var texture = $TextureRect
 onready var button = $BookButton
 onready var scroll = $HBoxContainer
 onready var scrollbar = $HBoxContainer/ScrollContainer
+onready var scrollbar2 = $HBoxContainer/ScrollContainer2
 onready var vbox = $HBoxContainer/ScrollContainer/MarginContainer/VBoxContainer
 onready var slots = get_parent().get_node("InventorySlotsContainer")
 onready var display = get_parent().get_node("InventoryInteractionDisplay")
 
-onready var descriptionName = $HBoxContainer/ScrollContainer2/VBoxContainer/Label
-onready var descriptionDescription = $HBoxContainer/ScrollContainer2/VBoxContainer/Description
+onready var descriptionName = $HBoxContainer/ScrollContainer2/MarginContainer/VBoxContainer/Label
+onready var descriptionDescription = $HBoxContainer/ScrollContainer2/MarginContainer/VBoxContainer/Description
+onready var descriptionCreation = $HBoxContainer/ScrollContainer2/MarginContainer/VBoxContainer/Creation
 
 signal crafting_changed(crafting)
 
@@ -20,6 +22,7 @@ func _ready():
 	Global.connect("inventory_state_change", self, "_inventory_state_changed")
 	self.connect("crafting_changed", self, "_crafting_changed")
 	scrollbar.get_v_scrollbar().rect_scale.x = 0
+	scrollbar2.get_v_scrollbar().rect_scale.x = 0
 	texture.hide()
 	scroll.hide()
 	for crafting_name in InventoryCraftings.craftings.keys():
@@ -63,14 +66,13 @@ func _crafting_changed(crafting):
 	print(crafting.description)
 	descriptionName.text = crafting.crafting_name
 	descriptionDescription.text = crafting.description
-	var values = "Substraty: \n"
-	print(values)
+	var values = "Substraty:\n"
 	for v in crafting.ingredients:
 		var resource = load("res://Items/Resources/" + v + ".tres")
-		values += " - " + resource.displayName + "\n"
-	values += "Produkty: \n"
+		values += resource.displayName + " " + str(crafting.ingredients[v]) + "\n"
+	values += "Produkty:\n"
 	for v in crafting.result:
 		var resource = load(v)
-		values += " - " +resource.displayName + "\n"
-	print(values)
+		values += resource.displayName + " " + str(crafting.result[v]) + "\n"
+	descriptionCreation.text = values
 
