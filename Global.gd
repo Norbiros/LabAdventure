@@ -39,3 +39,8 @@ func _notification(what):
 		if get_tree().get_current_scene().get_name() != "TitleScreen":
 			emit_signal("inventory_closed")
 			GameSaver.save()
+
+func _unhandled_key_input(_event) -> void:
+	if Input.is_action_just_pressed("open_main_scene"):
+		GameSaver.save()
+		get_tree().change_scene_to(load("res://UI/TitleScreen/TitleScreen.tscn"))
