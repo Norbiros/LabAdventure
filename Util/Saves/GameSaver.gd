@@ -28,7 +28,6 @@ func load_level():
 
 
 func save():
-	print("123")
 	if level_name == "": return
 	save_level(gameID)
 
