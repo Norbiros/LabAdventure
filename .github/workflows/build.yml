@@ -1,4 +1,4 @@
-name: Build Windows
+name: Build
 
 on:
   push:
@@ -17,10 +17,10 @@ jobs:
     steps:
       # Always include the checkout step so that 
       # your project is available for Godot to export
-    - name: checkout
+    - name: Checkout
       uses: actions/checkout@v3.0.2
   
-    - name: export game
+    - name: Export Game
       id: export
       # Use latest version (see releases for all versions)
       uses: firebelley/godot-export@v4.7.0
@@ -33,6 +33,6 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: game
+        name: Game-Binaries
         path: ${{ steps.export.outputs.archive_directory }}/*
 
