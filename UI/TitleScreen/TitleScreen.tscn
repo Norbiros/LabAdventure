@@ -175,8 +175,9 @@ script = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DeleteConfirm"]
 margin_left = 35.0
+margin_top = 2.0
 margin_right = 285.0
-margin_bottom = 59.0
+margin_bottom = 56.0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DeleteConfirm/VBoxContainer"]
 margin_right = 250.0
