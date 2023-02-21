@@ -1,0 +1,16 @@
+{
+   "KingDialogue1":[
+      {
+         "name":"Król",
+         "text":"Ah! Witaj przyjacielu w moich skromnych prograch!"
+      },
+      {
+         "name":"Pedro",
+         "text":"Guten morgen! Ich spreche Polish nicht gut!"
+      },
+      {
+         "name":"Król",
+         "text":"I co ja mam tu z tobą zrobić..."
+      }
+   ]
+}

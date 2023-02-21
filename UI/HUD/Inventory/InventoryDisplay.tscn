@@ -258,3 +258,4 @@ rect_scale = Vector2( 1, 1 )
 [node name="ItemBar" parent="." instance=ExtResource( 3 )]
 
 [node name="InventoryHover" parent="." instance=ExtResource( 5 )]
+visible = false
