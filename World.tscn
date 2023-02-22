@@ -339,6 +339,9 @@ position = Vector2( -8, 28 )
 texture = SubResource( 11 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1983, 2000 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="VulcanBackgroundTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 104 )
@@ -857,12 +860,12 @@ resource = "res://Items/Resources/Plank.tres"
 [node name="Vulcan" type="AnimatedSprite" parent="YSort/Vulcan"]
 position = Vector2( 418, -741 )
 frames = SubResource( 105 )
+frame = 1
 playing = true
 
 [node name="Vulcan2" type="AnimatedSprite" parent="YSort/Vulcan"]
 position = Vector2( 525, -699 )
 frames = SubResource( 105 )
-frame = 1
 playing = true
 
 [node name="BlackRock2" type="Sprite" parent="YSort/Vulcan"]

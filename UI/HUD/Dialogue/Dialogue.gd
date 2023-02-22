@@ -22,7 +22,7 @@ func _show_dialogue(dialogue: String) -> void:
 	_show_dialogue_message()
 
 func _show_dialogue_message() -> void:
-	if current_dialogue == []:
+	if current_dialogue.size() == 0:
 		nameEl.text = ""
 		textEl.text = ""
 	else:
