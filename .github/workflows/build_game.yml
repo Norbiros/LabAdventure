@@ -33,5 +33,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Game-Binaries
-        path: ${{ steps.export.outputs.archive_directory }}/*
+        path: ${{ steps.export.outputs.build_directory }}/*
 
