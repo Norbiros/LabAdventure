@@ -9,6 +9,7 @@ signal pressed_menu_button(button)
 signal inventory_closed()
 signal inventory_state_change(state)
 signal show_dialogue(dialogue)
+signal dialogue_ended()
 
 var start_position = Vector2.ZERO
 var teleporting = false

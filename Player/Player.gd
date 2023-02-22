@@ -80,7 +80,6 @@ func save(save_game : Resource):
 	save_game.data[Global.SAVE_KEY] = position
 
 func load(save_game : Resource):
-	print("asd")
 	position = save_game.data[SAVE_KEY]
 	get_owner().get_node("Camera").position = position
 	get_owner().get_node("Camera").reset_smoothing()

@@ -12,5 +12,19 @@
          "name":"Król",
          "text":"I co ja mam tu z tobą zrobić..."
       }
+   ],
+   "KingDialogue2":[
+      {
+         "name":"Pedro",
+         "text":"Tutaj masz wiele itemów!"
+      },
+      {
+         "name":"Król",
+         "text":"Dzięki, ale ja ich nie chcaiłem"
+      },
+      {
+         "name":"Pedro",
+         "text":"Upisk :("
+      }
    ]
 }
