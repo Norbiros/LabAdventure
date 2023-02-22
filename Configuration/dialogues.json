@@ -20,11 +20,29 @@
       },
       {
          "name":"Król",
-         "text":"Dzięki, ale ja ich nie chcaiłem"
+         "text":"Dzięki, ale ja ich nie chciałem"
       },
       {
          "name":"Pedro",
-         "text":"Upisk :("
+         "text":"Upsik :("
+      }
+   ],
+   "KingDialogue3":[
+      {
+         "name":"Król",
+         "text":"Witaj przybyszu!"
+      },
+      {
+         "name":"Pedro",
+         "text":"Witaj! Co mogę dla ciebie zrobić?"
+      },
+      {
+         "name":"Król",
+         "text":"Hmm... Niech no ja pomyśle."
+      },
+      {
+         "name":"Król",
+         "text":"Przynieś mi 5 fiolek kwasu siarkowego (VI).\nBędzie mi on bardzo potrzebny do\nmateriału wybuchowego."
       }
    ]
 }

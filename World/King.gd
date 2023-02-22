@@ -9,7 +9,7 @@ func _ready():
 	Global.connect("dialogue_ended", self, "_dialogue_ended")
 	
 func _dialogue_ended(dialogue: String):
-	if dialogue == "KingDialogue2":
+	if dialogue == "KingDialogue3":
 		dialogue_index = ""
 	else:
 		dialogue_index = dialogue
@@ -28,6 +28,11 @@ func run_interaction():
 	elif dialogue_index == "KingDialogue1" and interacted == false:
 		dialogue_index = "KingDialogue2"
 		Global.emit_signal("show_dialogue", "KingDialogue2")
+		Global.player_interactions.erase(self.name)
+		interacted = true
+	elif dialogue_index == "KingDialogue2" and interacted == false:
+		dialogue_index = "KingDialogue3"
+		Global.emit_signal("show_dialogue", "KingDialogue3")
 		Global.player_interactions.erase(self.name)
 		interacted = true
 	else:
