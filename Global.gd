@@ -45,4 +45,5 @@ func _notification(what):
 func _unhandled_key_input(_event) -> void:
 	if Input.is_action_just_pressed("open_main_scene"):
 		GameSaver.save()
+		GameSaver.saveGameResource = SaveGame.new()
 		get_tree().change_scene_to(load("res://UI/TitleScreen/TitleScreen.tscn"))
