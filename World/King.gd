@@ -5,17 +5,22 @@ var interacted = false
 var player_in_area2d = false
 var SAVE_KEY = name + "-dialogue-index"
 
+var inventory = preload("res://UI/HUD/Inventory/Inventory.tres")
+
 func _ready():
 	Global.connect("dialogue_ended", self, "_dialogue_ended")
 	
 func _dialogue_ended(dialogue: String):
-	if dialogue == "KingDialogue3":
+	if dialogue == "KingDialogueHaveItems":
 		dialogue_index = ""
 	else:
 		dialogue_index = dialogue
 	interacted = false
 	if player_in_area2d and dialogue_index != "":
-		Global.player_interactions[self.name] = ["Kliknij, aby porozmawiać z królem!", self, "run_interaction"]
+		if dialogue == "KingDialogue3":
+			Global.player_interactions[self.name] = ["Kliknij, aby dać królowi kwas!", self, "run_interaction"]
+		else:
+			Global.player_interactions[self.name] = ["Kliknij, aby porozmawiać z królem!", self, "run_interaction"]
 	else: 
 		Global.player_interactions.erase(self.name)
 
@@ -36,7 +41,16 @@ func run_interaction():
 		Global.player_interactions.erase(self.name)
 		interacted = true
 	else:
-		print("DONE")
+		if inventory.amount_of_items("H2SO4Tube") >= 1:
+			dialogue_index = ""
+			Global.emit_signal("show_dialogue", "KingDialogueHaveItems")
+			Global.player_interactions.erase(self.name)
+			interacted = true
+		else:
+			dialogue_index = "KingDontHaveItems"
+			Global.emit_signal("show_dialogue", "KingDialogueDontHaveItems")
+			Global.player_interactions.erase(self.name)
+			interacted = true
 	
 
 func _on_Area2D_body_entered(body):

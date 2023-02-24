@@ -44,5 +44,29 @@
          "name":"Król",
          "text":"Przynieś mi 5 fiolek kwasu siarkowego (VI).\nBędzie mi on bardzo potrzebny do nawozów."
       }
+   ],
+   "KingDialogueDontHaveItems":[
+      {
+         "name":"Król",
+         "text":"Na prawdę mnie zawiodłeś/aś! \nPrzynieś mi 5 fiolek kwasu siarkowego (VI)."
+      }
+   ],
+   "KingDialogueHaveItems":[
+      {
+         "name":"Król",
+         "text":"Dziękuje Ci za ten kwas!\n Oszukałem ciebie z tym, że chce go do nawozów!"
+      },
+      {
+         "name":"Narrator",
+         "text":"*Król z zapałem otwiera probówkę, i pije kwas.*\n *Umiera w cierpieniach.*"
+      },
+      {
+         "name":"Straż królewska",
+         "text":"Pedro! Jesteś aresztowany pod zarzutem\n zabicia Króla Krzesłosława!"
+      },
+      {
+         "name":"Pedro",
+         "text":"No nie! Znowu ?!?!?"
+      }
    ]
 }
