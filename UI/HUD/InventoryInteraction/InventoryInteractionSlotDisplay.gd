@@ -34,7 +34,9 @@ func get_drag_data(_position):
 	
 		set_drag_preview(dragPreview)
 		var drag = drag_data(displayItem, item_index)
+	  
 		display_item(null)
+		print(drag)
 		return drag
 	display_item(null)
 
@@ -55,12 +57,17 @@ func drop_data(_position, data):
 	display_item(data.item)
 	get_parent().emit_signal("start_crafting", data.item, get_parent().get_child(1 - get_index()).get_item())
 
-func _ended_crafting(_item, _second_item):
-	inventory.emit_signal("items_changed", [0])
-	Global.emit_signal("itembar_changed")
-	inventory.drag_data = null 
-	inventory.hideSlot = true
-	display_item(null)
+func _ended_crafting(_item, _second_item, item_ratio):
+	#inventory.emit_signal("items_changed", [0])
+	#Global.emit_signal("itembar_changed")
+	#inventory.drag_data = null 
+	#inventory.hideSlot = true
+	if get_index() <  len(item_ratio):
+		displayItem.amount -= item_ratio[get_index()]
+	if displayItem == null or displayItem.amount < 1:
+		display_item(null)
+	else: 
+		display_item(displayItem)
 
 func _on_inventory_close():
 	if displayItem != null: inventory.add_item(displayItem)

@@ -16,6 +16,9 @@ export(Array, Resource) var items = [
 ]
 
 func set_item(item_index, item):
+	if item_index == -1:
+		add_item(item)
+		return null
 	var previousItem = items[item_index]
 	items[item_index] = item.duplicate()
 	items[item_index].amount = item.amount

@@ -15,6 +15,7 @@ func _ready():
 func display_item(item):
 	displayItem = item
 	if item is Item:
+		item.amount = floor(item.amount)
 		itemTextureRect.texture = item.texture
 		if item.amount > 1:
 			itemTextureRect.show()
@@ -48,7 +49,7 @@ func drag_data(item, _item_index):
 		inventory.drag_data = data
 		return data
 		
-func _show_crafting(item, second_item):
+func _show_crafting(item, second_item, _item_ratio):
 	display_item(null)
 		
 	if get_index() == 2:

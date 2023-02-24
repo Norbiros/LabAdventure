@@ -59,8 +59,8 @@ size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ScrollContainer"]
-margin_right = 103.0
-margin_bottom = 111.0
+margin_right = 91.0
+margin_bottom = 16.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_bottom = 16
@@ -81,8 +81,8 @@ size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/ScrollContainer2"]
-margin_right = 103.0
-margin_bottom = 111.0
+margin_right = 91.0
+margin_bottom = 57.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
