@@ -35,6 +35,23 @@ func remove_item(item_index):
 	emit_signal("items_changed", [item_index])
 	return previousItem
 
+func remove_items_by_name(item_name):
+	var amount = 0
+	var i = 0
+	for v in items:
+		if v is Item:
+			if v.name == item_name:
+				remove_item(i)
+		i += 1
+
+func amount_of_items(item_name):
+	var amount = 0
+	for v in items:
+		if v is Item:
+			if v.name == item_name:
+				amount += v.amount
+	return amount
+
 func add_item(item):
 	if item.is_tool:
 		for n in 3:

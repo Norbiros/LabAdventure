@@ -440,6 +440,14 @@ texture = ExtResource( 23 )
 position = Vector2( 214, 240 )
 texture = ExtResource( 19 )
 
+[node name="Stone11" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -307, 385 )
+texture = ExtResource( 19 )
+
+[node name="Stone12" type="Sprite" parent="YSort/Natural"]
+position = Vector2( 387, -49 )
+texture = ExtResource( 19 )
+
 [node name="Stone8" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 87, 403 )
 texture = ExtResource( 19 )
@@ -462,6 +470,14 @@ texture = ExtResource( 40 )
 
 [node name="Wood5" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 188, 285 )
+texture = ExtResource( 38 )
+
+[node name="Wood8" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -181, 242 )
+texture = ExtResource( 38 )
+
+[node name="Wood9" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -371, 52 )
 texture = ExtResource( 38 )
 
 [node name="Wood6" type="Sprite" parent="YSort/Natural"]
@@ -580,7 +596,11 @@ texture = ExtResource( 31 )
 position = Vector2( 53, 13 )
 
 [node name="Stone3" type="Sprite" parent="YSort/Natural"]
-position = Vector2( -595, 188 )
+position = Vector2( -591, 225 )
+texture = ExtResource( 20 )
+
+[node name="Stone4" type="Sprite" parent="YSort/Natural"]
+position = Vector2( -465, 2 )
 texture = ExtResource( 20 )
 
 [node name="Gravestone" type="Sprite" parent="YSort/Natural"]
@@ -780,7 +800,7 @@ position = Vector2( 153, -271 )
 position = Vector2( 280, 118 )
 
 [node name="Tree56" parent="YSort/Natural" instance=ExtResource( 22 )]
-position = Vector2( 204, -205 )
+position = Vector2( 209, -222 )
 
 [node name="Tree57" parent="YSort/Natural" instance=ExtResource( 22 )]
 position = Vector2( 370, -297 )
@@ -840,7 +860,7 @@ amount = 125
 [node name="SwordItem" parent="YSort/Items" instance=ExtResource( 9 )]
 position = Vector2( -134, 115 )
 resource = "res://Items/Resources/EmptyTube.tres"
-amount = 3
+amount = 10
 
 [node name="SwordItem4" parent="YSort/Items" instance=ExtResource( 9 )]
 position = Vector2( 1, 96 )
@@ -860,12 +880,12 @@ resource = "res://Items/Resources/Plank.tres"
 [node name="Vulcan" type="AnimatedSprite" parent="YSort/Vulcan"]
 position = Vector2( 418, -741 )
 frames = SubResource( 105 )
+frame = 1
 playing = true
 
 [node name="Vulcan2" type="AnimatedSprite" parent="YSort/Vulcan"]
 position = Vector2( 525, -699 )
 frames = SubResource( 105 )
-frame = 1
 playing = true
 
 [node name="BlackRock2" type="Sprite" parent="YSort/Vulcan"]

@@ -25,6 +25,7 @@ func _ready():
 	scrollbar2.get_v_scrollbar().rect_scale.x = 0
 	texture.hide()
 	scroll.hide()
+	var first_crafting = null
 	for crafting_name in InventoryCraftings.craftings.keys():
 		var resource = preload("res://UI/HUD/InventoryInteraction/InventoryCraftingElement.tscn")
 		var obj = resource.instance()
@@ -33,7 +34,10 @@ func _ready():
 		obj.set_name(crafting["name"])
 		obj.set_crafting(crafting["ingredients"], crafting["result"])
 		vbox.add_child(obj)
-
+		if first_crafting == null:
+			first_crafting = obj
+	
+	_crafting_changed(first_crafting)
 
 func _inventory_state_changed(inventory_state):
 	if inventory_state:
@@ -54,7 +58,8 @@ func change_state():
 		texture.hide()
 		scroll.hide()
 		slots.show()
-		display.show()
+		if Global.is_near_crafting:
+			display.show()
 	else:
 		texture.show()
 		scroll.show()
@@ -62,8 +67,6 @@ func change_state():
 		display.hide()
 
 func _crafting_changed(crafting):
-	print(crafting.crafting_name)
-	print(crafting.description)
 	descriptionName.text = crafting.crafting_name
 	descriptionDescription.text = crafting.description
 	var values = "Substraty:\n"
