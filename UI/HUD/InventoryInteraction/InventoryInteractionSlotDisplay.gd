@@ -71,7 +71,7 @@ func _ended_crafting(_item, _second_item, item_ratio):
 
 func _on_inventory_close():
 	if displayItem != null: inventory.add_item(displayItem)
-	displayItem = null
+	display_item(null)
 
 func get_item():
 	return displayItem

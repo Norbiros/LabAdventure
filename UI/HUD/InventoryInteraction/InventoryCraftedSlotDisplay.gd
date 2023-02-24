@@ -65,4 +65,4 @@ func drop_data(_position, data):
 
 func _on_inventory_close():
 	if displayItem != null: inventory.add_item(displayItem)
-	displayItem = null
+	display_item(null)
