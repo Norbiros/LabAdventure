@@ -5,7 +5,7 @@
          "text":"Ah! Witaj przyjacielu w moich skromnych prograch!"
       },
       {
-         "name":"Pedro",
+         "name":"Pedra",
          "text":"Guten morgen! Ich spreche Polish nicht gut!"
       },
       {
@@ -23,7 +23,7 @@
          "text":"Dzięki, ale ja ich nie chciałem"
       },
       {
-         "name":"Pedro",
+         "name":"Pedra",
          "text":"Upsik :("
       }
    ],
@@ -33,7 +33,7 @@
          "text":"Witaj przybyszu!"
       },
       {
-         "name":"Pedro",
+         "name":"Pedra",
          "text":"Witaj! Co mogę dla ciebie zrobić?"
       },
       {
@@ -62,10 +62,10 @@
       },
       {
          "name":"Straż królewska",
-         "text":"Pedro! Gratulacje! Prosze, o to dla ciebie nowo wyhodowana kalarepa"
+         "text":"Pedro! Gratulacje! \nProsze, o to dla ciebie nowo wyhodowana kalarepa"
       },
       {
-         "name":"Pedro",
+         "name":"Pedra",
          "text":"No nie! O jak ja nie cierpię kalarep, i mój kot też!"
       }
    ]
