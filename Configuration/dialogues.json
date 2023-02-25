@@ -58,15 +58,15 @@
       },
       {
          "name":"Narrator",
-         "text":"*Król z zapałem otwiera probówkę, i pije kwas.*\n *Umiera w cierpieniach.*"
+         "text":"*Król z zapałem otwiera probówkę, i wylewa na ziemie*\n *Cała planeta z powrotem zamienia się w zielony las!*"
       },
       {
          "name":"Straż królewska",
-         "text":"Pedro! Jesteś aresztowany pod zarzutem\n zabicia Króla Krzesłosława!"
+         "text":"Pedro! Gratulacje! Prosze, o to dla ciebie nowo wyhodowana kalarepa"
       },
       {
          "name":"Pedro",
-         "text":"No nie! Znowu ?!?!?"
+         "text":"No nie! O jak ja nie cierpię kalarep, i mój kot też!"
       }
    ]
 }
