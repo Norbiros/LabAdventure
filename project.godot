@@ -69,6 +69,7 @@ config/version="0.1.0"
 Global="*res://Global.gd"
 GameSaver="*res://Util/Saves/GameSaver.gd"
 InventoryCraftings="*res://UI/HUD/Inventory/InventoryCraftings.gd"
+Music="*res://Sounds/Music.tscn"
 
 [display]
 

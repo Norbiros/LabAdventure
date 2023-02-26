@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -39,7 +39,6 @@
 [ext_resource path="res://Textures/Tileset/lava-corner.tres" type="Texture" id=37]
 [ext_resource path="res://Textures/Natural/Wood/wood5.png" type="Texture" id=38]
 [ext_resource path="res://Textures/Natural/Wood/fence3.png" type="Texture" id=40]
-[ext_resource path="res://Sounds/Music.mp3" type="AudioStream" id=42]
 [ext_resource path="res://World.gd" type="Script" id=43]
 [ext_resource path="res://Textures/Natural/Plants/flower2.png" type="Texture" id=46]
 
@@ -880,12 +879,12 @@ resource = "res://Items/Resources/Plank.tres"
 [node name="Vulcan" type="AnimatedSprite" parent="YSort/Vulcan"]
 position = Vector2( 418, -741 )
 frames = SubResource( 105 )
+frame = 1
 playing = true
 
 [node name="Vulcan2" type="AnimatedSprite" parent="YSort/Vulcan"]
 position = Vector2( 525, -699 )
 frames = SubResource( 105 )
-frame = 1
 playing = true
 
 [node name="BlackRock2" type="Sprite" parent="YSort/Vulcan"]
@@ -923,10 +922,6 @@ visible = false
 autoplay = "Day_and_Night"
 anims/Day_and_Night = SubResource( 50 )
 anims/RESET = SubResource( 51 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 42 )
-volume_db = -11.9
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
