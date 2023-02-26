@@ -209,7 +209,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id=30]
 resource_name = "idleDown"
-length = 0.1
+length = 5.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
@@ -218,10 +218,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 4.9 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 0, 18 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:flip_h")
@@ -375,7 +375,7 @@ material = SubResource( 35 )
 position = Vector2( -1, -17 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 3 )
-hframes = 18
+hframes = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = -1.5708
