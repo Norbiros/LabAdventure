@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Textures/Other/book.png" type="Texture" id=1]
+[ext_resource path="res://Textures/Other/book.pop.png" type="Texture" id=1]
+[ext_resource path="res://Textures/Other/book.pop_jas.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Fonts/Monocraft.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://UI/HUD/InventoryCraftingList/InventoryCraftingList.gd" type="Script" id=4]
 [ext_resource path="res://UI/HUD/Inventory/inventory_background.png" type="Texture" id=5]
@@ -126,6 +127,7 @@ margin_top = 15.0
 margin_right = 277.0
 margin_bottom = 47.0
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 1 )
 
 [connection signal="pressed" from="BookButton" to="." method="_on_BookButton_pressed"]

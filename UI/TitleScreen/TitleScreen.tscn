@@ -92,6 +92,7 @@ rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 1
 size_flags_vertical = 1
 button_name = "Zamknij"
+flip = true
 
 [node name="SelectSave" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
 visible = false

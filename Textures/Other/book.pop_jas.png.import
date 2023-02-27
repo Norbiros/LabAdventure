@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/to_do_przyciskow_menu.png-8c839155ceab58e68a3478fbf11ff80e.stex"
+path="res://.import/book.pop_jas.png-1be193c01478095822744e0eec3dac43.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Other/to_do_przyciskow_menu.png"
-dest_files=[ "res://.import/to_do_przyciskow_menu.png-8c839155ceab58e68a3478fbf11ff80e.stex" ]
+source_file="res://Textures/Other/book.pop_jas.png"
+dest_files=[ "res://.import/book.pop_jas.png-1be193c01478095822744e0eec3dac43.stex" ]
 
 [params]
 
