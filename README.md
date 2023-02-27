@@ -6,9 +6,6 @@ Awesome Godot game about chemistry for GeekCompetition!
 You solve tasks for king, gather resources and create new things!
 
 ## Authors
-Norbiros
-EpicPlayerA10
-Bartuniko
-Bartollo26
+Norbiros<br/>
+EpicPlayerA10<br>
 Elite
-Oliwia
