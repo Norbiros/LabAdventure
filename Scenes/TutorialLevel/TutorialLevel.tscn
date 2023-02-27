@@ -1,0 +1,301 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://UI/HUD/Inventory/InventoryContainer.gd" type="Script" id=1]
+[ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/FullTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
+[ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
+[ext_resource path="res://UI/HUD/Inventory/InventoryDisplay.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
+
+[sub_resource type="TileSet" id=101]
+0/name = "DirtTileset.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 176, 80 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
+0/autotile/icon_coordinate = Vector2( 3, 3 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="TutorialLevel" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 487, -6 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1524, 352 )
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2( -106, -3 )
+current = true
+limit_left = -500
+limit_top = -500
+limit_right = 500
+limit_bottom = 500
+smoothing_enabled = true
+smoothing_speed = 8.0
+
+[node name="PathTitleMap" type="TileMap" parent="."]
+tile_set = SubResource( 101 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 2, 65535, 0, 131072, 0, 0, 131074 )
+
+[node name="YSort" type="YSort" parent="."]
+z_index = 1
+
+[node name="Player" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( -106, -3 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+remote_path = NodePath("../../../Camera")
+
+[node name="Bush" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -50, -70 )
+
+[node name="Bush2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -25, -75 )
+
+[node name="Bush3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 4, -70 )
+
+[node name="Bush4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 32, -74 )
+
+[node name="Bush5" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 57, -67 )
+
+[node name="Bush6" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -181, -21 )
+
+[node name="Bush7" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -160, -43 )
+
+[node name="Bush8" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -140, -64 )
+
+[node name="Bush9" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -112, -73 )
+
+[node name="Bush10" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -78, -67 )
+
+[node name="Bush11" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -78, 76 )
+
+[node name="Bush12" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -42, 79 )
+
+[node name="Bush13" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -6, 84 )
+
+[node name="Bush14" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 28, 87 )
+
+[node name="Bush15" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 61, 88 )
+
+[node name="Bush16" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -175, 3 )
+
+[node name="Bush17" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -167, 26 )
+
+[node name="Bush18" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -161, 47 )
+
+[node name="Bush19" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -136, 59 )
+
+[node name="Bush20" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( -108, 67 )
+
+[node name="Bush21" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 220, 84 )
+
+[node name="Bush22" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 245, 79 )
+
+[node name="Bush23" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 274, 84 )
+
+[node name="Bush24" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 302, 80 )
+
+[node name="Bush25" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 327, 87 )
+
+[node name="Bush26" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 85, 84 )
+
+[node name="Bush27" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 110, 79 )
+
+[node name="Bush28" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 139, 84 )
+
+[node name="Bush29" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 167, 80 )
+
+[node name="Bush30" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 192, 87 )
+
+[node name="Bush31" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 216, -70 )
+
+[node name="Bush32" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 241, -75 )
+
+[node name="Bush33" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 270, -70 )
+
+[node name="Bush34" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 298, -74 )
+
+[node name="Bush35" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 323, -67 )
+
+[node name="Bush36" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 81, -70 )
+
+[node name="Bush37" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 106, -75 )
+
+[node name="Bush38" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 135, -70 )
+
+[node name="Bush39" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 163, -74 )
+
+[node name="Bush40" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 188, -67 )
+
+[node name="Bush41" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 474, -79 )
+
+[node name="Bush42" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 499, -84 )
+
+[node name="Bush43" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 530, -72 )
+
+[node name="Bush44" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 550, -55 )
+
+[node name="Bush45" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 562, -33 )
+
+[node name="Bush46" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 339, -79 )
+
+[node name="Bush47" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 364, -84 )
+
+[node name="Bush48" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 393, -79 )
+
+[node name="Bush49" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 421, -83 )
+
+[node name="Bush50" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 446, -76 )
+
+[node name="Bush51" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 475, 104 )
+
+[node name="Bush52" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 501, 95 )
+
+[node name="Bush53" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 527, 85 )
+
+[node name="Bush54" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 546, 68 )
+
+[node name="Bush55" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 563, 50 )
+
+[node name="Bush56" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 340, 104 )
+
+[node name="Bush57" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 365, 99 )
+
+[node name="Bush58" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 394, 104 )
+
+[node name="Bush59" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 422, 100 )
+
+[node name="Bush60" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 447, 107 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="FullTransition" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="InventoryContainer2" type="CenterContainer" parent="CanvasLayer"]
+visible = false
+margin_left = -160.0
+margin_top = -88.0
+margin_right = 152.0
+margin_bottom = 88.0
+script = ExtResource( 1 )
+
+[node name="InventoryDisplay" parent="CanvasLayer/InventoryContainer2" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 156.0
+margin_top = 88.0
+margin_right = 156.0
+margin_bottom = 88.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 9.0
+margin_top = -57.0
+margin_right = 185.0
+margin_bottom = -9.0
+text = "Używaj przycisku \"F\", aby rozpoczynać interakcję z różnymi rzeczami!"
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 146.0
+margin_top = 18.0
+margin_right = 322.0
+margin_bottom = 66.0
+text = "Używaj przycisku \"E\" żeby otwierać ekwipunek. W środku możesz kliknąć książkę."
+autowrap = true
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 276.0
+margin_top = -57.0
+margin_right = 452.0
+margin_bottom = -9.0
+text = "Jak klikniesz książkę, to będziesz miał menu rodzajów."
+autowrap = true
+
+[node name="Portal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 500, 0 )
+next_scene_path = "res://World.tscn"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="FullTransition" parent="CanvasLayer2" instance=ExtResource( 3 )]

@@ -2,15 +2,16 @@ extends Node
 
 signal teleported_in(next_scene_path)
 signal itembar_changed()
-signal start_creating_game(level)
+signal start_creating_game(level, new)
 signal remove_save(level)
-signal start_game(level)
+signal start_game(level, new)
 signal pressed_menu_button(button)
 signal inventory_closed()
 signal inventory_state_change(state)
 signal show_dialogue(dialogue)
 signal dialogue_ended()
 
+var tutorial = false
 var start_position = Vector2.ZERO
 var teleporting = false
 var show_tp_animation = false
