@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alt-button.png-902e27e2bffff7a4fe0350e4f0ccab3f.stex"
+path="res://.import/empty_probowka.png-0580f1c8285ceea4db715d45eb56292d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Other/alt-button.png"
-dest_files=[ "res://.import/alt-button.png-902e27e2bffff7a4fe0350e4f0ccab3f.stex" ]
+source_file="res://Items/Textures/empty_probowka.png"
+dest_files=[ "res://.import/empty_probowka.png-0580f1c8285ceea4db715d45eb56292d.stex" ]
 
 [params]
 
