@@ -1,11 +1,11 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Textures/Tileset/water-animated-down1.tres" type="Texture" id=3]
 [ext_resource path="res://World/CraftingTable.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/Well.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Textures/Natural/Vulcan/black_rock2.png" type="Texture" id=6]
+[ext_resource path="res://World/BlackRockMedium.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
 [ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Util/ItemDrop.tscn" type="PackedScene" id=9]
@@ -23,13 +23,11 @@
 [ext_resource path="res://Textures/Natural/Wood/sign1.png" type="Texture" id=21]
 [ext_resource path="res://World/Tree.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Textures/Natural/Plants/flower5.png" type="Texture" id=23]
-[ext_resource path="res://Textures/Natural/Vulcan/lava_rock.png" type="Texture" id=24]
-[ext_resource path="res://Textures/Natural/Vulcan/vulcan_1.png" type="Texture" id=25]
+[ext_resource path="res://World/LavaRockBig.tscn" type="PackedScene" id=24]
+[ext_resource path="res://World/Vulcan.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Textures/Natural/Plants/mushroom1.png" type="Texture" id=26]
 [ext_resource path="res://Textures/Tileset/lava.tres" type="Texture" id=27]
-[ext_resource path="res://Textures/Natural/Vulcan/black_rock.png" type="Texture" id=28]
-[ext_resource path="res://Textures/Natural/Vulcan/vulcan_2.png" type="Texture" id=29]
-[ext_resource path="res://Textures/Natural/Vulcan/lava_bush.png" type="Texture" id=30]
+[ext_resource path="res://World/LavaBush.tscn" type="PackedScene" id=28]
 [ext_resource path="res://Textures/Natural/Plants/plant13.png" type="Texture" id=31]
 [ext_resource path="res://Textures/Tileset/water_ocean.png" type="Texture" id=32]
 [ext_resource path="res://World/StoneBackground.png" type="Texture" id=33]
@@ -38,6 +36,7 @@
 [ext_resource path="res://Textures/Natural/Stone/stone5.png" type="Texture" id=36]
 [ext_resource path="res://Textures/Tileset/lava-corner.tres" type="Texture" id=37]
 [ext_resource path="res://Textures/Natural/Wood/wood5.png" type="Texture" id=38]
+[ext_resource path="res://World/BlackRockSmall.tscn" type="PackedScene" id=39]
 [ext_resource path="res://Textures/Natural/Wood/fence3.png" type="Texture" id=40]
 [ext_resource path="res://World.gd" type="Script" id=43]
 [ext_resource path="res://Textures/Natural/Plants/flower2.png" type="Texture" id=46]
@@ -236,14 +235,6 @@ load_path = "res://.import/GrassBackground.png-97f32375e80ccfc9d4addd18e4430882.
 8/shapes = [  ]
 8/z_index = 0
 
-[sub_resource type="SpriteFrames" id=105]
-animations = [ {
-"frames": [ ExtResource( 25 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "default",
-"speed": 1.0
-} ]
-
 [sub_resource type="Animation" id=50]
 resource_name = "Day_and_Night"
 length = 240.0
@@ -276,6 +267,15 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="ConvexPolygonShape2D" id=107]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=108]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=109]
+points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
+
 [sub_resource type="TileSet" id=106]
 0/name = "lava.tres 0"
 0/texture = ExtResource( 27 )
@@ -287,9 +287,16 @@ tracks/0/keys = {
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 107 )
 0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 107 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 0/z_index = 0
 3/name = "lava-edge.tres 3"
 3/texture = ExtResource( 35 )
@@ -301,9 +308,16 @@ tracks/0/keys = {
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 108 )
 3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 108 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 3/z_index = 0
 4/name = "lava-corner.tres 4"
 4/texture = ExtResource( 37 )
@@ -315,9 +329,16 @@ tracks/0/keys = {
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 109 )
 4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 109 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 4/z_index = 0
 
 [node name="World" type="Node2D"]
@@ -1263,108 +1284,98 @@ resource = "res://Items/Resources/Plank.tres"
 
 [node name="Vulcan" type="YSort" parent="YSort"]
 
-[node name="Vulcan" type="AnimatedSprite" parent="YSort/Vulcan"]
-position = Vector2( 418, -741 )
-frames = SubResource( 105 )
-frame = 1
-playing = true
+[node name="BlackRockMedium" parent="YSort/Vulcan" instance=ExtResource( 6 )]
+position = Vector2( 704, -590 )
 
-[node name="Vulcan2" type="AnimatedSprite" parent="YSort/Vulcan"]
-position = Vector2( 525, -699 )
-frames = SubResource( 105 )
-playing = true
+[node name="BlackRockMedium3" parent="YSort/Vulcan" instance=ExtResource( 6 )]
+position = Vector2( 408, -834 )
 
-[node name="BlackRock2" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 406, -817 )
-texture = ExtResource( 6 )
+[node name="BlackRockMedium2" parent="YSort/Vulcan" instance=ExtResource( 6 )]
+position = Vector2( 640, -419 )
 
-[node name="BlackRock3" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 700, -582 )
-texture = ExtResource( 6 )
+[node name="BlackRockSmall" parent="YSort/Vulcan" instance=ExtResource( 39 )]
+position = Vector2( 488, -450 )
 
-[node name="BlackRock4" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 638, -408 )
-texture = ExtResource( 6 )
+[node name="BlackRockSmall8" parent="YSort/Vulcan" instance=ExtResource( 39 )]
+position = Vector2( 785, -351 )
 
-[node name="BlackRock" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 722, -530 )
-texture = ExtResource( 28 )
+[node name="BlackRockSmall2" parent="YSort/Vulcan" instance=ExtResource( 39 )]
+position = Vector2( 660, -517 )
 
-[node name="BlackRock7" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 481, -448 )
-texture = ExtResource( 28 )
+[node name="BlackRockSmall3" parent="YSort/Vulcan" instance=ExtResource( 39 )]
+position = Vector2( 822, -588 )
 
-[node name="BlackRock8" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 780, -341 )
-texture = ExtResource( 28 )
+[node name="BlackRockSmall4" parent="YSort/Vulcan" instance=ExtResource( 39 )]
+position = Vector2( 645, -715 )
 
-[node name="BlackRock2" type="Sprite" parent="YSort/Vulcan/BlackRock8"]
-position = Vector2( -520, -210 )
-texture = ExtResource( 6 )
+[node name="BlackRockSmall5" parent="YSort/Vulcan" instance=ExtResource( 39 )]
+position = Vector2( 576, -824 )
 
-[node name="BlackRock" type="Sprite" parent="YSort/Vulcan/BlackRock8"]
-position = Vector2( -155, -353 )
-texture = ExtResource( 28 )
+[node name="BlackRockSmall6" parent="YSort/Vulcan" instance=ExtResource( 39 )]
+position = Vector2( 386, -786 )
 
-[node name="LavaBush" type="Sprite" parent="YSort/Vulcan/BlackRock8"]
-position = Vector2( -160, -266 )
-texture = ExtResource( 30 )
+[node name="BlackRockSmall7" parent="YSort/Vulcan" instance=ExtResource( 39 )]
+position = Vector2( 225, -737 )
 
-[node name="LavaBush2" type="Sprite" parent="YSort/Vulcan/BlackRock8"]
-position = Vector2( 76, -140 )
-texture = ExtResource( 30 )
+[node name="LavaRockBig" parent="YSort/Vulcan" instance=ExtResource( 24 )]
+position = Vector2( 582, -499 )
 
-[node name="LavaBush4" type="Sprite" parent="YSort/Vulcan/BlackRock8"]
-position = Vector2( -471, -495 )
-texture = ExtResource( 30 )
+[node name="LavaRockBig2" parent="YSort/Vulcan" instance=ExtResource( 24 )]
+position = Vector2( 776, -423 )
 
-[node name="LavaBush6" type="Sprite" parent="YSort/Vulcan/BlackRock8"]
-position = Vector2( -14, -395 )
-texture = ExtResource( 30 )
+[node name="LavaRockBig3" parent="YSort/Vulcan" instance=ExtResource( 24 )]
+position = Vector2( 766, -533 )
 
-[node name="LavaBush5" type="Sprite" parent="YSort/Vulcan/BlackRock8"]
-position = Vector2( -295, -467 )
-texture = ExtResource( 30 )
+[node name="LavaRockBig4" parent="YSort/Vulcan" instance=ExtResource( 24 )]
+position = Vector2( 760, -658 )
 
-[node name="LavaBush3" type="Sprite" parent="YSort/Vulcan/BlackRock8"]
-position = Vector2( -213, -91 )
-texture = ExtResource( 30 )
+[node name="LavaRockBig5" parent="YSort/Vulcan" instance=ExtResource( 24 )]
+position = Vector2( 627, -778 )
 
-[node name="BlackRock9" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 855, -599 )
-texture = ExtResource( 28 )
+[node name="LavaRockBig6" parent="YSort/Vulcan" instance=ExtResource( 24 )]
+position = Vector2( 226, -803 )
 
-[node name="BlackRock6" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 190, -703 )
-texture = ExtResource( 28 )
+[node name="LavaBush" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 556, -418 )
 
-[node name="BlackRock5" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 335, -787 )
-texture = ExtResource( 28 )
+[node name="LavaBush2" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 715, -357 )
 
-[node name="LavaBush" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 514, -744 )
-texture = ExtResource( 30 )
+[node name="LavaBush3" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 709, -463 )
 
-[node name="LavaRock" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 556, -553 )
-texture = ExtResource( 24 )
+[node name="LavaBush4" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 851, -483 )
 
-[node name="LavaRock2" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 731, -658 )
-texture = ExtResource( 24 )
+[node name="LavaBush5" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 633, -611 )
 
-[node name="LavaRock3" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 589, -791 )
-texture = ExtResource( 24 )
+[node name="LavaBush6" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 744, -725 )
 
-[node name="LavaRock4" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 759, -442 )
-texture = ExtResource( 24 )
+[node name="LavaBush7" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 508, -764 )
 
-[node name="LavaRock5" type="Sprite" parent="YSort/Vulcan"]
-position = Vector2( 224, -807 )
-texture = ExtResource( 24 )
+[node name="LavaBush8" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 476, -825 )
+
+[node name="LavaBush9" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 320, -822 )
+
+[node name="LavaBush10" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 133, -809 )
+
+[node name="LavaBush11" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 188, -653 )
+
+[node name="LavaBush12" parent="YSort/Vulcan" instance=ExtResource( 28 )]
+position = Vector2( 273, -544 )
+
+[node name="Vulcan" parent="YSort/Vulcan" instance=ExtResource( 25 )]
+position = Vector2( 507, -738 )
+
+[node name="Vulcan2" parent="YSort/Vulcan" instance=ExtResource( 25 )]
+position = Vector2( 549, -679 )
 
 [node name="Player" parent="YSort" groups=["save"] instance=ExtResource( 2 )]
 position = Vector2( 5, 42 )

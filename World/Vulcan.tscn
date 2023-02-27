@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Textures/Natural/Vulcan/vulcan_2.png" type="Texture" id=1]
+[ext_resource path="res://Textures/Natural/Vulcan/vulcan_1.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 6.0
+height = 16.0
+
+[node name="Vulcan" type="KinematicBody2D"]
+
+[node name="Vulcan" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 10 )
+rotation = 1.5708
+shape = SubResource( 2 )
