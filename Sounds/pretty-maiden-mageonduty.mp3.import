@@ -11,5 +11,5 @@ dest_files=[ "res://.import/pretty-maiden-mageonduty.mp3-74749ff2ac1c392a8840052
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

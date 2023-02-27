@@ -11,5 +11,5 @@ dest_files=[ "res://.import/gem_kings_gallery.mp3-781d9217e3a483dd3fd40b91de6d72
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
