@@ -708,6 +708,42 @@ texture = ExtResource( 21 )
 position = Vector2( -48, -88 )
 priority = 1.0
 
+[node name="Stone2" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( -38, -104 )
+priority = 1.0
+
+[node name="Stone27" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( -21, -116 )
+priority = 1.0
+
+[node name="Stone28" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 12, -125 )
+priority = 1.0
+
+[node name="Stone29" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 35, -127 )
+priority = 1.0
+
+[node name="Stone30" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 54, -126 )
+priority = 1.0
+
+[node name="Stone31" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 72, -127 )
+priority = 1.0
+
+[node name="Stone32" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 91, -127 )
+priority = 1.0
+
+[node name="Stone33" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 104, -126 )
+priority = 1.0
+
+[node name="Stone34" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 104, -126 )
+priority = 1.0
+
 [node name="Flower13" type="Sprite" parent="YSort/Natural"]
 position = Vector2( 376, 352 )
 texture = ExtResource( 15 )
