@@ -50,7 +50,8 @@
       "dialogue": [
         {
            "name":"Ja",
-           "text":"Ah! Co tu się stało!"
+           "text":"Ah! Co tu się stało!",
+		   "additional_info": "Naciśnij SPACJA, aby przejść dalej!"
         },
         {
            "name":"Ja",

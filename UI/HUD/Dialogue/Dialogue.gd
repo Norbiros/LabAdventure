@@ -30,7 +30,8 @@ func _show_dialogue_message() -> void:
 	else:
 		nameEl.text = current_dialogue[dialogue_index]["name"]
 		textEl.text = current_dialogue[dialogue_index]["text"]
-		if "Ah! Co tu się stało!" in current_dialogue[dialogue_index]["text"]:
+		if "additional_info" in current_dialogue[dialogue_index]:
+			infoEl.text = current_dialogue[dialogue_index]["additional_info"]
 			infoEl.show()
 
 func _unhandled_key_input(_event) -> void:
