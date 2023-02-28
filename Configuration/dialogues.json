@@ -3,7 +3,7 @@
       "dialogue": [
         {
            "name":"Wieśniak",
-           "text":"Witaj przybyeszu!"
+           "text":"Witaj przybyszu!"
         },
         {
            "name":"Pedra",
@@ -15,7 +15,7 @@
         },
         {
            "name":"Wieśniak",
-           "text":"Przynieś mi 5 fiolek kwasu siarkowego (VI).\nBędzie mi on bardzo potrzebny do nawozów."
+           "text":"Przynieś mi 5 fiolek kwasu siarkowego (VI).\nBędzie mi on bardzo potrzebny do nawozów.",
         }
       ],
       "next_dialogue": "FirstKingChoise"
