@@ -1,72 +1,53 @@
 {
-   "KingDialogue1":[
-      {
-         "name":"Król",
-         "text":"Ah! Witaj przyjacielu w moich skromnych prograch!"
-      },
-      {
-         "name":"Pedra",
-         "text":"Guten morgen! Ich spreche Polish nicht gut!"
-      },
-      {
-         "name":"Król",
-         "text":"I co ja mam tu z tobą zrobić..."
-      }
-   ],
-   "KingDialogue2":[
-      {
-         "name":"Pedro",
-         "text":"Tutaj masz wiele itemów!"
-      },
-      {
-         "name":"Król",
-         "text":"Dzięki, ale ja ich nie chciałem"
-      },
-      {
-         "name":"Pedra",
-         "text":"Upsik :("
-      }
-   ],
-   "KingDialogue3":[
-      {
-         "name":"Król",
-         "text":"Witaj przybyszu!"
-      },
-      {
-         "name":"Pedra",
-         "text":"Witaj! Co mogę dla ciebie zrobić?"
-      },
-      {
-         "name":"Król",
-         "text":"Hmm... Niech no ja pomyśle."
-      },
-      {
-         "name":"Król",
-         "text":"Przynieś mi 5 fiolek kwasu siarkowego (VI).\nBędzie mi on bardzo potrzebny do nawozów."
-      }
-   ],
-   "KingDialogueDontHaveItems":[
-      {
-         "name":"Król",
-         "text":"Na prawdę mnie zawiodłeś/aś! \nPrzynieś mi 5 fiolek kwasu siarkowego (VI)."
-      }
-   ],
-   "KingDialogueHaveItems":[
-      {
-         "name":"Król",
-         "text":"Dziękuje Ci za ten kwas!\n Oszukałem ciebie z tym, że chce go do nawozów!"
-      },
-      {
-         "name":"Narrator",
-         "text":"*Król z zapałem otwiera probówkę, i wylewa na ziemie*\n *Cała planeta z powrotem zamienia się w zielony las!*"
-      },
-      {
-         "name":"Straż królewska",
-         "text":"Pedro! Gratulacje! \nProsze, o to dla ciebie nowo wyhodowana kalarepa"
-      },
-      {
-         "name":"Pedra",
-         "text":"No nie! O jak ja nie cierpię kalarep, i mój kot też!"
-      }
-   ]
+   "KingDialogue1": {
+      "dialogue": [
+        {
+           "name":"Król",
+           "text":"Witaj przybyeszu!"
+        },
+        {
+           "name":"Pedra",
+           "text":"Witaj! Co mogę dla ciebie zrobić?"
+        },
+        {
+           "name":"Król",
+           "text":"Hmm... Niech no ja pomyśle."
+        },
+        {
+           "name":"Król",
+           "text":"Przynieś mi 5 fiolek kwasu siarkowego (VI).\nBędzie mi on bardzo potrzebny do nawozów."
+        }
+      ],
+      "next_dialogue": "FirstKingChoise"
+   },
+   "KingDialogueDontHaveItems": {
+      "dialogue": [
+        {
+           "name":"Król",
+           "text":"Na prawdę mnie zawiodłeś/aś! \nPrzynieś mi 5 fiolek kwasu siarkowego (VI)."
+        }
+      ],
+      "next_dialogue": "FirstKingChoise"
+   },
+   "KingDialogueHaveItems": {
+      "dialogue": [
+        {
+           "name":"Król",
+           "text":"Dziękuje Ci za ten kwas!\n Oszukałem ciebie z tym, że chce go do nawozów!"
+        },
+        {
+           "name":"Narrator",
+           "text":"*Król z zapałem otwiera probówkę, i wylewa na ziemie*\n *Cała planeta z powrotem zamienia się w zielony las!*"
+        },
+        {
+           "name":"Straż królewska",
+           "text":"Pedro! Gratulacje! \nProsze, o to dla ciebie nowo wyhodowana kalarepa"
+        },
+        {
+           "name":"Pedra",
+           "text":"No nie! O jak ja nie cierpię kalarep, i mój kot też!"
+        }
+      ],
+      "next_dialogue": "END"
+   }
 }

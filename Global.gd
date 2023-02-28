@@ -8,7 +8,7 @@ signal start_game(level, new)
 signal pressed_menu_button(button)
 signal inventory_closed()
 signal inventory_state_change(state)
-signal show_dialogue(dialogue)
+signal show_dialogue(dialogue, next_dialogue)
 signal dialogue_ended()
 
 var tutorial = false

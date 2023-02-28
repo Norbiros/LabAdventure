@@ -58,10 +58,6 @@ func drop_data(_position, data):
 	get_parent().emit_signal("start_crafting", data.item, get_parent().get_child(1 - get_index()).get_item())
 
 func _ended_crafting(_item, _second_item, item_ratio):
-	#inventory.emit_signal("items_changed", [0])
-	#Global.emit_signal("itembar_changed")
-	#inventory.drag_data = null 
-	#inventory.hideSlot = true
 	if get_index() <  len(item_ratio):
 		displayItem.amount -= item_ratio[get_index()]
 	if displayItem == null or displayItem.amount < 1:

@@ -16,7 +16,7 @@ func _ready():
 	_show_dialogue_message()
 
 func _show_dialogue(dialogue: String) -> void:
-	current_dialogue = dialogues[dialogue]
+	current_dialogue = dialogues[dialogue]["dialogue"]
 	dialogue_name = dialogue
 	dialogue_index = 0
 	_show_dialogue_message()
@@ -33,7 +33,8 @@ func _unhandled_key_input(_event) -> void:
 	var state = Global.inventory_state
 	if Input.is_action_just_pressed("next_dialogue"):
 		if dialogue_index + 2 > len(current_dialogue) and current_dialogue != []:
-			Global.emit_signal("dialogue_ended", dialogue_name)
+			var next_dialogue = dialogues[dialogue_name]["next_dialogue"]
+			Global.emit_signal("dialogue_ended", dialogue_name, next_dialogue)
 			current_dialogue = []
 			dialogue_index = -1
 			dialogue_name = ""
