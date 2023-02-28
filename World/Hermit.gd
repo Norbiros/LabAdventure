@@ -26,11 +26,12 @@ func run_interaction():
 
 func states():
 	# Tutaj można dodawać różne interaktywne zadania, po prostu od ifów.
-	if dialogue_index == "FirstKingChoise":
+	print(Global.prev )
+	if dialogue_index == "FirstHermitChoise":
 		if inventory.amount_of_items("H2SO4Tube") >= 5:
-			Global.emit_signal("show_dialogue", "KingDialogueHaveItems")
+			Global.emit_signal("show_dialogue", "HermitDialogueHaveItems")
 		else:
-			Global.emit_signal("show_dialogue", "KingDialogueDontHaveItems")
+			Global.emit_signal("show_dialogue", "HermitDialogueDontHaveItems")
 	elif dialogue_index == "END":
 		return false
 	else:
@@ -39,8 +40,8 @@ func states():
 
 
 func _on_Area2D_body_entered(body):
-	if body.name  == "Player" and interacted == false:
-		Global.player_interactions[self.name] = ["Kliknij F, aby porozmawiać z osadnikiem!", self, "run_interaction"]
+	if body.name  == "Player":
+		Global.player_interactions[self.name] = ["Kliknij F, aby porozmawiać z Hermitem!", self, "run_interaction"]
 		player_in_area2d = true
 
 

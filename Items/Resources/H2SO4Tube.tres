@@ -12,4 +12,4 @@ siarki, tlenu i wody!
 Bardzo przydatny"
 texture = ExtResource( 2 )
 is_tool = false
-max_stack_value = 8
+max_stack_value = 16

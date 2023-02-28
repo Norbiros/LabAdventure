@@ -37,30 +37,6 @@ var craftings = {
 		},
 		"time": 10.0
 	},
-	"P4O10": {
-		"name": "Tlenek fosforu (V)",
-		"description": "Kolejna nudna receptura",
-		"ingredients": {
-			"P": 4,
-			"EmptyTube": 5
-		},
-		"result": {
-			"res://Items/Resources/P4O10.tres": 1
-		},
-		"time": 10.0
-	},
-	"H3PO4": {
-		"name": "Kwas fosforowy (V)",
-		"description": "Kwas!",
-		"ingredients": {
-			"P4O10": 1,
-			"WaterTube": 6
-		},
-		"result": {
-			"res://Items/Resources/H3PO4.tres": 4
-		},
-		"time": 10.0
-	},
 	"Iron": {
 		"name": "Sztabka żelaza",
 		"description": "Przepis do zrobienia czegoś fajnego",

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://Items/item.gd" type="Script" id=1]
-[ext_resource path="res://Items/Textures/h2so4_tube.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Other/kwas_2.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
@@ -10,4 +10,4 @@ displayName = "Tlenek siarki (IV)"
 description = "Nieorganiczny związek chemiczny z grupy tlenków siarki, w którym siarka znajduje się na IV stopniu utlenienia."
 texture = ExtResource( 2 )
 is_tool = false
-max_stack_value = 1
+max_stack_value = 16

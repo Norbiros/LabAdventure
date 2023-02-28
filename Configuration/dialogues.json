@@ -51,15 +51,32 @@
       ],
       "next_dialogue": "FirstHermitChoise"
    },
+   "WilliamDialogue2": {
+      "dialogue": [
+        {
+           "name":"Irys",
+           "text":"Hej."
+        },
+        {
+           "name":"The Catalysts' Team",
+           "text":"Dziękujemy za wzięcie udziału w wersji DEMO!"
+        },
+        {
+           "name":"The Catalysts' Team",
+           "text":"Zapraszamy to pozwiedzania mapy, i wyczekujcie\nNASTĘPNEJ CZĘŚĆI :)"
+        }
+      ],
+      "next_dialogue": "."
+   },
    "HermitDialogueDontHaveItems": {
       "dialogue": [
         {
            "name":"Hermit",
            "text":"Na prawdę mnie zawiodłaś! \nPrzynieś mi 5 fiolek kwasu siarkowego (VI).",
-           "additional_info": "Stwórz kwas siarkowy (VI)\n, opis jak to zrobić masz w książce w ekwipunku!"
+           "additional_info": "Stwórz kwas siarkowy (VI),\n opis jak to zrobić masz w książce w ekwipunku!"
         }
       ],
-      "next_dialogue": "FirstWilliamChoise"
+      "next_dialogue": "FirstHermitChoise"
    },
    "HermitDialogueHaveItems": {
       "dialogue": [
@@ -74,9 +91,18 @@
         {
            "name":"Irys",
            "text":"Dziękuje!"
-        }
+        },
+        {
+           "name":"Hermit",
+           "text":"Jak pomożesz Williamowi to on na pewno\n ci powie jak wydostać się z tej wyspy!"
+        },
+        {
+           "name":"Irys",
+           "text":"Okej",
+           "additional_info": "Udaj się zpowrotem do Williama!"
+        },
       ],
-      "next_dialogue": "END"
+      "next_dialogue": "WillDialogue2"
    },
    "Init": {
       "dialogue": [

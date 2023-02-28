@@ -3,6 +3,7 @@ extends Control
 
 var dialogues = {}
 var current_dialogue = []
+var prev = ""
 var dialogue_index = 0
 var dialogue_name = ""
 onready var SAVE_KEY = "dialogue_" + name
@@ -40,6 +41,7 @@ func _unhandled_key_input(_event) -> void:
 		if dialogue_index + 2 > len(current_dialogue) and current_dialogue != []:
 			var next_dialogue = dialogues[dialogue_name]["next_dialogue"]
 			Global.emit_signal("dialogue_ended", dialogue_name, next_dialogue)
+			Global.prev = dialogue_name
 			current_dialogue = []
 			dialogue_index = -1
 			dialogue_name = ""
