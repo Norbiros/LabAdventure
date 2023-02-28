@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://World/BlackRockMedium.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
 [ext_resource path="res://Textures/Other/Dom.png" type="Texture" id=8]
-[ext_resource path="res://Util/ItemDrop.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World/Stone.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Textures/Natural/Plants/flower4.png" type="Texture" id=11]
 [ext_resource path="res://Textures/Tileset/water-animated-left.tres" type="Texture" id=12]
@@ -1483,74 +1482,6 @@ texture = ExtResource( 8 )
 position = Vector2( -60, 17 )
 
 [node name="Items" type="YSort" parent="YSort"]
-
-[node name="AxeItem1" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( -275, -35 )
-resource = "res://Items/Resources/IronIngot.tres"
-amount = 4
-
-[node name="AxeItem2" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( 108, -52 )
-resource = "res://Items/Resources/IronOre.tres"
-amount = 125
-
-[node name="Sulfur" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( 114, 50 )
-resource = "res://Items/Resources/Sulfur.tres"
-amount = 64
-
-[node name="AxeItem3" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( 93, -133 )
-resource = "res://Items/Resources/IronOre.tres"
-amount = 125
-
-[node name="SwordItem" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( -134, 115 )
-resource = "res://Items/Resources/EmptyTube.tres"
-amount = 10
-
-[node name="SwordItem4" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( 1, 96 )
-resource = "res://Items/Resources/WaterTube.tres"
-amount = 3
-
-[node name="SwordItem5" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( -66, 89 )
-resource = "res://Items/Resources/P.tres"
-amount = 20
-
-[node name="SwordItem7" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( -162, -14 )
-resource = "res://Items/Resources/P.tres"
-amount = 11
-
-[node name="EmptyTube" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( -41, 156 )
-resource = "res://Items/Resources/EmptyTube.tres"
-amount = 3
-
-[node name="EmptyTube2" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( 78, 138 )
-resource = "res://Items/Resources/EmptyTube.tres"
-amount = 3
-
-[node name="EmptyTube3" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( 67, 58 )
-resource = "res://Items/Resources/EmptyTube.tres"
-amount = 3
-
-[node name="EmptyTube4" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( 155, -15 )
-resource = "res://Items/Resources/EmptyTube.tres"
-amount = 3
-
-[node name="SwordItem3" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( -248, -97 )
-resource = "res://Items/Resources/EmptyTube.tres"
-
-[node name="SwordItem2" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( -76, -66 )
-resource = "res://Items/Resources/Plank.tres"
 
 [node name="Vulcan" type="YSort" parent="YSort"]
 

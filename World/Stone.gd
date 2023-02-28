@@ -4,7 +4,7 @@ var interacted = false
 
 func _on_Stone_body_entered(body):
 	if body.name  == "Player" and interacted == false:
-		Global.player_interactions[self.name] = ["Kliknij, aby podnieść!", self, "run_interaction"]
+		Global.player_interactions[self.name] = ["Kliknij, SPACJĘ aby podnieść!", self, "run_interaction"]
 
 func run_interaction():
 	interacted = true
