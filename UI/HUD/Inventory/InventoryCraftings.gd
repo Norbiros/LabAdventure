@@ -14,7 +14,7 @@ var craftings = {
 		"time": 10.0
 	},
 	"SO3": {
-		"name": "Tritlenek siarki",
+		"name": "Tlenek siarki (VI)",
 		"description": "Kolejna nudna receptura",
 		"ingredients": {
 			"SO2": 1,
@@ -26,7 +26,7 @@ var craftings = {
 		"time": 10.0
 	},
 	"SO2": {
-		"name": "Dwutlenek siarki",
+		"name": "Tlenek siarki (IV)",
 		"description": "Receptura jak każda inna",
 		"ingredients": {
 			"Sulfur": 1,
@@ -34,6 +34,30 @@ var craftings = {
 		},
 		"result": {
 			"res://Items/Resources/SO2.tres": 1
+		},
+		"time": 10.0
+	},
+	"P4O10": {
+		"name": "Tlenek fosforu (V)",
+		"description": "Kolejna nudna receptura",
+		"ingredients": {
+			"P": 4,
+			"EmptyTube": 5
+		},
+		"result": {
+			"res://Items/Resources/P4O10.tres": 1
+		},
+		"time": 10.0
+	},
+	"H3PO4": {
+		"name": "Kwas fosforowy (V)",
+		"description": "Kwas!",
+		"ingredients": {
+			"P4O10": 1,
+			"WaterTube": 6
+		},
+		"result": {
+			"res://Items/Resources/H3PO4.tres": 4
 		},
 		"time": 10.0
 	},

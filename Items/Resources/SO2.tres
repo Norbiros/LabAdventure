@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource( 1 )
 name = "SO2"
-displayName = "Dwutlenek siarki"
+displayName = "Tlenek siarki (IV)"
 description = "Nieorganiczny związek chemiczny z grupy tlenków siarki, w którym siarka znajduje się na IV stopniu utlenienia."
 texture = ExtResource( 2 )
 is_tool = false
