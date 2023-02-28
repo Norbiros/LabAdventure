@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://World/BlackRockMedium.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
 [ext_resource path="res://Textures/Other/Dom.png" type="Texture" id=8]
+[ext_resource path="res://Util/ItemDrop.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World/Stone.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Textures/Natural/Plants/flower4.png" type="Texture" id=11]
 [ext_resource path="res://Textures/Tileset/water-animated-left.tres" type="Texture" id=12]
@@ -1553,6 +1554,41 @@ texture = ExtResource( 8 )
 [node name="CraftingTable" parent="YSort/Natural" instance=ExtResource( 4 )]
 position = Vector2( -60, 17 )
 
+[node name="ItemDrop" parent="YSort/Natural" instance=ExtResource( 9 )]
+position = Vector2( 24, 134 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 5
+
+[node name="ItemDrop2" parent="YSort/Natural" instance=ExtResource( 9 )]
+position = Vector2( -149, 118 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 5
+
+[node name="ItemDrop3" parent="YSort/Natural" instance=ExtResource( 9 )]
+position = Vector2( 137, -26 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 5
+
+[node name="ItemDrop4" parent="YSort/Natural" instance=ExtResource( 9 )]
+position = Vector2( -152, -42 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 5
+
+[node name="ItemDrop5" parent="YSort/Natural" instance=ExtResource( 9 )]
+position = Vector2( 290, 64 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 5
+
+[node name="ItemDrop6" parent="YSort/Natural" instance=ExtResource( 9 )]
+position = Vector2( 290, 64 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 5
+
+[node name="ItemDrop7" parent="YSort/Natural" instance=ExtResource( 9 )]
+position = Vector2( 72, 25 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 5
+
 [node name="Items" type="YSort" parent="YSort"]
 
 [node name="Vulcan" type="YSort" parent="YSort"]
@@ -1666,7 +1702,7 @@ scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 47 )
 
 [node name="Hermit" parent="YSort" instance=ExtResource( 44 )]
-position = Vector2( 277, 62 )
+position = Vector2( 267, 65 )
 scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 45 )
 

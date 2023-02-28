@@ -2,16 +2,16 @@ extends Area2D
 
 var interacted = false
 
-var items = ["P.tres", "Sulfur.tres", "IronOre.tres"]
+var items = ["Sulfur.tres"]
 
 func _on_Stone_body_entered(body):
 	if body.name  == "Player" and interacted == false:
-		Global.player_interactions[self.name] = ["Kliknij, F aby podnieść!", self, "run_interaction"]
+		Global.player_interactions[self.name] = ["Kliknij, F aby wykopać!", self, "run_interaction"]
 
 func run_interaction():
 	interacted = true
 	var t = Timer.new()
-	t.set_wait_time(3)
+	t.set_wait_time(0)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()
