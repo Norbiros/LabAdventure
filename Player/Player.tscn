@@ -290,8 +290,8 @@ shader_param/crop_top = 0.0
 shader_param/crop_bottom = 0.0
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 4.0
-height = 4.0
+radius = 6.00002
+height = 5.99996
 
 [sub_resource type="AnimationNodeAnimation" id=11]
 animation = "IdleLeft"
@@ -379,6 +379,7 @@ texture = ExtResource( 3 )
 hframes = 19
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -3 )
 rotation = -1.5708
 shape = SubResource( 1 )
 

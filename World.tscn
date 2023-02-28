@@ -347,7 +347,7 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 script = ExtResource( 43 )
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( 5, 42 )
+position = Vector2( -811, 805 )
 current = true
 limit_left = -1000
 limit_top = -1000
@@ -1383,7 +1383,7 @@ position = Vector2( 549, -679 )
 position = Vector2( 233, -30 )
 
 [node name="Player" parent="YSort" groups=["save"] instance=ExtResource( 2 )]
-position = Vector2( 5, 42 )
+position = Vector2( -811, 805 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://UI/HUD/Inventory/InventoryContainer.gd" type="Script" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
@@ -7,8 +7,29 @@
 [ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/TutorialLevel/TutorialLevel.gd" type="Script" id=6]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Natural/Plants/mushroom1.png" type="Texture" id=8]
 [ext_resource path="res://UI/HUD/Inventory/InventoryDisplay.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Textures/Natural/Plants/plant13.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Natural/Wood/sign1.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Natural/Stone/stone7.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Natural/Plants/flower3.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Natural/Stone/stone5.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Natural/Plants/flower4.png" type="Texture" id=16]
+[ext_resource path="res://Textures/Natural/Plants/flower1.png" type="Texture" id=17]
+[ext_resource path="res://Textures/Natural/Plants/flower2.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Natural/Plants/flower5.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Natural/Wood/wood6.png" type="Texture" id=20]
+[ext_resource path="res://Textures/Natural/Stone/stone3.png" type="Texture" id=21]
+[ext_resource path="res://Textures/Natural/Stone/gravestone.png" type="Texture" id=22]
+[ext_resource path="res://Textures/Natural/Wood/wood5.png" type="Texture" id=23]
+[ext_resource path="res://Textures/Natural/Plants/flower6.png" type="Texture" id=24]
+[ext_resource path="res://Textures/Natural/Wood/wood4.png" type="Texture" id=25]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Textures/Natural/Wood/wood1.png" type="Texture" id=27]
+[ext_resource path="res://Textures/Natural/Wood/fence2.png" type="Texture" id=28]
+[ext_resource path="res://Textures/Natural/Wood/wood3.png" type="Texture" id=29]
+[ext_resource path="res://Textures/Natural/Wood/fence1.png" type="Texture" id=30]
 
 [sub_resource type="TileSet" id=101]
 0/name = "DirtTileset.png 0"
@@ -36,20 +57,21 @@
 0/z_index = 0
 
 [node name="TutorialLevel" type="Node2D"]
+position = Vector2( 123, -12 )
 script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 487, -6 )
+position = Vector2( 203, -9 )
 texture = ExtResource( 4 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 1524, 352 )
+region_rect = Rect2( 0, 0, 1025, 352 )
 
 [node name="Camera" type="Camera2D" parent="."]
-position = Vector2( -106, -3 )
+position = Vector2( -133, -11 )
 current = true
 limit_left = -500
 limit_top = -500
-limit_right = 500
+limit_right = 1000
 limit_bottom = 500
 smoothing_enabled = true
 smoothing_speed = 8.0
@@ -58,15 +80,16 @@ smoothing_speed = 8.0
 tile_set = SubResource( 101 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 2, 65535, 0, 131072, 0, 0, 131074 )
+tile_data = PoolIntArray( -262130, 0, 196611, -262113, 0, 3, -196579, 0, 0, -196578, 0, 1, -196577, 0, 131080, -196576, 0, 1, -196575, 0, 2, -65545, 0, 0, -65544, 0, 1, -65543, 0, 2, -65541, 0, 0, -65540, 0, 1, -65539, 0, 1, -65538, 0, 1, -65537, 0, 1, -131072, 0, 1, -131071, 0, 2, -131059, 0, 0, -131058, 0, 1, -131057, 0, 1, -131056, 0, 1, -131055, 0, 1, -131054, 0, 1, -131053, 0, 2, -131044, 0, 0, -131043, 0, 131078, -131042, 0, 65537, -131041, 0, 65537, -131040, 0, 65537, -131039, 0, 131077, -131038, 0, 2, -9, 0, 131072, -8, 0, 65542, -7, 0, 131077, -6, 0, 1, -5, 0, 65545, -4, 0, 131073, -3, 0, 131073, -2, 0, 131073, -1, 0, 131073, -65536, 0, 131073, -65535, 0, 196613, -65534, 0, 196609, -65533, 0, 6, -65532, 0, 1, -65531, 0, 1, -65530, 0, 1, -65529, 0, 2, -65526, 0, 0, -65525, 0, 1, -65524, 0, 1, -65523, 0, 65545, -65522, 0, 131073, -65521, 0, 131073, -65520, 0, 131073, -65519, 0, 131073, -65518, 0, 131073, -65517, 0, 196613, -65516, 0, 196609, -65515, 0, 196609, -65514, 0, 6, -65513, 0, 1, -65512, 0, 1, -65511, 0, 1, -65510, 0, 1, -65509, 0, 1, -65508, 0, 131078, -65507, 0, 65537, -65506, 0, 65537, -65505, 0, 65537, -65504, 0, 65537, -65503, 0, 65537, -65502, 0, 65538, 65528, 0, 131072, 65529, 0, 131073, 65530, 0, 131073, 65531, 0, 131074, 3, 0, 131072, 4, 0, 131073, 5, 0, 131073, 6, 0, 131073, 7, 0, 196613, 8, 0, 196609, 9, 0, 196609, 10, 0, 196614, 11, 0, 131073, 12, 0, 131073, 13, 0, 131074, 22, 0, 131072, 23, 0, 131073, 24, 0, 131073, 25, 0, 131073, 26, 0, 131073, 27, 0, 131073, 28, 0, 65542, 29, 0, 65537, 30, 0, 65537, 31, 0, 65537, 32, 0, 65537, 33, 0, 65537, 34, 0, 65538, 65564, 0, 131072, 65565, 0, 65542, 65566, 0, 65537, 65567, 0, 65537, 65568, 0, 65537, 65569, 0, 65541, 65570, 0, 131074, 131101, 0, 131072, 131102, 0, 65542, 131103, 0, 65537, 131104, 0, 65541, 131105, 0, 131074, 196638, 0, 131072, 196639, 0, 131073, 196640, 0, 131074 )
 
 [node name="YSort" type="YSort" parent="."]
 z_index = 1
 
 [node name="Player" parent="YSort" instance=ExtResource( 10 )]
-position = Vector2( -106, -3 )
+position = Vector2( -132, -2 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
+position = Vector2( -1, -9 )
 remote_path = NodePath("../../../Camera")
 
 [node name="Bush" parent="YSort" instance=ExtResource( 2 )]
@@ -75,23 +98,17 @@ position = Vector2( -50, -70 )
 [node name="Bush2" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -25, -75 )
 
-[node name="Bush3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 4, -70 )
-
 [node name="Bush4" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 32, -74 )
 
 [node name="Bush5" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 57, -67 )
+position = Vector2( 0, -39 )
 
 [node name="Bush6" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -181, -21 )
 
 [node name="Bush7" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -160, -43 )
-
-[node name="Bush8" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -140, -64 )
 
 [node name="Bush9" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -112, -73 )
@@ -117,12 +134,6 @@ position = Vector2( 61, 88 )
 [node name="Bush16" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -175, 3 )
 
-[node name="Bush17" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -167, 26 )
-
-[node name="Bush18" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( -161, 47 )
-
 [node name="Bush19" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( -136, 59 )
 
@@ -144,12 +155,6 @@ position = Vector2( 302, 80 )
 [node name="Bush25" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 327, 87 )
 
-[node name="Bush26" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 85, 84 )
-
-[node name="Bush27" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 110, 79 )
-
 [node name="Bush28" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 139, 84 )
 
@@ -170,15 +175,6 @@ position = Vector2( 270, -70 )
 
 [node name="Bush34" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 298, -74 )
-
-[node name="Bush35" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 323, -67 )
-
-[node name="Bush36" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 81, -70 )
-
-[node name="Bush37" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 106, -75 )
 
 [node name="Bush38" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 135, -70 )
@@ -234,9 +230,6 @@ position = Vector2( 546, 68 )
 [node name="Bush55" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 563, 50 )
 
-[node name="Bush56" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 340, 104 )
-
 [node name="Bush57" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 365, 99 )
 
@@ -248,6 +241,262 @@ position = Vector2( 422, 100 )
 
 [node name="Bush60" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 447, 107 )
+
+[node name="KinematicBody2D" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 5, -84 )
+
+[node name="KinematicBody2D2" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 97, -70 )
+
+[node name="KinematicBody2D6" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 314, -68 )
+
+[node name="KinematicBody2D7" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 353, 102 )
+
+[node name="KinematicBody2D8" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 553, -16 )
+
+[node name="KinematicBody2D9" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 568, 9 )
+
+[node name="KinematicBody2D10" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 562, 29 )
+
+[node name="Flower1" type="Sprite" parent="YSort"]
+position = Vector2( 176, -57 )
+texture = ExtResource( 17 )
+
+[node name="Flower2" type="Sprite" parent="YSort"]
+position = Vector2( -16, 42 )
+texture = ExtResource( 18 )
+
+[node name="Flower3" type="Sprite" parent="YSort"]
+position = Vector2( -15, -55 )
+texture = ExtResource( 17 )
+
+[node name="Flower4" type="Sprite" parent="YSort"]
+position = Vector2( 349, 32 )
+texture = ExtResource( 18 )
+
+[node name="Flower5" type="Sprite" parent="YSort"]
+position = Vector2( 20, 25 )
+texture = ExtResource( 16 )
+
+[node name="Flower6" type="Sprite" parent="YSort"]
+position = Vector2( 6, -51 )
+texture = ExtResource( 24 )
+
+[node name="Flower7" type="Sprite" parent="YSort"]
+position = Vector2( -72, -47 )
+texture = ExtResource( 19 )
+
+[node name="Flower8" type="Sprite" parent="YSort"]
+position = Vector2( -48, 26 )
+texture = ExtResource( 14 )
+
+[node name="Mushroom1" type="Sprite" parent="YSort"]
+position = Vector2( -105, -47 )
+texture = ExtResource( 8 )
+
+[node name="Flower9" type="Sprite" parent="YSort"]
+position = Vector2( -87, 35 )
+texture = ExtResource( 18 )
+
+[node name="KinematicBody2D3" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( 102, 84 )
+
+[node name="KinematicBody2D4" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( -162, 36 )
+
+[node name="KinematicBody2D5" parent="YSort" instance=ExtResource( 26 )]
+position = Vector2( -125, -55 )
+
+[node name="Flower10" type="Sprite" parent="YSort"]
+position = Vector2( 412, 60 )
+texture = ExtResource( 18 )
+
+[node name="Plant16" type="Sprite" parent="YSort"]
+position = Vector2( 137, 36 )
+texture = ExtResource( 11 )
+
+[node name="Flower11" type="Sprite" parent="YSort"]
+position = Vector2( 208, -43 )
+texture = ExtResource( 19 )
+
+[node name="Flower12" type="Sprite" parent="YSort"]
+position = Vector2( 324, 16 )
+texture = ExtResource( 16 )
+
+[node name="Flower13" type="Sprite" parent="YSort"]
+position = Vector2( 639, -51 )
+texture = ExtResource( 16 )
+
+[node name="Stone7" type="Sprite" parent="YSort/Flower13"]
+position = Vector2( -338, 179 )
+texture = ExtResource( 13 )
+
+[node name="Stone3" type="Sprite" parent="YSort/Flower13"]
+position = Vector2( -127, 173 )
+texture = ExtResource( 21 )
+
+[node name="Gravestone" type="Sprite" parent="YSort/Flower13"]
+position = Vector2( -277, -74 )
+texture = ExtResource( 22 )
+
+[node name="Stone4" type="Sprite" parent="YSort/Flower13"]
+position = Vector2( -659, -83 )
+texture = ExtResource( 21 )
+
+[node name="Stone8" type="Sprite" parent="YSort/Flower13"]
+position = Vector2( -845, -21 )
+texture = ExtResource( 13 )
+
+[node name="Stone5" type="Sprite" parent="YSort/Flower13"]
+position = Vector2( -814, 128 )
+texture = ExtResource( 15 )
+
+[node name="Stone6" type="Sprite" parent="YSort/Flower13"]
+position = Vector2( -658, 165 )
+texture = ExtResource( 21 )
+
+[node name="Flower14" type="Sprite" parent="YSort"]
+position = Vector2( 259, -53 )
+texture = ExtResource( 17 )
+
+[node name="Flower15" type="Sprite" parent="YSort"]
+position = Vector2( 120, 37 )
+texture = ExtResource( 16 )
+
+[node name="Mushroom2" type="Sprite" parent="YSort"]
+position = Vector2( 436, 62 )
+texture = ExtResource( 8 )
+
+[node name="Flower16" type="Sprite" parent="YSort"]
+position = Vector2( 385, 50 )
+texture = ExtResource( 16 )
+
+[node name="Flower17" type="Sprite" parent="YSort"]
+position = Vector2( 460, -59 )
+texture = ExtResource( 17 )
+
+[node name="Flower18" type="Sprite" parent="YSort"]
+position = Vector2( 367, -69 )
+texture = ExtResource( 18 )
+
+[node name="Flower19" type="Sprite" parent="YSort"]
+position = Vector2( 400, 34 )
+texture = ExtResource( 14 )
+
+[node name="Flower20" type="Sprite" parent="YSort"]
+position = Vector2( 460, -46 )
+texture = ExtResource( 14 )
+
+[node name="Stone7" type="Sprite" parent="YSort"]
+position = Vector2( 232, -64 )
+texture = ExtResource( 13 )
+
+[node name="Stone5" type="Sprite" parent="YSort"]
+position = Vector2( 17, 56 )
+texture = ExtResource( 15 )
+
+[node name="Stone3" type="Sprite" parent="YSort"]
+position = Vector2( -39, -56 )
+texture = ExtResource( 21 )
+
+[node name="Gravestone" type="Sprite" parent="YSort"]
+position = Vector2( 472, 71 )
+texture = ExtResource( 22 )
+
+[node name="Wood3" type="Sprite" parent="YSort"]
+position = Vector2( 27, -60 )
+texture = ExtResource( 29 )
+
+[node name="Wood1" type="Sprite" parent="YSort"]
+position = Vector2( 219, 7 )
+texture = ExtResource( 27 )
+
+[node name="Wood4" type="Sprite" parent="YSort"]
+position = Vector2( -56, 55 )
+texture = ExtResource( 25 )
+
+[node name="Wood6" type="Sprite" parent="YSort"]
+position = Vector2( 61, 107 )
+texture = ExtResource( 20 )
+
+[node name="Wood7" type="Sprite" parent="YSort"]
+position = Vector2( 391, -73 )
+texture = ExtResource( 20 )
+
+[node name="Wood5" type="Sprite" parent="YSort"]
+position = Vector2( -227, 12 )
+texture = ExtResource( 29 )
+
+[node name="Wood8" type="Sprite" parent="YSort"]
+position = Vector2( -160, -102 )
+texture = ExtResource( 23 )
+
+[node name="Wood9" type="Sprite" parent="YSort"]
+position = Vector2( -108, 109 )
+texture = ExtResource( 20 )
+
+[node name="Wood10" type="Sprite" parent="YSort"]
+position = Vector2( 444, 40 )
+texture = ExtResource( 25 )
+
+[node name="Wood11" type="Sprite" parent="YSort"]
+position = Vector2( 261, 108 )
+texture = ExtResource( 29 )
+
+[node name="Wood12" type="Sprite" parent="YSort"]
+position = Vector2( 435, 128 )
+texture = ExtResource( 20 )
+
+[node name="Wood13" type="Sprite" parent="YSort"]
+position = Vector2( 150, -126 )
+texture = ExtResource( 25 )
+
+[node name="Sign1" type="Sprite" parent="YSort"]
+position = Vector2( -55, -121 )
+texture = ExtResource( 12 )
+
+[node name="Fence2" type="Sprite" parent="YSort"]
+position = Vector2( 288, -125 )
+texture = ExtResource( 28 )
+
+[node name="Fence1" type="Sprite" parent="YSort"]
+position = Vector2( 499, -133 )
+texture = ExtResource( 30 )
+
+[node name="Fence3" type="Sprite" parent="YSort"]
+position = Vector2( 515, -133 )
+texture = ExtResource( 30 )
+flip_h = true
+
+[node name="Fence4" type="Sprite" parent="YSort"]
+position = Vector2( 526, -120 )
+texture = ExtResource( 30 )
+
+[node name="Fence5" type="Sprite" parent="YSort"]
+position = Vector2( 542, -120 )
+texture = ExtResource( 30 )
+flip_h = true
+
+[node name="Plant13" type="Sprite" parent="."]
+position = Vector2( 102, 23 )
+texture = ExtResource( 11 )
+
+[node name="Plant14" type="Sprite" parent="."]
+position = Vector2( -138, 7 )
+texture = ExtResource( 11 )
+
+[node name="Plant15" type="Sprite" parent="."]
+position = Vector2( 177, -33 )
+texture = ExtResource( 11 )
+
+[node name="Flower2" type="Sprite" parent="."]
+position = Vector2( 72, 40 )
+texture = ExtResource( 18 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -271,11 +520,12 @@ margin_right = 156.0
 margin_bottom = 88.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 9.0
-margin_top = -57.0
-margin_right = 185.0
-margin_bottom = -9.0
+margin_left = 37.0
+margin_top = -58.0
+margin_right = 206.0
+margin_bottom = -25.0
 text = "Używaj przycisku \"F\", aby rozpoczynać interakcję z różnymi rzeczami!"
+align = 1
 autowrap = true
 
 [node name="Label2" type="Label" parent="."]
@@ -284,20 +534,24 @@ margin_top = 18.0
 margin_right = 322.0
 margin_bottom = 66.0
 text = "Używaj przycisku \"E\" żeby otwierać ekwipunek. W środku możesz kliknąć książkę."
+align = 1
 autowrap = true
 
 [node name="Label3" type="Label" parent="."]
 margin_left = 276.0
 margin_top = -57.0
 margin_right = 452.0
-margin_bottom = -9.0
+margin_bottom = -36.0
 text = "Jak klikniesz książkę, to będziesz miał menu rodzajów."
+align = 1
 autowrap = true
 
 [node name="Portal" parent="." instance=ExtResource( 5 )]
 position = Vector2( 500, 0 )
 next_scene_path = "res://World.tscn"
+player_spawn_location = Vector2( -811, 805 )
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 
-[node name="FullTransition" parent="CanvasLayer2" instance=ExtResource( 3 )]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -169, 12, -161, 48, -86, 75, 93, 87, 202, 82, 293, 85, 363, 98, 424, 109, 488, 102, 551, 69, 577, 21, 569, -29, 552, -70, 496, -94, 424, -80, 373, -78, 287, -82, 193, -76, 119, -78, 63, -80, 11, -83, -72, -84, -131, -75, -168, -47, -172, 7, -171, 11, -194.841, 3.32239, -230, -8, -216, -163, 583, -181, 609, 148, -247, 141, -230, -4 )
