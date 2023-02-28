@@ -1,51 +1,79 @@
 {
-   "KingDialogue1": {
+   "WilliamDialogue1": {
       "dialogue": [
         {
            "name":"Irys",
-           "text":"CZ-z-cześć, sztorm wyrzucił mnie na brzeg waszej wyspy, mieszkasz tu? "
+           "text":"CZ-z-cześć, \nsztorm wyrzucił mnie na brzeg waszej wyspy,\n mieszkasz tu? "
         },
         {
            "name":"William",
-           "text":"Tak, mieszkam tu od ponad 20 lat i wraz z moim przyjacielem, Hermitem.\n Potrzebujesz pomocy? Widzę, że zmarzłaś. "
+           "text":"Tak, mieszkam tu od ponad 20 lat\n i wraz z moim przyjacielem, Hermitem.\n Jestem farmerem. A ty czym się zajmujesz?"
         },
         {
            "name":"Irys",
-           "text":"Tak, proszę."
+           "text":"Jestem chemiczką. Umiem robić różne związki chemiczne \ni wiele innych rzeczy."
         },
         {
            "name":"William",
-           "text":"Udaj się do mojej chatki. Idąc drogą do góry napotkasz się na mój dom.\n Na stoliku leży ręcznik. Weź go i ogrzej się. ",
+           "text":"No to udaj się do mojej chatki\n, tam Hermit może mieć dla ciebie składniki. \nIdąc drogą do góry napotkasz się na mój dom.\n",
         },
         {
            "name":"Irys",
            "text":"Miło poznać.",
+           "additional_info": "Pójdź do serca wyspy i znajdź Hermita!"
         }
       ],
-      "next_dialogue": "FirstKingChoise"
+      "next_dialogue": "."
    },
-   "KingDialogueDontHaveItems": {
+   "HermitDialogue1": {
       "dialogue": [
         {
-           "name":"Wieśniak",
-           "text":"Na prawdę mnie zawiodłeś/aś! \nPrzynieś mi 5 fiolek kwasu siarkowego (VI)."
+           "name":"Irys",
+           "text":"Cześć! Rozmawiałam z Twoim przyjacielem!\nPowiedział że mi pomożesz!"
+        },
+        {
+           "name":"Hermit",
+           "text":"Ahh, w tych trudnych czasach to nie takie proste!\nZróbmy tak, ty mi pomożesz to ja pomogę tobie!"
+        },
+        {
+           "name":"Irys",
+           "text":"Umowa Stoi!"
+        },
+        {
+           "name":"William",
+           "text":"No to przynieś mi 5 fiolek kwasu siarkowy (VI). \n Potrzebny jest mi do nawozów. \nTutaj masz siarkę:",
+        },
+        {
+           "name":"Irys",
+           "text":"Okej, nie ma problemu!",
+           "additional_info": "Stwórz kwas siarkowy (VI)\n, opis jak to zrobić masz w książce w ekwipunku!"
         }
       ],
-      "next_dialogue": "FirstKingChoise"
+      "next_dialogue": "FirstHermitChoise"
    },
-   "KingDialogueHaveItems": {
+   "HermitDialogueDontHaveItems": {
       "dialogue": [
         {
-           "name":"Wieśniak",
-           "text":"Dziękuje Ci za ten kwas!\n Oszukałem ciebie z tym, że chce go do nawozów!"
+           "name":"Hermit",
+           "text":"Na prawdę mnie zawiodłaś! \nPrzynieś mi 5 fiolek kwasu siarkowego (VI).",
+           "additional_info": "Stwórz kwas siarkowy (VI)\n, opis jak to zrobić masz w książce w ekwipunku!"
+        }
+      ],
+      "next_dialogue": "FirstWilliamChoise"
+   },
+   "HermitDialogueHaveItems": {
+      "dialogue": [
+        {
+           "name":"Hermit",
+           "text":"Dziękuje Ci za ten kwas!\n Teraz na pewno uda mi się coś wychodować!"
         },
         {
-           "name":"Narrator",
-           "text":"*Wieśniak z zapałem otwiera probówkę, i wylewa na ziemie*\n *Cała planeta z powrotem zamienia się w zielony las!*"
+           "name":"Hermit",
+           "text":"Moja córka pasjonuje się Chemią, może jakieś rzeczy od niej ci się przydadzą:"
         },
         {
-           "name":"Pedra",
-           "text":"No nie! O jak ja nie cierpię kalarep, i mój kot też!"
+           "name":"Irys",
+           "text":"Dziękuje!"
         }
       ],
       "next_dialogue": "END"
