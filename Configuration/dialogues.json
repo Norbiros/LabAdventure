@@ -2,20 +2,24 @@
    "KingDialogue1": {
       "dialogue": [
         {
-           "name":"Wieśniak",
-           "text":"Witaj przybyszu!"
+           "name":"Irys",
+           "text":"CZ-z-cześć, sztorm wyrzucił mnie na brzeg waszej wyspy, mieszkasz tu? "
         },
         {
-           "name":"Pedra",
-           "text":"Witaj! Co mogę dla ciebie zrobić?"
+           "name":"William",
+           "text":"Tak, mieszkam tu od ponad 20 lat i wraz z moim przyjacielem, Hermitem.\n Potrzebujesz pomocy? Widzę, że zmarzłaś. "
         },
         {
-           "name":"Wieśniak",
-           "text":"Hmm... Niech no ja pomyśle."
+           "name":"Irys",
+           "text":"Tak, proszę."
         },
         {
-           "name":"Wieśniak",
-           "text":"Przynieś mi 5 fiolek kwasu siarkowego (VI).\nBędzie mi on bardzo potrzebny do nawozów.",
+           "name":"William",
+           "text":"Udaj się do mojej chatki. Idąc drogą do góry napotkasz się na mój dom.\n Na stoliku leży ręcznik. Weź go i ogrzej się. ",
+        },
+        {
+           "name":"Irys",
+           "text":"Miło poznać.",
         }
       ],
       "next_dialogue": "FirstKingChoise"
@@ -49,21 +53,17 @@
    "Init": {
       "dialogue": [
         {
-           "name":"Ja",
-           "text":"Ah! Co tu się stało!",
-		   "additional_info": "Naciśnij SPACJA, aby przejść dalej!"
+           "name":"Irys (Ja)",
+           "text":"Chce mi się pić, jestem wyczerpana. Czy to bezludna wyspa?",
+		       "additional_info": "Naciśnij SPACJA, aby przejść dalej!"
         },
         {
-           "name":"Ja",
-           "text":"Pewnie się rozbiłem! Ah, miałem takie piękne ryby!"
+           "name":"Irys",
+           "text":"Pójdę się przejść, może spotkam kogoś po drodze. "
         },
         {
-           "name":"Ja",
-           "text":"Dzięki nim mógłbym przetestować mój kwas :D\nale teraz nie mam niczego!"
-        },
-        {
-           "name":"Ja",
-           "text":"Co by tu zrobić"
+           "name":"Narrator",
+           "text":"*Iris jest ofiarą sztormu, trafia na bezludną wyspę,\n która potem okazuje się jednak zamieszkała przez ludzi...*"
         }
       ],
       "next_dialogue": "."
