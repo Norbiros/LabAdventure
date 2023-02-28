@@ -9,7 +9,6 @@ func _ready():
 	Global.connect("pressed_menu_button", self, "_pressed_menu_button")
 
 func _start_game(level, new):
-	
 	if new:
 		get_tree().change_scene("res://Scenes/TutorialLevel/TutorialLevel.tscn")
 	else:
