@@ -20,7 +20,8 @@ func _ready():
 	get_owner().get_node("Camera").position = Global.start_position
 	get_owner().get_node("Camera").reset_smoothing()
 	self.global_position = Global.start_position
-	
+
+var last_footstep = 0;
 func _physics_process(delta):
 	var pos = get_position();
 	var input_vector = Vector2.ZERO
@@ -45,9 +46,15 @@ func _physics_process(delta):
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationState.travel("Run")
+		if last_footstep <= 0:
+			play_footstep_sound()
+			last_footstep = 20
+		else:
+			last_footstep -= 1
 		velocity = velocity.move_toward(input_vector * speed, ACCELERATION * delta)
 	else:
 		animationState.travel("Idle")
+		last_footstep = 0
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
 	
@@ -84,3 +91,9 @@ func load(save_game : Resource):
 	get_owner().get_node("Camera").position = position
 	get_owner().get_node("Camera").reset_smoothing()
 
+var rng = RandomNumberGenerator.new()
+
+func play_footstep_sound():
+	rng.randomize()
+	$AudioStreamPlayer2D.pitch_scale = rand_range(0.7, 1.5)
+	$AudioStreamPlayer2D.play(0.0)
