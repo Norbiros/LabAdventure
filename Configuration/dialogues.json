@@ -2,7 +2,7 @@
    "KingDialogue1": {
       "dialogue": [
         {
-           "name":"Król",
+           "name":"Wieśniak",
            "text":"Witaj przybyeszu!"
         },
         {
@@ -10,11 +10,11 @@
            "text":"Witaj! Co mogę dla ciebie zrobić?"
         },
         {
-           "name":"Król",
+           "name":"Wieśniak",
            "text":"Hmm... Niech no ja pomyśle."
         },
         {
-           "name":"Król",
+           "name":"Wieśniak",
            "text":"Przynieś mi 5 fiolek kwasu siarkowego (VI).\nBędzie mi on bardzo potrzebny do nawozów."
         }
       ],
@@ -23,7 +23,7 @@
    "KingDialogueDontHaveItems": {
       "dialogue": [
         {
-           "name":"Król",
+           "name":"Wieśniak",
            "text":"Na prawdę mnie zawiodłeś/aś! \nPrzynieś mi 5 fiolek kwasu siarkowego (VI)."
         }
       ],
@@ -32,16 +32,12 @@
    "KingDialogueHaveItems": {
       "dialogue": [
         {
-           "name":"Król",
+           "name":"Wieśniak",
            "text":"Dziękuje Ci za ten kwas!\n Oszukałem ciebie z tym, że chce go do nawozów!"
         },
         {
            "name":"Narrator",
-           "text":"*Król z zapałem otwiera probówkę, i wylewa na ziemie*\n *Cała planeta z powrotem zamienia się w zielony las!*"
-        },
-        {
-           "name":"Straż królewska",
-           "text":"Pedro! Gratulacje! \nProsze, o to dla ciebie nowo wyhodowana kalarepa"
+           "text":"*Wieśniak z zapałem otwiera probówkę, i wylewa na ziemie*\n *Cała planeta z powrotem zamienia się w zielony las!*"
         },
         {
            "name":"Pedra",

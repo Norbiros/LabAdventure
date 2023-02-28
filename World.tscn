@@ -1241,7 +1241,7 @@ position = Vector2( 655, -220 )
 [node name="King" parent="YSort/Natural" instance=ExtResource( 34 )]
 position = Vector2( -6, -90 )
 
-[node name="CraftingTable" parent="YSort" instance=ExtResource( 4 )]
+[node name="CraftingTable" parent="YSort/Natural" instance=ExtResource( 4 )]
 position = Vector2( -60, 17 )
 
 [node name="Items" type="YSort" parent="YSort"]
