@@ -1285,15 +1285,10 @@ position = Vector2( -66, 89 )
 resource = "res://Items/Resources/P.tres"
 amount = 20
 
-[node name="SwordItem6" parent="YSort/Items" instance=ExtResource( 9 )]
-position = Vector2( -132, 51 )
-resource = "res://Items/Resources/P.tres"
-amount = 20
-
 [node name="SwordItem7" parent="YSort/Items" instance=ExtResource( 9 )]
 position = Vector2( -162, -14 )
 resource = "res://Items/Resources/P.tres"
-amount = 20
+amount = 11
 
 [node name="EmptyTube" parent="YSort/Items" instance=ExtResource( 9 )]
 position = Vector2( -41, 156 )

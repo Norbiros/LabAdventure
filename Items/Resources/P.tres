@@ -10,4 +10,4 @@ displayName = "Fosfor"
 description = "Normalny, zwyczajny fosfor."
 texture = ExtResource( 2 )
 is_tool = false
-max_stack_value = 1
+max_stack_value = 64
