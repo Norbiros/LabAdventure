@@ -11,10 +11,12 @@ func _ready():
 	Global.connect("dialogue_ended", self, "_dialogue_ended")
 	
 func _dialogue_ended(dialogue: String, next_dialogue):
+	if !("King" in next_dialogue):
+		return
 	dialogue_index = next_dialogue
 	interacted = false
 	if states() and player_in_area2d:
-		Global.player_interactions[self.name] = ["Kliknij, aby porozmawiać z królem!", self, "run_interaction"]
+		Global.player_interactions[self.name] = ["Kliknij F, aby porozmawiać z osadnikiem!", self, "run_interaction"]
 
 func run_interaction():
 	if !states():
@@ -38,7 +40,7 @@ func states():
 
 func _on_Area2D_body_entered(body):
 	if body.name  == "Player" and interacted == false:
-		Global.player_interactions[self.name] = ["Kliknij, aby porozmawiać z królem!", self, "run_interaction"]
+		Global.player_interactions[self.name] = ["Kliknij F, aby porozmawiać z osadnikiem!", self, "run_interaction"]
 		player_in_area2d = true
 
 

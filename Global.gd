@@ -11,6 +11,7 @@ signal inventory_state_change(state)
 signal show_dialogue(dialogue, next_dialogue)
 signal dialogue_ended()
 
+var load_fabule = false
 var tutorial = false
 var start_position = Vector2.ZERO
 var teleporting = false

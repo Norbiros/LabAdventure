@@ -395,10 +395,10 @@ parameters/Run/blend_position = Vector2( 0, 0 )
 z_index = 100
 
 [node name="PlayerInteraction" parent="Node2D" instance=ExtResource( 2 )]
-margin_left = 29.0
-margin_top = -28.0
-margin_right = 29.0
-margin_bottom = -28.0
+margin_left = 16.0
+margin_top = -38.0
+margin_right = 16.0
+margin_bottom = -38.0
 rect_scale = Vector2( 0.75, 0.75 )
 
 [node name="MediumShadow" type="Sprite" parent="."]

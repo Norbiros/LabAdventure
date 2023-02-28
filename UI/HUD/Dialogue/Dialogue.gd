@@ -9,6 +9,7 @@ onready var SAVE_KEY = "dialogue_" + name
 
 onready var textEl = $CenterContainer/VBoxContainer/Text
 onready var nameEl = $CenterContainer/VBoxContainer/Name
+onready var infoEl = $CenterContainer/VBoxContainer/Info
 
 func _ready():
 	dialogues = get_json()
@@ -22,12 +23,15 @@ func _show_dialogue(dialogue: String) -> void:
 	_show_dialogue_message()
 
 func _show_dialogue_message() -> void:
+	infoEl.hide()
 	if current_dialogue.size() == 0:
 		nameEl.text = ""
 		textEl.text = ""
 	else:
 		nameEl.text = current_dialogue[dialogue_index]["name"]
 		textEl.text = current_dialogue[dialogue_index]["text"]
+		if "Ah! Co tu się stało!" in current_dialogue[dialogue_index]["text"]:
+			infoEl.show()
 
 func _unhandled_key_input(_event) -> void:
 	var state = Global.inventory_state

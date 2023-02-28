@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://World/Well.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/BlackRockMedium.tscn" type="PackedScene" id=6]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
-[ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Util/ItemDrop.tscn" type="PackedScene" id=9]
 [ext_resource path="res://World/Stone.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Textures/Natural/Plants/flower4.png" type="Texture" id=11]
@@ -1408,11 +1407,6 @@ position = Vector2( -811, 805 )
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
 visible = false
 remote_path = NodePath("../../../Camera")
-
-[node name="Portal" parent="." instance=ExtResource( 8 )]
-position = Vector2( 320, -115 )
-next_scene_path = "res://Scenes/Castle/Castle.tscn"
-player_spawn_location = Vector2( 150, 50 )
 
 [node name="DayAndNight" type="CanvasModulate" parent="."]
 visible = false

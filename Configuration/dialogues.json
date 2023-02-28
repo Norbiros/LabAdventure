@@ -45,5 +45,26 @@
         }
       ],
       "next_dialogue": "END"
+   },
+   "Init": {
+      "dialogue": [
+        {
+           "name":"Ja",
+           "text":"Ah! Co tu się stało!"
+        },
+        {
+           "name":"Ja",
+           "text":"Pewnie się rozbiłem! Ah, miałem takie piękne ryby!"
+        },
+        {
+           "name":"Ja",
+           "text":"Dzięki nim mógłbym przetestować mój kwas :D\nale teraz nie mam niczego!"
+        },
+        {
+           "name":"Ja",
+           "text":"Co by tu zrobić"
+        }
+      ],
+      "next_dialogue": "."
    }
 }
