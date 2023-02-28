@@ -709,38 +709,74 @@ position = Vector2( -48, -88 )
 priority = 1.0
 
 [node name="Stone2" parent="YSort/Natural" instance=ExtResource( 10 )]
-position = Vector2( -38, -104 )
+position = Vector2( -65, -187 )
 priority = 1.0
 
 [node name="Stone27" parent="YSort/Natural" instance=ExtResource( 10 )]
-position = Vector2( -21, -116 )
+position = Vector2( 169, -133 )
 priority = 1.0
 
 [node name="Stone28" parent="YSort/Natural" instance=ExtResource( 10 )]
-position = Vector2( 12, -125 )
-priority = 1.0
-
-[node name="Stone29" parent="YSort/Natural" instance=ExtResource( 10 )]
-position = Vector2( 35, -127 )
+position = Vector2( -169, -303 )
 priority = 1.0
 
 [node name="Stone30" parent="YSort/Natural" instance=ExtResource( 10 )]
-position = Vector2( 54, -126 )
+position = Vector2( -307, -28 )
+priority = 1.0
+
+[node name="Stone38" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( -78, 218 )
+priority = 1.0
+
+[node name="Stone39" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 608, 287 )
+priority = 1.0
+
+[node name="Stone40" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 110, 509 )
+priority = 1.0
+
+[node name="Stone41" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( -184, 469 )
+priority = 1.0
+
+[node name="Stone42" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( -219, 296 )
+priority = 1.0
+
+[node name="Stone43" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( -339, 171 )
 priority = 1.0
 
 [node name="Stone31" parent="YSort/Natural" instance=ExtResource( 10 )]
-position = Vector2( 72, -127 )
+position = Vector2( -242, -128 )
 priority = 1.0
 
 [node name="Stone32" parent="YSort/Natural" instance=ExtResource( 10 )]
-position = Vector2( 91, -127 )
-priority = 1.0
-
-[node name="Stone33" parent="YSort/Natural" instance=ExtResource( 10 )]
-position = Vector2( 104, -126 )
+position = Vector2( 377, 232 )
 priority = 1.0
 
 [node name="Stone34" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 463, -90 )
+priority = 1.0
+
+[node name="Stone35" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 266, -334 )
+priority = 1.0
+
+[node name="Stone36" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 33, -459 )
+priority = 1.0
+
+[node name="Stone37" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( -472, -488 )
+priority = 1.0
+
+[node name="Stone29" parent="YSort/Natural" instance=ExtResource( 10 )]
+position = Vector2( 102, -327 )
+priority = 1.0
+
+[node name="Stone33" parent="YSort/Natural" instance=ExtResource( 10 )]
 position = Vector2( 104, -126 )
 priority = 1.0
 
