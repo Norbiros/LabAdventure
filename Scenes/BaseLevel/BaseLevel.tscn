@@ -90,7 +90,6 @@ region_enabled = true
 region_rect = Rect2( 0, 0, 500, 500 )
 
 [node name="Camera" type="Camera2D" parent="."]
-current = true
 limit_left = -500
 limit_top = -500
 limit_right = 500
@@ -180,5 +179,4 @@ tile_data = PoolIntArray( -262145, 1, 0, -327680, 1, 0, -327679, 1, 0, -327678, 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 31, -86 )
 frames = SubResource( 105 )
-frame = 1
 playing = true

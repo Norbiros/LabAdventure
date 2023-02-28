@@ -1276,6 +1276,26 @@ position = Vector2( 1, 96 )
 resource = "res://Items/Resources/WaterTube.tres"
 amount = 3
 
+[node name="EmptyTube" parent="YSort/Items" instance=ExtResource( 9 )]
+position = Vector2( -41, 156 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 3
+
+[node name="EmptyTube2" parent="YSort/Items" instance=ExtResource( 9 )]
+position = Vector2( 78, 138 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 3
+
+[node name="EmptyTube3" parent="YSort/Items" instance=ExtResource( 9 )]
+position = Vector2( 67, 58 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 3
+
+[node name="EmptyTube4" parent="YSort/Items" instance=ExtResource( 9 )]
+position = Vector2( 155, -15 )
+resource = "res://Items/Resources/EmptyTube.tres"
+amount = 3
+
 [node name="SwordItem3" parent="YSort/Items" instance=ExtResource( 9 )]
 position = Vector2( -248, -97 )
 resource = "res://Items/Resources/EmptyTube.tres"

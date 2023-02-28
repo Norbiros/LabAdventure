@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Items/item.gd" type="Script" id=1]
+[ext_resource path="res://Items/Textures/h2so4_tube.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+name = "SO3"
+displayName = "Tritlenek siarki"
+description = "Nieorganiczny związek chemiczny z grupy tlenków kwasowych, w którym siarka występuje na VI stopniu utlenienia."
+texture = ExtResource( 2 )
+is_tool = false
+max_stack_value = 1

@@ -5,11 +5,35 @@ var craftings = {
 		"name": "Kwas siarkowy (VI)",
 		"description": "Ale mocny kwas!",
 		"ingredients": {
-			"Sulfur": 1,
+			"SO3": 1,
 			"WaterTube": 1
 		},
 		"result": {
 			"res://Items/Resources/H2SO4Tube.tres": 3
+		},
+		"time": 10.0
+	},
+	"SO3": {
+		"name": "Tritlenek siarki",
+		"description": "Kolejna nudna receptura",
+		"ingredients": {
+			"SO2": 1,
+			"EmptyTube": 1
+		},
+		"result": {
+			"res://Items/Resources/SO3.tres": 1
+		},
+		"time": 10.0
+	},
+	"SO2": {
+		"name": "Dwutlenek siarki",
+		"description": "Receptura jak każda inna",
+		"ingredients": {
+			"Sulfur": 1,
+			"EmptyTube": 1
+		},
+		"result": {
+			"res://Items/Resources/SO2.tres": 1
 		},
 		"time": 10.0
 	},
