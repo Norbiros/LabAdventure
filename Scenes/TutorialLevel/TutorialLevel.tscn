@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://UI/HUD/Inventory/InventoryContainer.gd" type="Script" id=1]
 [ext_resource path="res://World/Bush.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/FullTransition.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
 [ext_resource path="res://Util/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/TutorialLevel/TutorialLevel.gd" type="Script" id=6]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=7]
 [ext_resource path="res://UI/HUD/Inventory/InventoryDisplay.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=10]
@@ -35,6 +36,7 @@
 0/z_index = 0
 
 [node name="TutorialLevel" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 487, -6 )
